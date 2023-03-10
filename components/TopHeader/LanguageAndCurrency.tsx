@@ -16,6 +16,7 @@ const LanguageAndCurrency = () => {
                         <a className='text-[#3BB77E]' href='tel:+88017XXXXX'>+88017XXXXX</a>
                     </p>
                 </div>
+
                 <div className='relative before:block before:absolute before:-right-2 before:w-[1px] before:h-[12px] before:top-2 before:bg-gray-200 hover-dropdown'>
 
                     <button className='top_header_item flex items-start space-x-1'>
@@ -23,7 +24,7 @@ const LanguageAndCurrency = () => {
                         <FaChevronDown className="w-2 mt-[2px]" />
                     </button>
 
-                    <ul className='absolute left-3 border hover-dropdwon-item border-gray-200 bg-white invisible '>
+                    <ul className='z-50 absolute right-0 border hover-dropdwon-item border-gray-200 bg-white invisible '>
 
                         <li onClick={() => setLanguage('English')} className='dropdown-items hover:bg-gray-50 flex space-x-1 items-center'>
                             <US title="United States" className="w-4 h-6" />
@@ -33,14 +34,13 @@ const LanguageAndCurrency = () => {
                         <li onClick={() => setLanguage('Bangali')} className='dropdown-items hover:bg-gray-50 flex space-x-1 items-center'>
                             <BD title="Bangladesh" className="w-4 h-6" />
                             <span>Bangali</span>
-
                         </li>
-
                         <li onClick={() => setLanguage('Hindi')} className='dropdown-items hover:bg-gray-50 flex space-x-1 items-center'>
                             <IN title="India" className="w-4 h-6" />
                             <span>Hindi</span>
                         </li>
                     </ul>
+                
 
                 </div>
                 <div className='relative hover-dropdown'>
@@ -49,7 +49,7 @@ const LanguageAndCurrency = () => {
                         <FaChevronDown className="w-2 mt-[2px]" />
                     </button>
 
-                    <ul className='absolute left-3 border hover-dropdwon-item border-gray-200 bg-white invisible '>
+                    <ul className='z-50 absolute right-0 border hover-dropdwon-item border-gray-200 bg-white invisible '>
 
                         <li onClick={() => setCurrency('USD')} className='dropdown-items hover:bg-gray-50 flex items-center space-x-1'>
                             <FaDollarSign className="w-3 text-gray-400" />

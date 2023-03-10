@@ -4,8 +4,13 @@
 
 
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #80808012;
+}
+
 .dropdown-items {
-    @apply cursor-pointer  text-sm text-gray-600 px-5 py-1 my-1
+    @apply cursor-pointer text-sm text-gray-600 px-5 py-1 my-1
 }
 
 .font-quicksand {
@@ -30,11 +35,14 @@
     top: 32px;
 }
 
-.top_header_item{
-    @apply cursor-pointer  p-1 text-[#7e7e7e] font-normal tracking-wide text-[13px] font-roboto
+
+
+
+.top_header_item {
+    @apply cursor-pointer p-1 text-[#7e7e7e] font-normal tracking-wide text-[13px] font-roboto
 }
 
-.sm-top-header{
+.sm-top-header {
     background: url('/assets/notice.jpg');
     background-repeat: no-repeat;
     background-size: cover;
