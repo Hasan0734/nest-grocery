@@ -9,7 +9,7 @@ const menus = [
     { id: 3, title: 'Wishlist', link: "/wishlist" },
     { id: 4, title: 'Order Tracking', link: "/order-tracking" },
 ]
-const HeaderMenue = () => {
+const HeaderMenu = () => {
     return (
         <ul className='flex space-x-4'>
             {menus.map((item: any) => <li className={`relative  
@@ -23,4 +23,4 @@ const HeaderMenue = () => {
     );
 };
 
-export default HeaderMenue;
+export default HeaderMenu;

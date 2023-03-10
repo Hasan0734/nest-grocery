@@ -5,7 +5,7 @@
 
 
 .dropdown-items {
-    @apply cursor-pointer block text-sm text-gray-600 px-5 py-1 my-1
+    @apply cursor-pointer  text-sm text-gray-600 px-5 py-1 my-1
 }
 
 .font-quicksand {
@@ -31,5 +31,12 @@
 }
 
 .top_header_item{
-    @apply cursor-pointer block p-1 text-[#7e7e7e] font-normal tracking-wide text-[13px] font-roboto
+    @apply cursor-pointer  p-1 text-[#7e7e7e] font-normal tracking-wide text-[13px] font-roboto
+}
+
+.sm-top-header{
+    background: url('/assets/notice.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% center;
 }
