@@ -2,31 +2,30 @@
 
 
 import React, { useState } from 'react';
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon,ShoppingCartIcon } from '@heroicons/react/24/outline'
 import Menu from './Menu';
 import SearchInput from './SearchInput';
 
+import CartDrawer from './CartDrawer';
+import MenuDrawer from './MenuDrawer';
 
-const menuItems = [
-    {id:1, title: "Home", route: "/"},
-    {id:2, title: "About Us", route: "/about-us"},
-    {id:3, title: "Shop", route: "/shop"},
-    {id:4, title: "Vendors", route: "/vendors"},
-    {id:5, title: "Mega Menu", route: "/mega-menu"},
-    {id:6, title: "Blog", route: "/blog"},
-    {id:7, title: "Contact", route: "/contact"},
-]
+
 
 const SecondHeader = () => {
-    const [drawer, setDrawer] = useState(true);
+    const [cartDrawer, setCartDrawer] = useState(false);
+    const [menuDrawer, setMenuDrawer] = useState(false);
+
 
     const handleOutSideClick = (event: React.MouseEvent) => {
         event.preventDefault();
         if (event.target === event.currentTarget) {
-            setDrawer(false)
+            setMenuDrawer(false)
+            setCartDrawer(false)
         }
 
     }
+
+
 
     return (
         <>
@@ -39,7 +38,7 @@ const SecondHeader = () => {
                                 <ul className=' flex lg:hidden  space-x-5 items-center'>
 
                                     <li >
-                                        <button className='flex items-center space-x-1 cursor-pointer relative'>
+                                        <button onClick={() => setCartDrawer(true)} className='flex items-center space-x-1 cursor-pointer relative'>
                                             <ShoppingCartIcon className='w-8 text-gray-600' />
                                             <div className='absolute p-1 -top-1 -left-3 rounded-full w-6 h-6 flex justify-center items-center bg-[#3BB77E] text-white'>
                                                 <span>0</span>
@@ -48,7 +47,7 @@ const SecondHeader = () => {
                                     </li>
 
                                     <li >
-                                        <button onClick={() => setDrawer(true)} className='flex items-center space-x-1 cursor-pointer'>
+                                        <button onClick={() => setMenuDrawer(true)} className='flex items-center space-x-1 cursor-pointer'>
                                             <Bars3Icon className='w-8 text-gray-600' />
                                         </button>
 
@@ -85,35 +84,20 @@ const SecondHeader = () => {
                 </div>
 
             </div>
-            <div
-                onClick={handleOutSideClick}
-                className={`z-50 block lg:hidden absolute left-0  transition-all  w-full ${!drawer ? "invisible opacity-0" : "opacity-100 visible bg-gray-800/40"}  
-            top-0 h-screen`}>
-                <div className={`absolute duration-500 opacity-0 ${drawer ? "left-0 opacity-100" : "-left-[1000px]"} bg-white h-screen w-4/5 `}>
-                    <div
-                        className='py-5 px-7 border-b border-gray-200'>
-                            <XMarkIcon onClick={() => setDrawer(false)} className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-[#3BB77E] p-1 w-6 rounded-full bg-[#3BB77E]/30'/>
-                     
-                    </div>
-                    <div className='py-5 px-7'>
-                        <form className='relative'>
-                            <input className='pl-4 pr-12 py-2 bg-gray-300/50 w-full outline-none rounded-md' type="text" placeholder='Search...' />
-                            <button className='focus:bg-[#3BB77E] absolute right-0 rounded-md  px-3 py-[10px]'>
-                                <MagnifyingGlassIcon className='w-5 text-gray-700' />
-                            </button>
-                        </form>
-                        <div className='mt-5'>
-                            <div className='flex gap-3'>
-                                <button className='duration-200 common_btn bg-gray-300/50 hover:bg-orange-200/70 hover:text-[#3BB77E]'>Menu</button>
 
-                                <button className='duration-200 common_btn bg-gray-300/50 hover:bg-orange-200/70 hover:text-[#3BB77E]'>Category</button>
-                            </div>
 
-                            <div></div>
-                        </div>
-                    </div>
-             </div>
-            </div>
+            {/* menu drawer */}
+            <MenuDrawer
+                handleOutSideClick={handleOutSideClick}
+                menuDrawer={menuDrawer}
+                setMenuDrawer={setMenuDrawer}
+            />
+
+            {/* product cart drawer */}
+          <CartDrawer
+                handleOutSideClick={handleOutSideClick}
+                cartDrawer={cartDrawer}
+                setCartDrawer={setCartDrawer} />
         </>
 
     );

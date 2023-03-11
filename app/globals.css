@@ -51,5 +51,5 @@ body {
 
 
 .common_btn{
-    @apply rounded-md w-full text-gray-600  py-[6px]  font-semibold
+    @apply rounded-md w-full  py-[6px]  font-semibold
 }
