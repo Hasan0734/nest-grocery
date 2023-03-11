@@ -1,6 +1,8 @@
 import SecondHeader from '@/components/SecondHeader/SecondHeader'
 import TopHeader from '@/components/TopHeader/TopHeader'
 import React from 'react'
+
+
 export default function Home() {
   return (
     <>
@@ -8,7 +10,8 @@ export default function Home() {
         <TopHeader />
         <SecondHeader />
       </header>
-
+    <button className='p-8 bg-orange-400'>Hello</button>
+      
     </>
 
   )
