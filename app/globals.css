@@ -53,3 +53,20 @@ body {
 .common_btn{
     @apply rounded-md w-full  py-[6px]  font-semibold
 }
+
+
+.nav_item_content{
+    /* visibility: hidden;
+    opacity: 0.5; */
+    right: -20px;
+    top: 80px;
+}
+.nav_item_hover:hover .nav_item_content{
+    visibility: visible;
+    opacity: 1;
+    right: 0px;
+    top: 71px;
+}
+.nav_item_hover:hover .nav_item{
+    color: #3BB77E;
+}

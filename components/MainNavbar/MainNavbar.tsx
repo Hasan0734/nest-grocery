@@ -1,75 +1,22 @@
 "use client"
 
-import { ChevronDownIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import React, { useState } from 'react';
-import { Headphones } from 'react-feather';
-import OutsideClickHandler from 'react-outside-click-handler';
-
-const menuItems = [
-    { id: 1, title: "Home", route: "/" },
-    { id: 2, title: "About Us", route: "/about-us" },
-    { id: 3, title: "Shop", route: "/shop" },
-    { id: 4, title: "Vendors", route: "/vendors" },
-    { id: 5, title: "Mega Menu", route: "/mega-menu" },
-    { id: 6, title: "Blog", route: "/blog" },
-    { id: 7, title: "Contact", route: "/contact" },
-]
-
-const categories = [
-    { id: 1, name: "Baking material", icon: "/assets/icons/category/category-2.png" },
-    { id: 2, name: "Bread and Juice", icon: "/assets/icons/category/category-11.png" },
-    { id: 3, name: "Clothing & beauty", icon: "/assets/icons/category/category-3.png" },
-    { id: 4, name: "Dals of The Day", icon: "/assets/icons/category/category-1.png" },
-    { id: 5, name: "Fresh Fruit", icon: "/assets/icons/category/category-7.png" },
-    { id: 6, name: "Fresh Seafood", icon: "/assets/icons/category/category-10.png" },
-    { id: 7, name: "Milks and Dairies", icon: "/assets/icons/category/category-6.png" },
-    { id: 8, name: "Uncategorized", icon: "/assets/icons/category/category-2.png" },
-    { id: 9, name: "Vegetables", icon: "/assets/icons/category/category-8.png" },
-    { id: 10, name: "Wines & Drinks", icon: "/assets/icons/category/category-9.png" },
-]
-
+import React from 'react';
+import Contact from './Contact';
+import Menu from './Menu';
+import NavCategory from './NavCategory';
 
 const MainNavbar = () => {
 
-    const [openCategory, setOpenCategory] = useState(false)
     return (
-        <nav className='border border-gray-200 py-2'>
-            <div className='container mx-auto px-4'>
+        <nav className='border hidden lg:block border-gray-200'>
+            <div className='container mx-auto px-4 relative'>
                 <div className='flex gap-5 items-center justify-between'>
-                    <div className='flex gap-7'>
-                        <div className='flex gap-6 items-center'>
-                            <div className='relative'>
-                                <OutsideClickHandler
-                                    onOutsideClick={() => setOpenCategory(false)}
-                                >
-                                <button onClick={() => setOpenCategory(!openCategory)} className='rounded flex gap-1 bg-[#3BB77E] px-3 py-2 items-center'>
-                                    <Squares2X2Icon strokeWidth={2} className='w-4 text-white' />
-                                    <span className='text-white font-bold font-quicksand'>Browse All Categories</span>
-                                    <ChevronDownIcon strokeWidth={2} className='w-4 text-white' />
-                                </button>
+                    <div className='flex gap-8 2xl:gap-7'>
+                        <div className='flex gap-10 2xl:gap-6 items-center'>
+                          
+                            <NavCategory/>
 
-                                <div className={`${openCategory ? "visible opacity-100  top-[50px]" : "invisible opacity-0  top-[60px]"} duration-300 rounded-lg border left-0 border-[#3BB77E]  p-5 z-40 bg-gray-100/20
-                                 
-                                 absolute  w-[400px]`}>
-                                    <ul className='grid grid-cols-2 gap-3'>
-                                        {categories.map((category) => <li key={category.id}
-                                            className=''>
-                                            <Link href={"/"} legacyBehavior>
-                                                <a
-                                                    className=' border border-gray-200 rounded
-                                                     p-2 flex gap-2 text-sm items-center hover:bg-white/80 duration-200 hover:drop-shadow-md'>
-                                                    <img className='w-6 h-6' src={category.icon} alt={category.name } />
-                                                    <span> {category.name}</span>
-                                                </a>
-                                            </Link>
-                                        </li>)}
-                                        
-                                    </ul>
-                                    </div>
-                                </OutsideClickHandler>
-
-                            </div>
                             <Link href="/hot-deals" legacyBehavior>
                                 <a className='flex items-center gap-1 font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E]'>
@@ -87,25 +34,9 @@ const MainNavbar = () => {
                                 </a>
                             </Link>
                         </div>
-                        <ul className='flex gap-4 items-center'>
-                            {menuItems.map((menu: any) => <li key={menu.id}>
-                                <Link href={"/home"} legacyBehavior>
-                                    <a className=' font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center ' href="">
-                                        <span>{menu.title}</span>
-                                        <ChevronDownIcon className="w-3" />
-                                    </a>
-                                </Link>
-                            </li>)}
-                        </ul>
+                       <Menu/>
                     </div>
-                    <div className='flex gap-2 items-center'>
-                        <Headphones size={25} color="gray" />
-                        <div>
-                            <h3>017XXXXXXX</h3>
-                            <p>24/7 Support Center</p>
-                        </div>
-                    </div>
+                   <Contact/>
                 </div>
             </div>
         </nav>
