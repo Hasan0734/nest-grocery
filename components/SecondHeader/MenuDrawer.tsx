@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Link from 'next/link';
-import { Bars3Icon, ChevronDownIcon, MagnifyingGlassIcon, PhoneIcon, ShoppingCartIcon, XMarkIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import {  ChevronDownIcon, MagnifyingGlassIcon, PhoneIcon,  XMarkIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { FaFacebookF, FaInstagram, FaSkype, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const menuItems = [
