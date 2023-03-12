@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 body {
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Quicksand', sans-serif;
@@ -51,29 +50,63 @@ body {
 }
 
 
-.common_btn{
-    @apply rounded-md w-full  py-[6px]  font-semibold
+.common_btn {
+    @apply rounded-md w-full py-[6px] font-semibold
 }
 
 
-.nav_item_content{
+.nav_item_content {
 
     left: -10px;
     top: 71px;
-    
+
 }
-.nav_item_hover:hover .nav_item_content{
+
+.nav_item_hover:hover .nav_item_content {
     visibility: visible;
     opacity: 1;
     left: 0px;
 }
-.nav_item_hover:hover .nav_item{
+
+.nav_item_hover:hover .nav_item {
     color: #3BB77E;
 }
 
-.banner_slider{
-    
+.banner_slider {
     border-radius: 30px;
     background-size: cover;
     background-position: center center;
+}
+
+.banner_paginate_bullet {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #3BB77E;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.banner_paginate_bullet_active {
+    border: 1px solid #0000;
+    background: #3BB77E;
+}
+
+.home_banner .banner_next, .home_banner .banner_prev{
+    visibility: hidden;
+    transition: 0.4s;
+    opacity: 0;
+    margin: 0 15px;
+}
+
+.home_banner:hover .banner_next,
+.home_banner:hover .banner_prev{
+    visibility: visible;
+    opacity: 1;
+    margin: 0 30px;
+}
+
+.home_banner .swiper-pagination{
+    bottom: 28px !important;
 }
