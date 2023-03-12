@@ -1,6 +1,7 @@
 import './globals.css';
-import "swiper/swiper.min.css";
-
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 export const metadata = {

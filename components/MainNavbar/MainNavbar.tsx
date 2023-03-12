@@ -12,7 +12,7 @@ const MainNavbar = () => {
         <nav className='border hidden lg:block border-gray-200'>
             <div className='container mx-auto px-4 relative'>
                 <div className='flex gap-5 items-center justify-between'>
-                    <div className='flex gap-8 2xl:gap-7'>
+                    <div className='flex gap-3 2xl:gap-7'>
                         <div className='flex gap-10 2xl:gap-6 items-center'>
                           
                             <NavCategory/>
