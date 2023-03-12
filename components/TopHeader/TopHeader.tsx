@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import HeaderMenu from './HeaderMenu';
 import LanguageAndCurrency from './LanguageAndCurrency';
