@@ -1,6 +1,7 @@
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import React from 'react';
+import MegaMenuContent from './MegaMenuContent';
 
 const menuItems = [
     { id: 1, title: "Home", route: "/" },
@@ -34,20 +35,20 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                        <button  className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center ' >
-                            <span>Shop</span>
-                            <ChevronDownIcon className="w-3" />
-                        </button>
+                        <span>Shop</span>
+                        <ChevronDownIcon className="w-3" />
+                    </button>
                 </li>
                 <li>
-                    
-                        <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+
+                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center'>
-                            <span>Vendors</span>
-                            <ChevronDownIcon className="w-3" />
+                        <span>Vendors</span>
+                        <ChevronDownIcon className="w-3" />
                     </button>
-                   
+
                 </li>
                 <li className='nav_item_hover'>
 
@@ -56,38 +57,31 @@ const Menu = () => {
                         <span>Mega Menu</span>
                         <ChevronDownIcon className="w-3" />
                     </button>
-
-                    <div className='nav_item_content absolute left-0 container invisible opacity-0 mx-auto px-4 duration-500'>
-                        <div className='w-full bg-white h-32'>
-
-                        </div>
-                    </div>
-
+                    <MegaMenuContent />
                 </li>
                 <li>
-                   
-                        <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+
+                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center '>
-                            <span>Blog</span>
-                            <ChevronDownIcon className="w-3" />
-                        </button>
-                    
+                        <span>Blog</span>
+                        <ChevronDownIcon className="w-3" />
+                    </button>
+
                 </li>
                 <li>
-                   
-                        <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+
+                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center'>
-                            <span>Pages</span>
-                            <ChevronDownIcon className="w-3" />
-                        </button>
-                   
+                        <span>Pages</span>
+                        <ChevronDownIcon className="w-3" />
+                    </button>
+
                 </li>
                 <li>
                     <Link href={"/about"} legacyBehavior>
                         <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center ' href="">
                             <span>Contact</span>
-                            <ChevronDownIcon className="w-3" />
                         </a>
                     </Link>
                 </li>

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Autoplay } from 'swiper';
 import Link from 'next/link';
-
 const TopNotification = () => {
     return (
         <>

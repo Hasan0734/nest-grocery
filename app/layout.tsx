@@ -1,4 +1,7 @@
-import './globals.css'
+import './globals.css';
+import "swiper/swiper.min.css";
+
+
 
 export const metadata = {
   title: 'Nest - Grocery Store Ecommerce Website',

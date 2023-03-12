@@ -1,3 +1,5 @@
+
+import HomeBanner from '@/components/Banner/HomeBanner'
 import MainNavbar from '@/components/MainNavbar/MainNavbar'
 import SecondHeader from '@/components/SecondHeader/SecondHeader'
 import TopHeader from '@/components/TopHeader/TopHeader'
@@ -10,10 +12,10 @@ export default function Home() {
       <header>
         <TopHeader />
         <SecondHeader />
-        <MainNavbar/>
+        <MainNavbar />
       </header>
-    <button className='p-8 bg-orange-400'>Hello</button>
-      
+      <HomeBanner />
+
     </>
 
   )
