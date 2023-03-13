@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CategoryCard from './CategoryCard';
-
+import { motion } from "framer-motion"
 
 const simpleCategory = [
     { id: 1, name: "Cake & Milk" },
@@ -96,7 +96,26 @@ const featuredCat = [
 const FeaturedCategories = () => {
     const swiperRef: any = useRef()
     return (
-        <div className=''>
+        <motion.div
+
+            initial={
+                {
+                    opacity: 0,
+                    y: 30
+                }
+            }
+            whileInView={
+                {
+                    opacity: 1,
+                    y: 0
+                }
+
+            }
+            viewport={{ once: true }}
+            transition={{
+                y: { duration: 0.4 },
+            }}
+            className=''>
             <div className='container mx-auto px-4 mt-10'>
 
                 <div className='flex justify-between '>
@@ -167,7 +186,7 @@ const FeaturedCategories = () => {
                     </Swiper>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
