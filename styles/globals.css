@@ -127,3 +127,6 @@ body {
 .cat_card:has(.cat_card_img:hover) {
     box-shadow: 1px 2px 8px 2px #c7c5c561;
 }
+.cat_card:hover {
+    box-shadow: 1px 2px 8px 2px #c7c5c561;
+}
