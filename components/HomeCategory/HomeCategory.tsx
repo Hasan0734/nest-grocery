@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 
 const HomeCategory = () => {
 
-
     return (
         <motion.div
 
@@ -27,7 +26,7 @@ const HomeCategory = () => {
                 y: { duration: 0.4 },
             }}
 
-            className='py-8'>
+            className='py-4'>
             <div className='container mx-auto px-4'>
                 <div className='grid grid-cols-3 gap-5 top-2'
 
