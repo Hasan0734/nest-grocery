@@ -6,7 +6,7 @@
 body {
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Quicksand', sans-serif;
-    background: #80808012;
+    background: #fff;
 }
 
 .dropdown-items {
@@ -93,7 +93,8 @@ body {
     background: #3BB77E;
 }
 
-.home_banner .banner_next, .home_banner .banner_prev{
+.home_banner .banner_next,
+.home_banner .banner_prev {
     visibility: hidden;
     transition: 0.4s;
     opacity: 0;
@@ -101,12 +102,28 @@ body {
 }
 
 .home_banner:hover .banner_next,
-.home_banner:hover .banner_prev{
+.home_banner:hover .banner_prev {
     visibility: visible;
     opacity: 1;
     margin: 0 30px;
 }
 
-.home_banner .swiper-pagination{
+.home_banner .swiper-pagination {
     bottom: 28px !important;
+}
+
+.cat_card_img {
+    transition: all 0.4s;
+}
+
+.cat_card_img:hover {
+    transform: scale(1.1);
+}
+
+.cat_card {
+    transition: all 0.4s;
+}
+
+.cat_card:has(.cat_card_img:hover) {
+    box-shadow: 1px 2px 8px 2px #c7c5c561;
 }

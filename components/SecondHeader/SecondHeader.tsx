@@ -1,6 +1,3 @@
-"use client";
-
-
 import React, { useState } from 'react';
 import { Bars3Icon,ShoppingCartIcon } from '@heroicons/react/24/outline'
 import Menu from './Menu';
