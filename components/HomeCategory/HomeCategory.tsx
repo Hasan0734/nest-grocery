@@ -21,14 +21,15 @@ const HomeCategory = () => {
                 }
 
             }
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{
+                delay: 0.4,
                 y: { duration: 0.4 },
             }}
 
             className='py-4'>
             <div className='container mx-auto px-4'>
-                <div className='grid grid-cols-3 gap-5 top-2'
+                <div className='grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-5 top-2'
 
                 >
                     <CategoryCard2
@@ -46,7 +47,6 @@ const HomeCategory = () => {
                         title={"The Organic Product Online"}
                         parentLink={'vegatebles'}
                         image="/assets/banner-3.png"
-
                     />
                 </div>
             </div>

@@ -109,10 +109,10 @@ const FeaturedCategories = () => {
                     opacity: 1,
                     y: 0
                 }
-
             }
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{
+                delay: 0.4,
                 y: { duration: 0.4 },
             }}
             className=''>
@@ -134,13 +134,13 @@ const FeaturedCategories = () => {
                         <button
                             onClick={() => swiperRef.current?.slidePrev()}
                             className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
-                            
+
                             <ArrowLeftIcon className='w-full' />
                         </button>
                         <button
                             onClick={() => swiperRef.current?.slideNext()}
                             className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
-                             
+
                             <ArrowRightIcon className='w-full' />
                         </button>
                     </div>
@@ -155,7 +155,7 @@ const FeaturedCategories = () => {
                         onBeforeInit={(swiper: any) => {
                             swiperRef.current = swiper
                         }}
-                       
+
                         modules={[Navigation]}
                         className=""
 
@@ -163,7 +163,7 @@ const FeaturedCategories = () => {
                             320: {
                                 slidesPerView: 2
                             },
-                    
+
                             768: {
                                 slidesPerView: 4,
 
@@ -178,11 +178,11 @@ const FeaturedCategories = () => {
                             }
                         }}
                     >
-                        
-                        {featuredCat.map((category: any) => <SwiperSlide key={category.id} className='py-5'> <CategoryCard  category={category} />
+
+                        {featuredCat.map((category: any) => <SwiperSlide key={category.id} className='py-5'> <CategoryCard category={category} />
                         </SwiperSlide>
                         )}
-                    
+
                     </Swiper>
                 </div>
             </div>

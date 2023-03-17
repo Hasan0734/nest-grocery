@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerForm from '../Shared/BannerForm';
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const Subscribe = () => {
     return (
@@ -8,19 +8,21 @@ const Subscribe = () => {
             initial={
                 {
                     opacity: 0,
-                    y: 5
+                    y: 10
                 }
             }
             whileInView={
                 {
                     opacity: 1,
-                    y: 0
+                    y: 0,
+                    
                 }
 
             }
             viewport={{ once: false }}
             transition={{
-                y: { duration: 0.6 },
+                delay: 0.3,
+                y: { duration: 0.6, },
             }}
 
             className='py-5'>
@@ -31,14 +33,14 @@ const Subscribe = () => {
                     style={{ backgroundImage: 'url(/assets/banner-10-min.png)' }}>
 
                     <div
-                        className='text-center lg:text-left 
-                        w-full lg:w-[45%] xl:w-[50%] 2xl:w-[45%] absolute
-                        left-2 px-2 lg:left-[8%]  translate-y-[10%]
+                        className='text-center sm:text-left 
+                        w-full sm:w-3/5 lg:w-[45%] xl:w-[50%] 2xl:w-[45%] absolute
+                        left-2 px-2 sm:left-[5%] lg:left-[8%] translate-y-[10%]
                         md:translate-y-[30%] top-0 z-20'>
 
                         <h1
                             className='text-[22px] lg:text-[40px] text-start
-                            2xl:text-[72px] leading-[28px] lg:leading-[50px]
+                            2xl:text-[50px] leading-[28px] lg:leading-[50px]
                              2xl:leading-[80px]
                             font-bold text-[#253d4e] mb-4 lg:mb-8'>
 
