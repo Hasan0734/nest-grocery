@@ -8,7 +8,7 @@ const TopHeader = () => {
     return (
         <>
             <div className='hidden lg:block border-b border-gray-100'>
-                <div className='container mx-auto px-4 '>
+                <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                     <div className='flex flex-col lg:flex-row justify-between items-center'>
 
                         <HeaderMenu />

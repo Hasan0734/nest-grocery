@@ -130,3 +130,10 @@ body {
 .cat_card:hover {
     box-shadow: 1px 2px 8px 2px #c7c5c561;
 }
+
+.advantage_card .advantage_image{ 
+   transition: all 0.4s;
+}
+.advantage_card:hover .advantage_image{
+    transform: translateY(-7px);
+}

@@ -116,7 +116,7 @@ const FeaturedCategories = () => {
                 y: { duration: 0.4 },
             }}
             className=''>
-            <div className='container mx-auto px-4 mt-10'>
+            <div className='max-w-8xl mx-auto px-4 2xl:px-0 mt-10'>
 
                 <div className='flex justify-between '>
                     <div className='flex flex-col md:flex-row gap-8 justify-start md:items-center'>

@@ -13,7 +13,7 @@ const advantages = [
 const OurAdvantage = () => {
     return (
         <section>
-            <div className='container mx-auto px-4'>
+            <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5'>
                     {advantages.map((advantage) => <AdvantageCard
                         key={advantage.id}

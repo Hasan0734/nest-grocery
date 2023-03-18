@@ -10,7 +10,7 @@ const HomeBanner = () => {
 
     return (
         <>
-            <section className='container mx-auto pt-10'>
+            <section className='max-w-8xl mx-auto px-4 2xl:px-0 pt-10'>
 
                 <div className='mx-4 overflow-hidden'>
                     <Swiper

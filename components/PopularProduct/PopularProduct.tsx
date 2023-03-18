@@ -33,7 +33,7 @@ const PopularProduct = () => {
     const [selectedCategory, setCategory] = React.useState('All')
     return (
         <div className='py-4'>
-            <div className='container mx-auto px-4'>
+            <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div
                     className='flex flex-col md:flex-row gap-8
                     justify-start md:justify-between md:items-center'>

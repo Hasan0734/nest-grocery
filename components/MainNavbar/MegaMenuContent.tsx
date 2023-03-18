@@ -38,7 +38,7 @@ const megaMenuData = [
 const MegaMenuContent = () => {
     return (
         <>
-            <div className='nav_item_content z-20 invisible absolute left-0 container  opacity-0 px-4 duration-500'>
+            <div className='nav_item_content z-20 invisible absolute left-0 max-w-8xl mx-auto px-4 2xl:px-0 opacity-0 duration-500'>
                 <div className='w-full bg-white grid grid-cols-12 gap-10 p-5 rounded-b-lg'>
                     <div className='flex justify-between col-span-9'>
                         {megaMenuData.map((menu: any) => (<div key={menu.id}>

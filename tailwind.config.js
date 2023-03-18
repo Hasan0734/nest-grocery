@@ -8,7 +8,12 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    maxWidth:{
+      '8xl': '1586px'
+    },
+    extend: {
+
+    },
   },
   plugins: [],
 };

@@ -27,7 +27,7 @@ const SecondHeader = () => {
     return (
         <>
             <div className='border border-gray-200'>
-                <div className='lg:container mx-auto py-8 px-4 '>
+                <div className='max-w-8xl mx-auto px-4 2xl:px-0 py-8  '>
                     <div className='flex items-center justify-between gap-10 xl:gap-20'>
                         <div className='flex flex-col xl:flex-row  gap-8  xl:items-center w-full'>
                             <div className='flex justify-between'>

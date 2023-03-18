@@ -19,14 +19,14 @@ const Subscribe = () => {
                 }
 
             }
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{
                 delay: 0.3,
                 y: { duration: 0.6, },
             }}
 
             className='py-5'>
-            <div className='container mx-auto px-4'>
+            <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div className='relative
                 rounded-[30px] min-h-[350px]
                  lg:min-h-[450px] 2xl:min-h-[538px]'

@@ -3,9 +3,9 @@ import React from 'react';
 const AdvantageCard = ({ advantage}:any) => {
     return (
         <>
-            <div className='flex gap-5 items-center bg-[#f4f6fa] p-5 rounded-lg  xl:last:hidden'>
+            <div className='flex gap-5 items-center advantage_card bg-[#f4f6fa] p-5 rounded-lg  xl:last:hidden'>
                 <div>
-                    <img className='w-[60px]' src={advantage.icon} alt="" />
+                    <img className='w-[60px] advantage_image' src={advantage.icon} alt="" />
                 </div>
                 <div>
                     <h2
