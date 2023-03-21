@@ -1,4 +1,6 @@
 import HomeBanner from '@/components/Banner/HomeBanner'
+import DailyBestSells from '@/components/DailyBestSells/DailyBestSells'
+import DealsOfTheDay from '@/components/DealsOfTheDay/DealsOfTheDay'
 import FeaturedCategories from '@/components/FeaturedCategories/FeaturedCategories'
 import HomeCategory from '@/components/HomeCategory/HomeCategory'
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage'
@@ -25,6 +27,8 @@ const Home: NextPage = () => {
         <FeaturedCategories />
         <HomeCategory />
         <PopularProduct />
+        <DailyBestSells/>
+        <DealsOfTheDay/>
         <TopProducts/>
         <Subscribe />
         <OurAdvantage/>
