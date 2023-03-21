@@ -4,6 +4,7 @@ import HomeCategory from '@/components/HomeCategory/HomeCategory'
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage'
 import PopularProduct from '@/components/PopularProduct/PopularProduct'
 import Subscribe from '@/components/Subscribe/Subscribe'
+import TopProducts from '@/components/TopProducts/TopProducts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         <FeaturedCategories />
         <HomeCategory />
         <PopularProduct />
+        <TopProducts/>
         <Subscribe />
         <OurAdvantage/>
       </Layout>

@@ -17,6 +17,12 @@ body {
     @apply cursor-pointer text-sm text-gray-600 px-5 py-1 my-1
 }
 
+@layer components {
+    .top_products {
+      @apply  text-[24px] text-[#253d4e] font-bold border-b border-gray-200 py-6 relative before:absolute before:w-24  before:border before:border-[#3ee77b]/40 before:bottom-0 before:left-0;
+    }
+  }
+
 .font-quicksand {
     font-family: 'Quicksand', sans-serif;
 }

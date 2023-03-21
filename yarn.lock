@@ -1962,6 +1962,16 @@
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
 
+"prettier-plugin-tailwindcss@^0.2.5":
+  "integrity" "sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg=="
+  "resolved" "https://registry.npmjs.org/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.2.5.tgz"
+  "version" "0.2.5"
+
+"prettier@^2.8.5", "prettier@>=2.2.0":
+  "integrity" "sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.8.5.tgz"
+  "version" "2.8.5"
+
 "prop-types-exact@^1.2.0":
   "integrity" "sha512-K+Tk3Kd9V0odiXFP9fwDHUYRyvK3Nun3GVyPapSIs5OBkITAm15W0CPFD/YKTkMUAbc0b9CUwRQp2ybiBIq+eA=="
   "resolved" "https://registry.npmjs.org/prop-types-exact/-/prop-types-exact-1.2.0.tgz"

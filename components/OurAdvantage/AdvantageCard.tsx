@@ -19,7 +19,7 @@ const AdvantageCard = ({ advantage }: any) => {
                     }
                 }
 
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{
                     delay: 0.3,
                     y: { duration: 0.5 },
