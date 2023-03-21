@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Quicksand', sans-serif;

@@ -12,7 +12,7 @@ const HomeBanner = () => {
         <>
             <section className='max-w-8xl mx-auto px-4 2xl:px-0 pt-10'>
 
-                <div className='mx-4 overflow-hidden'>
+                <div className='overflow-hidden'>
                     <Swiper
                         slidesPerView={1}
                         slidesPerGroup={1}
