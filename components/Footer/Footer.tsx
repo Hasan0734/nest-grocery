@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
-import { Facebook, PhoneCall } from 'react-feather';
+import { PhoneCall } from 'react-feather';
 import { FaFacebookF, FaInstagram, FaSkype, FaTwitter } from 'react-icons/fa';
 import Address from './Address';
 import AppsInstall from './AppsInstall';
