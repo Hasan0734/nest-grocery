@@ -8,7 +8,6 @@ const Address = () => {
     return (
         <>
             <motion.div
-
                 initial={
                     {
                         opacity: 0.4,
@@ -21,8 +20,7 @@ const Address = () => {
                         y: 0
                     }
                 }
-
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{
                     delay: 0.2,
                     y: { duration: 0.5 },
@@ -38,9 +36,7 @@ const Address = () => {
                         <div>
                             <strong className='mr-2'>Address: </strong>
                             5171W Campbell Ave Kent, utah 53127 United States
-
                         </div>
-
                     </li>
                     <li className='flex gap-x-2 items-start py-2'>
                         <Headphones className='w-5 text-[#33b77e]' />
