@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -19,9 +19,9 @@ body {
 
 @layer components {
     .top_products {
-      @apply  text-[24px] text-[#253d4e] font-bold border-b border-gray-200 py-6 relative before:absolute before:w-24  before:border before:border-[#3ee77b]/40 before:bottom-0 before:left-0;
+        @apply text-[24px] text-[#253d4e] font-bold border-b border-gray-200 py-6 relative before:absolute before:w-24 before:border before:border-[#3ee77b]/40 before:bottom-0 before:left-0;
     }
-  }
+}
 
 .font-quicksand {
     font-family: 'Quicksand', sans-serif;
@@ -137,13 +137,26 @@ body {
 .cat_card:has(.cat_card_img:hover) {
     box-shadow: 1px 2px 8px 2px #c7c5c561;
 }
+
 .cat_card:hover {
     box-shadow: 1px 2px 8px 2px #c7c5c561;
 }
 
-.advantage_card .advantage_image{ 
-   transition: all 0.4s;
+.advantage_card .advantage_image {
+    transition: all 0.4s;
 }
-.advantage_card:hover .advantage_image{
+
+.advantage_card:hover .advantage_image {
     transform: translateY(-7px);
+}
+
+.deals_card .deals_card_content {
+    transition: all 0.3s;
+}
+.deals_card .deals_card_content .deals_content{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .05);
+}
+
+.deals_card:hover .deals_card_content {
+    transform: translateY(-5px);
 }

@@ -110,7 +110,7 @@ const FeaturedCategories = () => {
                     y: 0
                 }
             }
-            
+
             viewport={{ once: true }}
             transition={{
                 delay: 0.4,
@@ -175,6 +175,10 @@ const FeaturedCategories = () => {
                             },
                             1200: {
                                 slidesPerView: 8,
+
+                            },
+                            1400: {
+                                slidesPerView: 10,
 
                             }
                         }}
