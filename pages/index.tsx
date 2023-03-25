@@ -33,8 +33,6 @@ const Home: NextPage = () => {
         <Subscribe />
         <OurAdvantage/>
       </Layout>
-
-
     </>
   )
 }

@@ -1,19 +1,39 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from './Contact';
 import Menu from './Menu';
 import NavCategory from './NavCategory';
 
 const MainNavbar = () => {
 
+    const [navScroll, setNavScroll] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const changeNave = () => {
+                const scroll = 200;
+                // console.log(window.scrollY)
+                if (scroll <= window.scrollY) {
+                    setNavScroll(true);
+                } else {
+                    setNavScroll(false);
+                }
+            };
+            window.addEventListener("scroll", changeNave);
+        }
+
+    }, [])
+
     return (
-        <nav className='border hidden lg:block border-gray-200'>
-            <div className='max-w-8xl mx-auto px-4 2xl:px-0 relative'>
+        <nav
+            className={`border hidden lg:block border-gray-200  z-10            
+        ${navScroll ? "nav_stick" : ""} `}>
+            <div className='max-w-8xl mx-auto px-4 2xl:px-0  relative '>
                 <div className='flex gap-5 items-center justify-between'>
                     <div className='flex gap-3 2xl:gap-7'>
                         <div className='flex gap-10 2xl:gap-6 items-center'>
-                          
-                            <NavCategory/>
+
+                            <NavCategory />
 
                             <Link href="/hot-deals" legacyBehavior>
                                 <a className='flex items-center gap-1 font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
@@ -31,10 +51,11 @@ const MainNavbar = () => {
                                     <span>Hot Deals</span>
                                 </a>
                             </Link>
+
                         </div>
-                       <Menu/>
+                        <Menu />
                     </div>
-                   <Contact/>
+                    <Contact />
                 </div>
             </div>
         </nav>

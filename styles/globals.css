@@ -82,6 +82,31 @@ body {
     color: #3BB77E;
 }
 
+.nav_stick{
+    animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation-name: fadeInDown;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    transition: all .5s ease 0s;
+    background: white;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3D(0, -75px,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3D(0);
+    }
+}
+
 .banner_slider {
     border-radius: 30px;
     background-size: cover;
@@ -153,7 +178,8 @@ body {
 .deals_card .deals_card_content {
     transition: all 0.3s;
 }
-.deals_card .deals_card_content .deals_content{
+
+.deals_card .deals_card_content .deals_content {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .05);
 }
 

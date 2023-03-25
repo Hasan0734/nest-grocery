@@ -1,6 +1,5 @@
 import React from 'react';
 import CardContainer from './CardContainer';
-import TopProductCard from './TopProductCard';
 
 const topSelling = [
     {

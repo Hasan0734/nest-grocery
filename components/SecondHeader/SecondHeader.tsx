@@ -64,7 +64,7 @@ const SecondHeader = () => {
                             hover:-translate-y-1 duration-200 border-gray-200
                              drop-shadow-[0_10px_6px_rgba(0,0,0,0.05)]
                               bg-white px-3 py-[6px] rounded flex items-center space-x-2'>
-                                        <span className='text-[#3BB77E]'>Became Ventor</span>
+                                        <span className='text-[#3BB77E]'>Become Vendor</span>
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             fill="none" viewBox="0 0 24 24"
                                             strokeWidth={1.5} stroke="currentColor"
