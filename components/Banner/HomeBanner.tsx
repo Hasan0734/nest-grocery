@@ -1,12 +1,15 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
+import { Pagination, Autoplay, Navigation, EffectFade } from "swiper";
 import BannerForm from '../Shared/BannerForm';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
+import 'swiper/css/effect-fade';
+
+
 
 const HomeBanner = () => {
-    const swiperRef:any = useRef()
+    const swiperRef: any = useRef()
 
     return (
         <>
@@ -14,16 +17,20 @@ const HomeBanner = () => {
 
                 <div className='overflow-hidden'>
                     <Swiper
+                        effect={"fade"}
+                        fadeEffect={
+                            { crossFade: false }
+                        }
                         slidesPerView={1}
                         slidesPerGroup={1}
-                        speed={2500}
+                        speed={2000}
                         loop={true}
                         spaceBetween={20}
-                        onBeforeInit={(swiper:any) => {
+                        onBeforeInit={(swiper: any) => {
                             swiperRef.current = swiper
                         }}
                         autoplay={{
-                            delay: 3000,
+                            delay: 2000,
                             waitForTransition: true,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true
@@ -31,11 +38,11 @@ const HomeBanner = () => {
                         }}
                         pagination={{
                             clickable: true,
-                            
+
                             bulletActiveClass: "banner_paginate_bullet_active",
                             bulletClass: "banner_paginate_bullet"
                         }}
-                        modules={[Autoplay, Pagination, Navigation]}
+                        modules={[Autoplay, Pagination, Navigation, EffectFade]}
                         className="home_banner relative rounded-[30px]"
                     >
 
@@ -89,11 +96,11 @@ const HomeBanner = () => {
                         </SwiperSlide>
 
                         <div className='swiper-navigations z-20 absolute top-[50%] left-0 w-full flex justify-between'>
-                            <button onClick={() => swiperRef.current?.slidePrev()} 
+                            <button onClick={() => swiperRef.current?.slidePrev()}
                                 className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_prev'>
                                 <ChevronLeftIcon className='w-full' />
                             </button>
-                            <button onClick={() => swiperRef.current?.slideNext()} 
+                            <button onClick={() => swiperRef.current?.slideNext()}
                                 className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_next' >
                                 <ChevronRightIcon className='w-full' />
                             </button>
