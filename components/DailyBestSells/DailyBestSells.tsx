@@ -1,5 +1,9 @@
 import React from 'react';
 import slugify from 'slugify';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import BestSellCard from './BestSellCard';
+
 const categoris = [
     {
         id: 1,
@@ -28,6 +32,7 @@ const categoris = [
 ]
 
 const DailyBestSells = () => {
+    const swiperRef: any = React.useRef()
     const [selectedCategory, setCategory] = React.useState('All')
     return (
         <section>
@@ -51,6 +56,23 @@ const DailyBestSells = () => {
                             </a>
                         </li>))}
                     </ul>
+                </div>
+
+                <div className='mt-8 flex gap-4 overflow-hidden'>
+                    <div className='w-[382px] daily_cat_card p-12 rounded-2xl min-h-[520px]' >
+                        <h3 className='text-[#253d4e] font-bold mb-24 
+                        text-[40px] leading-[48px] w-[250px]
+                        '>Bring nature into your home</h3>
+                        <button className='bg-[#3bb77e] px-3 py-[6px]
+                         text-white rounded text-sm font-semibold'>Shop Now →</button>
+                    </div>
+                    <div className='grid grid-cols-4 gap-4'>
+
+                        <BestSellCard />
+                        <BestSellCard />
+                        <BestSellCard />
+                        <BestSellCard />
+                    </div>
                 </div>
             </div>
         </section>

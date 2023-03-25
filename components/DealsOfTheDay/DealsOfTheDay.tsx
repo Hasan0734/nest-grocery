@@ -1,7 +1,7 @@
 
 import React from 'react';
 import DealCard from './DealCard';
-const Fade = require("react-reveal/Fade")
+
 
 const deals = [
     {
@@ -56,11 +56,10 @@ const DealsOfTheDay = () => {
 
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                    {deals.map((deal: any, i) => <Fade bottom>
-                        <DealCard
-
+                    {deals.map((deal: any, i) =>  <DealCard
+                       
                             key={deal.id} deal={deal} />
-                    </Fade>)}
+                    )}
 
                 </div>
 
