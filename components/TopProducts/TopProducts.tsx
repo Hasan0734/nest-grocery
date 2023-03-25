@@ -1,4 +1,5 @@
 import React from 'react';
+import CardContainer from './CardContainer';
 import TopProductCard from './TopProductCard';
 
 const topSelling = [
@@ -59,7 +60,7 @@ const trendingProduct = [
         price_range: null
     },
 ]
-const recently_added = [
+const recentlyAdded = [
     {
         id: 1,
         name: 'Organic Cage Grade A Large  Eggs',
@@ -94,38 +95,10 @@ const TopProducts = () => {
         <section className='py-10'>
             <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div>
-                        <div
-                            className='top_products mb-4'>
-                            Top Selling
-                        </div>
-                        {topSelling.map((product) => <TopProductCard
-                            key={product.id}
-                            product={product} />)}
-                    </div>
-                    <div>
-                        <div
-                            className='top_products mb-4'>
-                            Trending Products
-                        </div>
-                        {trendingProduct.map((product) => <TopProductCard
-                            key={product.id}
-                            product={product} />)}
-                    </div>
-                    <div>
-                        <div
-                            className='top_products mb-4'>Recently added</div>
-                        {recently_added.map((product) => <TopProductCard
-                            key={product.id}
-                            product={product} />)}
-                    </div>
-                    <div>
-                        <div
-                            className='top_products mb-4'>Top Rated</div>
-                        {trendingProduct.map((product) => <TopProductCard
-                            key={product.id}
-                            product={product} />)}
-                    </div>
+                    <CardContainer card_name="Top Selling" products={topSelling} />
+                    <CardContainer card_name="Trending Products" products={trendingProduct} />
+                    <CardContainer card_name="Recently added" products={recentlyAdded} />
+                    <CardContainer card_name="Top Rated" products={trendingProduct} />
                 </div>
             </div>
         </section>
