@@ -36,7 +36,7 @@ const Subscribe = () => {
                         className='text-center sm:text-left 
                         w-full sm:w-3/5 lg:w-[45%] xl:w-[50%] 2xl:w-[45%] absolute
                         left-2 px-2 sm:left-[5%] lg:left-[8%] translate-y-[10%]
-                        md:translate-y-[30%] top-0 z-20'>
+                        md:translate-y-[30%] top-0 z-10'>
 
                         <h1
                             className='text-[22px] lg:text-[40px] text-start

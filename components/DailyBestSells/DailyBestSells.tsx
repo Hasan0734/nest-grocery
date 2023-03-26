@@ -58,21 +58,84 @@ const DailyBestSells = () => {
                     </ul>
                 </div>
 
-                <div className='mt-8 flex gap-4 overflow-hidden'>
-                    <div className='w-[382px] daily_cat_card p-12 rounded-2xl min-h-[520px]' >
+                <div className='mt-5 flex flex-col xs:flex-row justify-between gap-5 overflow-hidden'>
+
+                    <div className='min-w-[300px] xs:min-w-[382px] h-[520px] daily_cat_card 
+                    p-5 md:p-12 rounded-2xl' >
                         <h3 className='text-[#253d4e] font-bold mb-24 
                         text-[40px] leading-[48px] w-[250px]
                         '>Bring nature into your home</h3>
                         <button className='bg-[#3bb77e] px-3 py-[6px]
                          text-white rounded text-sm font-semibold'>Shop Now →</button>
                     </div>
-                    <div className='grid grid-cols-4 gap-4'>
 
-                        <BestSellCard />
-                        <BestSellCard />
-                        <BestSellCard />
-                        <BestSellCard />
-                    </div>
+                    {/* <div className='grid grid-cols-4 gap-4'> */}
+
+                    <Swiper
+                        slidesPerView={4}
+                        slidesPerGroup={1}
+                        spaceBetween={20}
+                        speed={2000}
+                        loop={true}
+                        className="daily_best_slider"
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                            },
+
+                            768: {
+                                slidesPerView: 1,
+
+                            },
+
+                            920: {
+                                slidesPerView: 2,
+                            },
+                            1350: {
+                                slidesPerView: 3,
+
+                            },
+                            1500: {
+                                slidesPerView: 4,
+
+                            },
+
+                        }}
+                    >
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <BestSellCard />
+                        </SwiperSlide>
+                    </Swiper>
+
+
+                    {/* </div> */}
                 </div>
             </div>
         </section>

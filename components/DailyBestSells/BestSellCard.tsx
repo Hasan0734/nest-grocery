@@ -1,28 +1,46 @@
-import { EyeIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
+import { EyeIcon, HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import React from 'react';
+import { Shuffle } from 'react-feather';
 import { NumericFormat } from 'react-number-format';
 import ProductRating from '../Shared/ProductRating';
 
 const BestSellCard = () => {
     return (
-        <div className='w-[280px] best_sell_card border cursor-pointer
-         border-gray-200 duration-300 rounded-[15px] overflow-hidden p-5'>
+        <div className=' best_sell_card border h-[520px]
+         border-gray-200 duration-300 rounded-[15px] overflow-hidden p-5 relative'>
             <div className='relative'>
-                <div className='relative'>
-                    <img className='card_image1' src="/assets/popular-product/product-1-1.jpg" alt="" />
-                    <img className='card_image2' src="/assets/popular-product/product-1-2.jpg" alt="" />
-
+                <div className='relative flex justify-center'>
+                    <div className='flex justify-center'>
+                        <img className='card_image1 w-[230px] h-[230px]' src="/assets/popular-product/product-1-1.jpg" alt="" />
+                        <img className='card_image2 w-[230px] h-[230px]' src="/assets/popular-product/product-1-2.jpg" alt="" />
+                    </div>
                 </div>
-                <ul className='absolute top-4 left-5'>
-                    <li>
-                        <EyeIcon width={15}/>
+                <ul className=' absolute left-[25%] product_action
+                 top-[36%] flex bg-white divide-x-2 z-10
+                  rounded-md border border-[#bce3c9] divide-[#3bb77e]/20' >
+                    <li className='relative'>
+                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                            <EyeIcon width={18} />
+
+                        </button>
+                        <small className='
+                        '>Quick view</small>
                     </li>
-                    <li>
-                        <EyeIcon width={15}/>
+                    <li className='relative'>
+                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                            <Shuffle size={18} />
+
+                        </button>
+                        <small className='
+                        '>Compare</small>
                     </li>
-                    <li>
-                        <EyeIcon width={15}/>
+                    <li className='relative'>
+                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                            <HeartIcon width={18} />
+                        </button>
+                        <small className='
+                        '>Wishlist</small>
                     </li>
                 </ul>
 
@@ -33,7 +51,7 @@ const BestSellCard = () => {
                     Fresh Fruit
                 </Link>
                 {/* title */}
-                <h3 className='text-[#253d4e] text-[16px] font-bold leading-5 my-3'>
+                <h3 className='text-[#253d4e] text-[16px] font-bold leading-5 my-2'>
                     <Link href={"/"}>
                         Sees of Change Organic Red Rice
                     </Link>
@@ -45,7 +63,7 @@ const BestSellCard = () => {
                     <span>1</span>
                 </div>
                 {/* price */}
-                <div className='flex gap-x-4 mt-3 items-center'>
+                <div className='flex gap-x-4 mt-2 items-center'>
                     <h5
                         className='text-[#3bb77e] 
                          text-[18px] font-bold underline'>
@@ -82,15 +100,25 @@ const BestSellCard = () => {
                     </div>
 
                 </div>
-                <span className='text-[#253d4e] text-[13px] font-semibold'>Sold: 243/356</span>
-                <button className='mt-4 bg-[#3bb77e] font-bold text-[14px]
+                <span
+                    className='text-[#253d4e] text-[13px] 
+                font-semibold'>Sold: 243/356</span>
+
+                <button
+                    className='mt-4 bg-[#3bb77e]
+                 hover:bg-[#fdc040] duration-500 font-bold text-[14px]
                  flex justify-center items-center gap-2 rounded text-white 
-                 px-4 py-3 w-full text-center'>
+                 px-4 py-[14px] w-full text-center'>
+
                     <ShoppingCartIcon strokeWidth={2} width={20} />
                     Add to Cart
                 </button>
             </div>
 
+            {/* product offer */}
+            <div className='absolute top-0 left-0 z-10'>
+                <div className='bg-[#3bb77e] px-5 py-2 text-white font-semibold text-[12px] rounded-br-2xl'>10%</div>
+            </div>
         </div >
     );
 };

@@ -26,7 +26,7 @@ const MainNavbar = () => {
 
     return (
         <nav
-            className={`border hidden lg:block border-gray-200  z-10            
+            className={`border hidden lg:block border-gray-200  z-20            
         ${navScroll ? "nav_stick" : ""} `}>
             <div className='max-w-8xl mx-auto px-4 2xl:px-0  relative '>
                 <div className='flex gap-5 items-center justify-between'>
