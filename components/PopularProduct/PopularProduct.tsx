@@ -1,5 +1,6 @@
 import React from 'react';
 import slugify from 'slugify';
+import ProductCard from './ProductCard';
 
 
 const categoris = [
@@ -32,7 +33,7 @@ const categoris = [
 const PopularProduct = () => {
     const [selectedCategory, setCategory] = React.useState('All')
     return (
-        <div className='py-4'>
+        <div className='my-8'>
             <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div
                     className='flex flex-col md:flex-row gap-8
@@ -48,11 +49,19 @@ const PopularProduct = () => {
                                 className={`text-[#253d4e] font-semibold
                                  text-[15px] cursor-pointer hover:text-[#3bb77e]
                                  hover:-translate-y-[3px] block duration-300
-                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-[#3bb77e]': "" }`}>
+                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-[#3bb77e]' : ""}`}>
                                 {category.name}
                             </a>
                         </li>))}
                     </ul>
+                </div>
+
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 mt-10'>
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
                 </div>
             </div>
         </div>

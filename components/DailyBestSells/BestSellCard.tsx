@@ -16,7 +16,7 @@ const BestSellCard = () => {
                         <img className='card_image2 w-[230px] h-[230px]' src="/assets/popular-product/product-1-2.jpg" alt="" />
                     </div>
                 </div>
-                <ul className=' absolute left-[25%] product_action
+                <ul className=' absolute left-1/2 product_action
                  top-[36%] flex bg-white divide-x-2 z-10
                   rounded-md border border-[#bce3c9] divide-[#3bb77e]/20' >
                     <li className='relative'>

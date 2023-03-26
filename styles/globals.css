@@ -209,6 +209,7 @@ body {
 .best_sell_card .product_action{
     visibility: hidden;
     opacity: 0;
+    transform: translateX(-50%);
     
 }
 .best_sell_card:hover .product_action{

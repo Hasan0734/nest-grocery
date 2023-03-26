@@ -58,9 +58,9 @@ const DailyBestSells = () => {
                     </ul>
                 </div>
 
-                <div className='mt-5 flex flex-col xs:flex-row justify-between gap-5 overflow-hidden'>
+                <div className='mt-5 flex flex-col sm:flex-row justify-between gap-5 overflow-hidden'>
 
-                    <div className='min-w-[300px] xs:min-w-[382px] h-[520px] daily_cat_card 
+                    <div className='sm:max-w-[320px] h-[520px] daily_cat_card 
                     p-5 md:p-12 rounded-2xl' >
                         <h3 className='text-[#253d4e] font-bold mb-24 
                         text-[40px] leading-[48px] w-[250px]
@@ -77,7 +77,7 @@ const DailyBestSells = () => {
                         spaceBetween={20}
                         speed={2000}
                         loop={true}
-                        className="daily_best_slider"
+                        className="daily_best_slider w-full"
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
