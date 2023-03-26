@@ -1,3 +1,4 @@
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 import slugify from 'slugify';
 import { Navigation } from 'swiper';
@@ -40,9 +41,28 @@ const DailyBestSells = () => {
                 <div
                     className='flex flex-col md:flex-row gap-8
                     justify-start md:justify-between md:items-center'>
-                    <h2
-                        className='text-[#253d4e] font-bold text-[32px] 
+                    <div className='flex items-center space-x-28'>
+                        <h2
+                            className='text-[#253d4e] font-bold text-[32px] 
                         leading-[30px]'>Daily Best Sells</h2>
+                        <div className='gap-4 hidden lg:flex'>
+                            <button
+                                onClick={() => swiperRef.current?.slidePrev()}
+                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+
+                                <ArrowLeftIcon className='w-full' />
+                            </button>
+                            <button
+                                onClick={() => swiperRef.current?.slideNext()}
+                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+
+                                <ArrowRightIcon className='w-full' />
+                            </button>
+
+                        </div>
+                    </div>
+
+
                     <ul className='flex gap-4 flex-wrap'>
                         {categoris.map((category: any) => (<li
                             key={category.id}
@@ -77,6 +97,12 @@ const DailyBestSells = () => {
                         spaceBetween={20}
                         speed={2000}
                         loop={true}
+                        onBeforeInit={(swiper: any) => {
+                            swiperRef.current = swiper
+                        }}
+
+                        modules={[Navigation]}
+
                         className="daily_best_slider w-full"
                         breakpoints={{
                             320: {

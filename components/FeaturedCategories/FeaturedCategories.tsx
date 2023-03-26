@@ -184,7 +184,9 @@ const FeaturedCategories = () => {
                         }}
                     >
 
-                        {featuredCat.map((category: any) => <SwiperSlide key={category.id} className='py-5'> <CategoryCard category={category} />
+                        {featuredCat.map((category: any) => <SwiperSlide
+                         key={category.id} className='py-5'> 
+                         <CategoryCard category={category} />
                         </SwiperSlide>
                         )}
 
