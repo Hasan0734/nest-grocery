@@ -10,45 +10,57 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Layout from '../components/Layout'
 import { Navigation } from 'swiper';
 import WhatWeProvideCard from '@/components/WhatWeProvideCard/WhatWeProvideCard'
-
+const Fade = require('react-reveal/Fade')
 
 const weProvides = [
   {
     id: 1,
     title: 'Best Prices & Offers',
     icon: '/assets/icons/icon-1.png',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 100
   },
   {
     id: 2,
     title: 'Wide Assortment',
     icon: '/assets/icons/icon-2.png',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 100
   },
   {
     id: 3,
     title: 'Free Delivery',
     icon: '/assets/icons/icon-3.png',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 100
   },
   {
     id: 4,
     title: 'Easy Returns',
     icon: '/assets/icons/icon-4.png',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 200
   },
   {
     id: 5,
     title: '100% Satisfaction',
     icon: '/assets/icons/icon-5.png',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 200
   },
   {
     id: 6,
     title: 'Great Daily Deal',
     icon: '/assets/icons/icon-6.svg',
-    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+    fadeDealy: 200
   },
+]
+
+const our_history = [
+  { id: 1, title: 'Who we area', desc: '' },
+  { id: 1, title: 'Our history', desc: '' },
+  { id: 1, title: 'Our mission', desc: '' },
 ]
 
 const About: NextPage = () => {
@@ -81,7 +93,9 @@ const About: NextPage = () => {
         <section>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-10 max-w-7xl mx-auto px-4 2xl:px-0'>
             <div>
-              <img className='rounded-xl' src="/assets/about/about-1.png" alt="" />
+              <Fade bottom>
+                <img className='rounded-xl' src="/assets/about/about-1.png" alt="" />
+              </Fade>
             </div>
             <div className='px-4 md:px-0 '>
               <div className='pt-6'>
@@ -172,6 +186,47 @@ const About: NextPage = () => {
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
               {weProvides.map((provide) => <WhatWeProvideCard key={provide.id} provide={provide} />)}
+
+            </div>
+          </div>
+        </section>
+        <section className='mt-16'>
+          <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
+            <div className='grid grid-cols-2 gap-10'>
+              <div>
+                <Fade bottom>
+                  <img src="/assets/about/about-5.png" alt="" />
+                </Fade>
+              </div>
+              <div className='flex items-center'>
+                <div className=''>
+                  <h3 className='text-[#3bb77e] text-2xl mb-5 font-bold'>Our performance</h3>
+                  <h3 className='text-[#253d4e] text-[30px] mb-5 font-bold leading-8'>
+                    Your Partner for <br />e-commerce grocery solution
+                  </h3>
+
+                  <div>
+                    <p className='text-[#7e7e7e] text-[16px] leading-7 font-medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aliquam cum delectus. Iure aliquam quis repellendus eaque ea! Libero odio iusto ad perferendis excepturi cupiditate!
+                    </p>
+                    <br />
+                    <p className='text-[#7e7e7e] text-[16px] leading-7 font-medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aliquam cum delectus. Iure aliquam quis repellendus eaque ea! Libero odio
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section className='mt-16'>
+          <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+              {our_history.map((history: any) => <div key={history.id}>
+                <h2 className='text-[#253d4e] text-[32px] mb-5 font-bold'>
+                  {history.title}
+                </h2>
+                <p className='text-[#7e7e7e] text-[16px] leading-7 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequatur nesciunt officiis quas at quam, excepturi earum corporis?</p>
+              </div>)}
 
             </div>
           </div>

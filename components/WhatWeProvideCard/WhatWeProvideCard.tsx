@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
+const Fade = require('react-reveal/Fade')
+
 
 const WhatWeProvideCard = ({ provide }: any) => {
     return (
-        <>
+        <Fade bottom delay={provide.fadeDealy}>
             <div className='px-6 py-10 border border-gray-200 rounded-xl hover:shadow-[3px_6px_15px_rgba(0,0,0,0.05)]'>
                 <div className='pb-7 pt-4 flex justify-center'>
                     <img className='w-[20%] sm:w-[30%]' src={provide.icon} alt="" />
@@ -22,7 +24,7 @@ const WhatWeProvideCard = ({ provide }: any) => {
                     Read More
                 </Link>
             </div>
-        </>
+        </Fade>
     );
 };
 
