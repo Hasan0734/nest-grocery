@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import Footer from './Footer/Footer';
 import MainNavbar from './MainNavbar/MainNavbar';
@@ -6,6 +7,9 @@ import SecondHeader from './SecondHeader/SecondHeader';
 import TopHeader from './TopHeader/TopHeader';
 
 const Layout = ({ children }: any) => {
+
+    const router = useRouter();
+
     return (
         <>
             <TopHeader />
@@ -13,7 +17,7 @@ const Layout = ({ children }: any) => {
             <MainNavbar />
             {children}
             <Footer />
-            <MobileMenu />
+           {router.pathname === '/' &&  <MobileMenu />}
         </>
     );
 };
