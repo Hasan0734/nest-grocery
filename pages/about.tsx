@@ -10,6 +10,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Layout from '../components/Layout'
 import { Navigation } from 'swiper';
 import WhatWeProvideCard from '@/components/WhatWeProvideCard/WhatWeProvideCard'
+import RecordsCountUp from '@/components/RecordsCountUp/RecordsCountUp'
+import { FaFacebookF, FaInstagram, FaSkype, FaTwitter } from 'react-icons/fa'
 const Fade = require('react-reveal/Fade')
 
 const weProvides = [
@@ -63,6 +65,14 @@ const our_history = [
   { id: 1, title: 'Our mission', desc: '' },
 ]
 
+const records = [
+  { id: 1, name: 'Glorious years', total: '3' },
+  { id: 2, name: 'Happy clients', total: '15' },
+  { id: 3, name: 'Projects complete', total: '17' },
+  { id: 4, name: 'Team advisor', total: '10' },
+  { id: 5, name: 'Product Sale', total: '8' },
+]
+
 const About: NextPage = () => {
   const swiperRef: any = React.useRef()
 
@@ -89,7 +99,7 @@ const About: NextPage = () => {
           </ul>
         </BreadCrumbs>
 
-
+        {/* welcome section */}
         <section>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-10 max-w-7xl mx-auto px-4 2xl:px-0'>
             <div>
@@ -178,6 +188,7 @@ const About: NextPage = () => {
           </div>
         </section>
 
+        {/* what we provide */}
         <section className='mt-10'>
           <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
             <h2 className='text-[#253D4E] text-[30px] 
@@ -190,9 +201,12 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
+
+
+        {/* our performance */}
         <section className='mt-16'>
           <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='grid grid-cols1 md:grid-cols-2 gap-10'>
               <div>
                 <Fade bottom>
                   <img src="/assets/about/about-5.png" alt="" />
@@ -218,6 +232,8 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
+
+        {/* our history */}
         <section className='mt-16'>
           <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
@@ -228,6 +244,114 @@ const About: NextPage = () => {
                 <p className='text-[#7e7e7e] text-[16px] leading-7 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequatur nesciunt officiis quas at quam, excepturi earum corporis?</p>
               </div>)}
 
+            </div>
+          </div>
+        </section>
+
+
+        {/* record counter */}
+        <section className='mt-16 counter_section'>
+          <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
+            <div className='z-10 relative py-24 rounded-3xl
+             before:rounded-3xl counter before:absolute before:-z-10
+             before:bg-[#4b675a]/80 before:h-full before:w-full before:top-0'>
+              <div className='z-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 max-w-7xl mx-auto
+             gap-x-6 gap-y-16'>
+                {records.map((item) => <RecordsCountUp key={item.id} records={item} />)}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* teams sections */}
+        <section className='mt-16 mb-28'>
+          <div className='max-w-7xl  mx-auto px-4 2xl:px-0'>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-20">
+              <div className='pr-1'>
+                <h3 className='text-2xl text-[#3bb77e] font-semibold mb-4'>Our Team</h3>
+
+                <h1 className='text-[#253d4e] text-[30px] font-bold mb-6'>Meet Our Expert Team</h1>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, omnis. Minus nihil omnis magni veniam delectus, dignissimos obcaecati non quisquam?</p>
+
+                <br />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus exercitationem odit mollitia culpa ad tempora, minus ipsum dolorum eius voluptatibus!</p>
+                <br />
+                <br />
+                <Link href={"/"} className="px-3 py-3 bg-[#3bb77e] rounded hover:bg-[#fdc040] duration-300 text-white font-bold text-sm">
+                  View All Members
+                </Link>
+              </div>
+              <Fade bottom>
+                <div className='relative team_card'>
+                  <img className='rounded-2xl' src="/assets/about/about-6.png" alt="" />
+                  <div className='absolute -bottom-16 w-full px-5 md:px-10 card_content'>
+
+                    <div className='bg-white w-full rounded-xl p-8 text-center drop-shadow-[0_8px_10px_rgba(0,0,0,0.05)] content'>
+                      <h2 className='text-[#253d4e] text-2xl font-bold'>H. Merinda</h2>
+                      <h5 className='text-[17px] text-[#7e7e7e]'>CEO & Co-Founder</h5>
+                      <ul className='flex gap-2 items-center justify-center mt-4'>
+                        <li>
+                          <a href="https://facebook.com/h.merinda">
+                            <FaFacebookF className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/h.merinda">
+                            <FaTwitter className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://skype.com/h.merinda">
+                            <FaSkype className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://instagram.com/h.merinda">
+                            <FaInstagram className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className='relative team_card'>
+                  <img className='rounded-2xl' src="/assets/about/about-8.png" alt="" />
+                  <div className='absolute -bottom-16 w-full px-5 md:px-10 card_content'>
+
+                    <div className='bg-white w-full rounded-xl p-8 text-center drop-shadow-[0_8px_10px_rgba(0,0,0,0.05)] content'>
+                      <h2 className='text-[#253d4e] text-2xl font-bold'>H. Merinda</h2>
+                      <h5 className='text-[17px] text-[#7e7e7e]'>CEO & Co-Founder</h5>
+                      <ul className='flex gap-2 items-center justify-center mt-4'>
+                        <li>
+                          <a href="https://facebook.com/h.merinda">
+                            <FaFacebookF className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/h.merinda">
+                            <FaTwitter className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://skype.com/h.merinda">
+                            <FaSkype className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://instagram.com/h.merinda">
+                            <FaInstagram className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Fade>
             </div>
           </div>
         </section>

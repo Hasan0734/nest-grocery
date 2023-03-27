@@ -283,3 +283,18 @@ body {
     background-position: center bottom;
     padding-bottom: 36px;
 }
+
+.counter_section .counter{
+    background-image: url('/assets/about/about-9.png');
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.team_card .card_content .content{
+  transition: all 0.3s;
+}
+.team_card:hover .card_content .content{
+   transform: translateY(-100px);
+}
