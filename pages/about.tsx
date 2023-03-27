@@ -1,6 +1,6 @@
 
 import BreadCrumbs from '@/components/Shared/BreadCrumbs'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -9,7 +9,47 @@ import { Home } from 'react-feather'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Layout from '../components/Layout'
 import { Navigation } from 'swiper';
+import WhatWeProvideCard from '@/components/WhatWeProvideCard/WhatWeProvideCard'
 
+
+const weProvides = [
+  {
+    id: 1,
+    title: 'Best Prices & Offers',
+    icon: '/assets/icons/icon-1.png',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+  {
+    id: 2,
+    title: 'Wide Assortment',
+    icon: '/assets/icons/icon-2.png',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+  {
+    id: 3,
+    title: 'Free Delivery',
+    icon: '/assets/icons/icon-3.png',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+  {
+    id: 4,
+    title: 'Easy Returns',
+    icon: '/assets/icons/icon-4.png',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+  {
+    id: 5,
+    title: '100% Satisfaction',
+    icon: '/assets/icons/icon-5.png',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+  {
+    id: 6,
+    title: 'Great Daily Deal',
+    icon: '/assets/icons/icon-6.svg',
+    about: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form'
+  },
+]
 
 const About: NextPage = () => {
   const swiperRef: any = React.useRef()
@@ -23,30 +63,30 @@ const About: NextPage = () => {
 
       <Layout>
         <BreadCrumbs>
-          <ul className='flex items-center gap-5'>
-            <li className=' flex space-x-5 items-center' >
+          <ul className='flex items-center gap-3'>
+            <li className=' flex space-x-3 items-center' >
               <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
                 <Home size={15} />
-                <span className='font-medium'>Home</span>
+                <span className='font-medium text-sm'>Home</span>
               </Link>
-              <ChevronRightIcon width={12} />
+              <ChevronRightIcon strokeWidth={2.5} width={10} />
             </li>
             <li className=' flex space-x-5 items-center'>
-              <span className='font-medium'>About</span>
+              <span className='font-medium text-sm'>About</span>
             </li>
           </ul>
         </BreadCrumbs>
 
 
         <section>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-10 max-w-5xl mx-auto px-4 2xl:px-0'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-10 max-w-7xl mx-auto px-4 2xl:px-0'>
             <div>
               <img className='rounded-xl' src="/assets/about/about-1.png" alt="" />
             </div>
-            <div className='px-4 md:px-0'>
-              <div>
+            <div className='px-4 md:px-0 '>
+              <div className='pt-6'>
                 <h2 className='text-[40px] text-[#253D4E] font-bold mb-4' >Welcome to Nest</h2>
-                <p className='text-[#7E7E7E] text-sm leading-5 font-normal'>
+                <p className='text-[#7E7E7E] text-[16px] leading-6 font-normal'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate id est laborum.
                   <br />
                   <br />
@@ -105,14 +145,16 @@ const About: NextPage = () => {
                   </SwiperSlide>
                   <div className='swiper-navigations z-20 absolute top-[50%]
                   -translate-y-[50%]
-                  left-0 w-full flex justify-between'>
+                  left-0  w-full flex justify-between'>
                     <button onClick={() => swiperRef.current?.slidePrev()}
-                      className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_prev'>
-                      <ChevronLeftIcon className='w-full' />
+                      className='bg-white w-9 h-9 hover:bg-[#3bb77e]
+                       hover:text-white rounded-full p-2 ml-2'>
+                      <ArrowLeftIcon className='w-full' />
                     </button>
                     <button onClick={() => swiperRef.current?.slideNext()}
-                      className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_next' >
-                      <ChevronRightIcon className='w-full' />
+                      className='bg-white w-9 h-9 hover:bg-[#3bb77e]
+                       hover:text-white rounded-full p-2 mr-2' >
+                      <ArrowRightIcon className='w-full' />
                     </button>
                   </div>
 
@@ -122,11 +164,16 @@ const About: NextPage = () => {
           </div>
         </section>
 
-        <section>
-          <div className='max-w-5xl mx-auto px-4 2xl:px-0'>
-            <h2 className='text-[#253D4E] text-[40px] 
+        <section className='mt-10'>
+          <div className='max-w-7xl mx-auto px-4 2xl:px-0'>
+            <h2 className='text-[#253D4E] text-[30px] 
             font-bold text-center about_wave'>
               What We Provide?</h2>
+
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
+              {weProvides.map((provide) => <WhatWeProvideCard key={provide.id} provide={provide} />)}
+
+            </div>
           </div>
         </section>
       </Layout>
