@@ -110,12 +110,12 @@ const DailyBestSells = () => {
                             },
 
                             768: {
-                                slidesPerView: 1,
+                                slidesPerView: 2,
 
                             },
 
                             920: {
-                                slidesPerView: 2,
+                                slidesPerView: 3,
                             },
                             1350: {
                                 slidesPerView: 3,

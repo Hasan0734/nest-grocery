@@ -3,35 +3,26 @@ import Link from 'next/link';
 import React from 'react';
 import MegaMenuContent from './MegaMenuContent';
 
-const menuItems = [
-    { id: 1, title: "Home", route: "/" },
-    { id: 2, title: "About Us", route: "/about-us" },
-    { id: 3, title: "Shop", route: "/shop" },
-    { id: 4, title: "Vendors", route: "/vendors" },
-    { id: 5, title: "Mega Menu", route: "/mega-menu" },
-    { id: 6, title: "Blog", route: "/blog" },
-    { id: 7, title: "Contact", route: "/contact" },
-]
+
 
 const Menu = () => {
     return (
         <>
             <ul className='flex gap-4 items-center'>
                 <li>
-                    <Link href={"/"} legacyBehavior>
-                        <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center ' href="">
-                            <span>Home</span>
-                        </a>
+                    <Link href={"/"} 
+                    className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                        Home
                     </Link>
                 </li>
                 <li>
-                    <Link href={"/about"} legacyBehavior>
-                        <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center ' href="">
-                            <span>About</span>
-                            {/* <ChevronDownIcon className="w-3" /> */}
-                        </a>
+                    <Link href={"/about"} 
+                    className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                        About
+                        
+
                     </Link>
                 </li>
                 <li>
