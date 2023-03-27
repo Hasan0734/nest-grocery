@@ -181,18 +181,18 @@ body {
     background-size: cover;
 }
 
-.best_sell_card:hover{
+.product_card:hover{
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .05);
 }
-.best_sell_card .card_image1{
+.product_card .card_image1{
     transition: all 1.5s cubic-bezier(0,0,.05,1);
     visibility: visible;
 }
-.best_sell_card:hover .card_image1{
+.product_card:hover .card_image1{
     visibility: hidden;
 }
 
-.best_sell_card .card_image2{
+.product_card .card_image2{
     top: 0;
     z-index: 2;
     transition:  .25s opacity, .25s visibility, transform 1.5s cubic-bezier(0,0,.2,1);
@@ -201,25 +201,25 @@ body {
     opacity: 0;
 
 }
-.best_sell_card:hover .card_image2{
+.product_card:hover .card_image2{
     visibility: visible;
     opacity: 1;
     transform: scale3d(1.05,1.05,1.05) translateZ(0);
 }
-.best_sell_card .product_action{
+.product_card .product_action{
     visibility: hidden;
     opacity: 0;
     transform: translateX(-50%);
     
 }
-.best_sell_card:hover .product_action{
+.product_card:hover .product_action{
     visibility: visible;
     opacity: 1;
     
 }
 
 
-.best_sell_card .product_action li small {
+.product_card .product_action li small {
     font-weight: 500;
     visibility: hidden;
     transform: translateX(-50%) translateY(0px);
@@ -238,7 +238,7 @@ body {
     opacity: 0;
 }
 
-.best_sell_card .product_action li small::before {
+.product_card .product_action li small::before {
     content: "";
     position: absolute;
     left: calc(50% - 7px);
@@ -251,7 +251,7 @@ body {
 
 }
 
-.best_sell_card .product_action li:hover small{
+.product_card .product_action li:hover small{
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(-8px);

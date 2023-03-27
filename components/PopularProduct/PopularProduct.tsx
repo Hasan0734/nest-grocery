@@ -1,6 +1,6 @@
 import React from 'react';
 import slugify from 'slugify';
-import ProductCard from './ProductCard';
+import ProductCard from '../Shared/ProductCard';
 
 
 const categoris = [

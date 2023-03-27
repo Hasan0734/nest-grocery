@@ -3,12 +3,12 @@ import Link from 'next/link';
 import React from 'react';
 import { Shuffle } from 'react-feather';
 import { NumericFormat } from 'react-number-format';
-import ProductRating from '../Shared/ProductRating';
+import ProductRating from './ProductRating';
 
 const ProductCard = () => {
     return (
         <>
-            <div className=' best_sell_card border 
+            <div className=' product_card border 
          border-gray-200 duration-300 rounded-[15px] overflow-hidden p-5 relative'>
                 <div className='relative'>
                     <div className='relative flex justify-center'>

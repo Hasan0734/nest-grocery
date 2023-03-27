@@ -10,27 +10,29 @@ const Menu = () => {
         <>
             <ul className='flex gap-4 items-center'>
                 <li>
-                    <Link href={"/"} 
-                    className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                    <Link href={"/"}
+                        className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center '>
                         Home
                     </Link>
                 </li>
                 <li>
-                    <Link href={"/about"} 
-                    className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                    <Link href={"/about"}
+                        className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center '>
                         About
-                        
+
 
                     </Link>
                 </li>
                 <li>
-                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center ' >
-                        <span>Shop</span>
-                        <ChevronDownIcon className="w-3" />
-                    </button>
+                    <Link href={"/shop"}
+                        className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                        Shop
+
+
+                    </Link>
                 </li>
                 <li>
 
