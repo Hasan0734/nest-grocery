@@ -5,10 +5,9 @@ import React from 'react';
 const CategoryListBox = ({ category }: any) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const subRef: any = React.useRef()
-    console.log(subRef?.current?.clientHeight)
     return (
         <>
-            <li className='my-[10px]'>
+            <li className='my-[8px]'>
                 <div className='border border-gray-200 p-2 rounded
              flex justify-between items-center'>
                     <Link href={`/`} className='flex gap-2 items-center'>
@@ -24,15 +23,21 @@ const CategoryListBox = ({ category }: any) => {
                         <span className='bg-green-black text-white text-xs rounded-full px-2 py-[3px] block text-center align-middle' >7</span>
                     </div>
                 </div>
+
+
                 {/* sub category */}
 
                 {category.sub?.length > 0 && (
-                    <ul ref={subRef} 
-                    className={`my-2 ${isOpen ? 'block' : 'hidden overflow-hidden'}`}
-                
+                    <ul
+                    ref={subRef}
+                        className={` overflow-hidden transition-all duration-500
+                     ${isOpen ? 'my-2' : ''}`}
+                        style={{height: isOpen ? `${subRef.current?.scrollHeight}px` : '0px'}}
                     >
-                        {category.sub?.map((sub: any) => <li key={sub.id} className={`p-2 
-                    flex  justify-between items-center duration-300 my-2 `}>
+                        {category.sub?.map((sub: any) => <li
+                            key={sub.id}
+                            className={`p-2 flex  justify-between items-center duration-300 my-2 `}>
+                    
                             <Link href={`/`} className='flex gap-2 items-center'>
                                 <img
                                     className='w-[30px] ' src={sub.icon} alt="" />

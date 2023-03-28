@@ -28,13 +28,17 @@ module.exports = {
       maxWidth: {
         "8xl": "1586px",
       },
-      colors:{
-        'gray-black': '#253d4e',
-        'green-black': '#3bb773',
-        'light-gray': '#7e7e7e',
-        'orange-light': '#fdc040',
-      }
+      colors: {
+        "gray-black": "#253d4e",
+        "green-black": "#3bb773",
+        "light-gray": "#7e7e7e",
+        "orange-light": "#fdc040",
+      },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [require("@tailwindcss/line-clamp"), 
+  require("tailwind-scrollbar") ({nocompatible:true})],
+  variants:{
+    scrollbar: ['rounded']
+  }
 };

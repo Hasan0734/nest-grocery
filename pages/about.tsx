@@ -12,6 +12,8 @@ import { Navigation } from 'swiper';
 import WhatWeProvideCard from '@/components/WhatWeProvideCard/WhatWeProvideCard'
 import RecordsCountUp from '@/components/RecordsCountUp/RecordsCountUp'
 import { FaFacebookF, FaInstagram, FaSkype, FaTwitter } from 'react-icons/fa'
+import Subscribe from '@/components/Subscribe/Subscribe'
+import OurAdvantage from '@/components/OurAdvantage/OurAdvantage'
 const Fade = require('react-reveal/Fade')
 
 const weProvides = [
@@ -80,7 +82,7 @@ const About: NextPage = () => {
     <>
       <Head>
         <title>About -Nest </title>
-        <link rel="icon" href="/favicon.ico" />
+   
       </Head>
 
       <Layout>
@@ -355,6 +357,9 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
+
+        <Subscribe />
+        <OurAdvantage/>
       </Layout>
     </>
   )

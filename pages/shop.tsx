@@ -1,88 +1,41 @@
 import Layout from '@/components/Layout';
+import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
-import CategoryListBox from '@/components/Shared/CategoryListBox';
 import ProductCard from '@/components/Shared/ProductCard';
-import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import ShopCategories from '@/components/ShopCategories/ShopCategories';
+import ShopTags from '@/components/ShopTags/ShopTags';
+import ShopTopRatedProduct from '@/components/ShopTopRatedProduct/ShopTopRatedProduct';
+import ShopTrendingProduct from '@/components/ShopTrendingProduct/ShopTrendingProduct';
+import Subscribe from '@/components/Subscribe/Subscribe';
+import { Listbox } from '@headlessui/react';
+import { ChevronDownIcon, ChevronRightIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
-import { Home } from 'react-feather';
+import React, { useState } from 'react';
+import { Grid, Home, List } from 'react-feather';
 
 
-
-const categories = [
-    {
-        id: 1,
-        name: "Baking material",
-        sub: null,
-        icon: "/assets/icons/category/category-2.png"
-    },
-    {
-        id: 2,
-        name: "Bread and Juice",
-        sub: null,
-        icon: "/assets/icons/category/category-11.png"
-    },
-    {
-        id: 3,
-        name: "Clothing & beauty",
-        sub: null,
-        icon: "/assets/icons/category/category-3.png"
-    },
-    {
-        id: 4,
-        name: "Dals of The Day",
-        sub: null,
-        icon: "/assets/icons/category/category-1.png"
-    },
-    {
-        id: 5,
-        name: "Fresh Fruit",
-        sub: [
-            { id: 1, name: 'Fresh Fruit', icon: '/assets/icons/category/category-7.png' },
-            { id: 2, name: 'Uncategorized', icon: '/assets/icons/category/category-7.png' },
-        ],
-        icon: "/assets/icons/category/category-7.png"
-    },
-    {
-        id: 6,
-        name: "Fresh Seafood",
-        sub: null,
-        icon: "/assets/icons/category/category-10.png"
-    },
-    {
-        id: 7,
-        name: "Milks and Dairies",
-        sub: null,
-        icon: "/assets/icons/category/category-6.png"
-    },
-    {
-        id: 8,
-        name: "Uncategorized",
-        sub: null,
-        icon: "/assets/icons/category/category-2.png"
-    },
-    {
-        id: 9,
-        name: "Vegetables",
-        sub: null,
-        icon: "/assets/icons/category/category-8.png"
-    },
-    {
-        id: 10,
-        name: "Wines & Drinks",
-        sub: null,
-        icon: "/assets/icons/category/category-9.png"
-    },
+const sorts = [
+    { id: 1, name: 'Default sorting' },
+    { id: 2, name: 'Sort by popularity' },
+    { id: 3, name: 'Sort by average rating' },
+    { id: 4, name: 'Sort by latest' },
+    { id: 5, name: 'Sort by price: low to high' },
+    { id: 6, name: 'Sort by price: high to low' },
 ]
 
 const shop: NextPage = () => {
+
+    const [layout, setLayout] = useState('GRID');
+    const [selectedSort, setSelectedSort] = useState(sorts[0]);
+
+
     return (
         <>
             <Head>
                 <title>Nest - Grocery Store SPA Website</title>
-                <link rel="icon" href="/favicon.ico" />
+
             </Head>
 
             <Layout>
@@ -102,9 +55,9 @@ const shop: NextPage = () => {
                 </BreadCrumbs>
 
                 <section className='my-16'>
-                    <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
-                        <div className='flex gap-10'>
-                            <div className='min-w-[400px] pr-4'>
+                    <div className='max-w-xl md:max-w-3xl lg:max-w-8xl mx-auto px-4 2xl:px-0'>
+                        <div className='flex flex-col lg:flex-row  gap-5 xl:gap-10'>
+                            <div className='order-2 md:order-1 min-w-full sm:min-w-[400px] pr-0 lg:pr-4'>
 
                                 {/* search bar */}
                                 <div className='mb-10'>
@@ -123,35 +76,110 @@ const shop: NextPage = () => {
 
                                     </form>
                                 </div>
+
                                 {/* product categories */}
-                                <div className='border border-gray-200 rounded-2xl shadow-[8px_5px_10px_rgba(0,0,0,0.05)] p-8'>
+                                <ShopCategories />
 
-                                    <h1 className='text-gray-black text-2xl font-bold border-b border-gray-200 pb-4 relative before:absolute before:w-20 before:left-0 before:bottom-0 before:bg-green-black before:h-[1px]'>Product Categories</h1>
+                                {/* Trending now */}
+                                <ShopTrendingProduct />
+
+                                {/* top rated products */}
+                                <ShopTopRatedProduct />
+
+                                {/* tag clouds */}
+                                <ShopTags />
+                            </div>
+
+                            <div className='order-1 md:order-2'>
+                                <div className='hidden md:flex justify-between mb-12 pl-0 lg:pl-2 py-2'>
+                                    <div className='flex items-center gap-4'>
+                                        <div className='flex items-center gap-2'>
+                                            <button
+                                                onClick={() => setLayout('GRID')}
+
+                                                className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "GRID" ? "bg-green-black text-white" : "text-gray-black bg-[#def9ec] "}`}>
+                                                <Grid strokeWidth={3} size={20} />
+                                            </button>
+
+                                            <button
+                                                onClick={() => setLayout('LIST')}
+
+                                                className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "LIST" ? "bg-green-black text-white" : "text-gray-black bg-[#def9ec] "}`}
+                                            >
+                                                <List strokeWidth={3} size={20} />
+                                            </button>
+                                        </div>
 
 
-                                    <ul className='mt-6'>
-                                        {categories.map((category) => <CategoryListBox key={category.id}
-                                            category={category} />)}
+                                        <button className='border border-gray-200 rounded-full px-4 py-1 flex items-center gap-1 shadow-[0_5px_10px_rgba(0,0,0,0.08)]'>
 
-                                    </ul>
+                                            <FunnelIcon className='text-green-black' width={20} />
 
+                                            <span className='text-gray-black text-[16px] font-bold'>Filter</span>
+
+                                        </button>
+                                        <div>
+                                            <span className='text-light-gray text-[16px] font-semibold'>Showing 1-12 of 16 results</span>
+                                        </div>
+                                    </div>
+
+                                    {/* product  sort */}
+                                    <div className='relative pr-11'>
+                                        <Listbox
+                                            value={selectedSort}
+                                            onChange={setSelectedSort}>
+
+                                            <Listbox.Button
+                                                className="border border-gray-200  px-4 py-3 rounded-lg flex items-center justify-between space-x-2">
+
+                                                <span className='block text-sm font-bold text-gray-black w-[115px] overflow-hidden whitespace-nowrap text-ellipsis'>
+                                                    {selectedSort.name}
+                                                </span>
+                                                <ChevronDownIcon width={16} className="text-gray-black"/>
+                                            </Listbox.Button>
+
+
+                                            <Listbox.Options
+
+                                                className="absolute top-[45px] bg-white z-20 border max-h-[150px] overflow-y-scroll scrollbar-thin scrollbar-thumb-green-black  scrollbar-track-gray-100
+                                           scrollbar-thumb-rounded-full 
+
+
+                                             border-gray-200 w-full rounded-lg p-2">
+                                                {sorts.map((sort) => (
+                                                    <Listbox.Option
+                                                        className="cursor-pointer hover:bg-gray-200 text-sm font-semibold text-gray-black py-2 px-4 "
+                                                        key={sort.id}
+                                                        value={sort}
+
+                                                    >
+                                                        {sort.name}
+                                                    </Listbox.Option>
+                                                ))}
+                                            </Listbox.Options>
+                                        </Listbox>
+                                    </div>
                                 </div>
 
-                            </div>
-                            <div className='grid col-span-1 gap-5 md:grid-cols-2
-                            lg:grid-cols-4 pl-2' >
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
+                                <div className='self-start grid grid-cols-1
+                            gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-2
+                            xl:grid-cols-3 2xl:grid-cols-4 pl-0 lg:pl-2' >
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <Subscribe />
+                <OurAdvantage />
             </Layout>
         </>
     );
