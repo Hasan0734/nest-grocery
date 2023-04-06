@@ -7,7 +7,7 @@ import ProductRating from '../Shared/ProductRating';
 
 const BestSellCard = () => {
     return (
-        <div className=' best_sell_card border h-[520px]
+        <div className=' product_card border h-[520px]
          border-gray-200 duration-300 rounded-[15px] overflow-hidden p-5 relative'>
             <div className='relative'>
                 <div className='relative flex justify-center'>

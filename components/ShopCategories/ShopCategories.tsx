@@ -73,7 +73,7 @@ const ShopCategories = () => {
     return (
         <>
 
-            <ShopCardContainer title="Top rated products">
+            <ShopCardContainer title="Categories">
 
                 <ul className='mt-6'>
                     {categories.map((category) => <CategoryListBox key={category.id}

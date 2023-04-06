@@ -1,11 +1,9 @@
 import Layout from '@/components/Layout';
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
-import ProductCard from '@/components/Shared/ProductCard';
-import ShopCategories from '@/components/ShopCategories/ShopCategories';
-import ShopTags from '@/components/ShopTags/ShopTags';
-import ShopTopRatedProduct from '@/components/ShopTopRatedProduct/ShopTopRatedProduct';
-import ShopTrendingProduct from '@/components/ShopTrendingProduct/ShopTrendingProduct';
+import ShopProductFilter from '@/components/ShopProductFilter/ShopProductFilter';
+import ShopProducts from '@/components/ShopProducts/ShopProducts';
+import ShopSidebar from '@/components/ShopSidebar/ShopSidebar';
 import Subscribe from '@/components/Subscribe/Subscribe';
 import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon, ChevronRightIcon, FunnelIcon } from '@heroicons/react/24/outline';
@@ -57,41 +55,12 @@ const shop: NextPage = () => {
                 <section className='my-16'>
                     <div className='max-w-xl md:max-w-3xl lg:max-w-8xl mx-auto px-4 2xl:px-0'>
                         <div className='flex flex-col lg:flex-row  gap-5 xl:gap-10'>
-                            <div className='order-2 md:order-1 min-w-full sm:min-w-[400px] pr-0 lg:pr-4'>
-
-                                {/* search bar */}
-                                <div className='mb-10'>
-
-                                    <form>
-                                        <label className='block mb-2 text-gray-black text-[18px] font-bold' htmlFor='searchText'>Search</label>
-                                        <div className='relative'>
-                                            <input
-                                                className='border border-gray-200 rounded-xl
-                                          outline-none py-[15px] pl-2 pr-[100px] w-full'
-                                                type="text"
-                                                id='searchText' />
-                                            <input className='absolute right-0 bg-green-black text-sm font-bold text-white rounded-xl py-[18px] px-6' type="submit" value="Search" />
-                                        </div>
-
-
-                                    </form>
-                                </div>
-
-                                {/* product categories */}
-                                <ShopCategories />
-
-                                {/* Trending now */}
-                                <ShopTrendingProduct />
-
-                                {/* top rated products */}
-                                <ShopTopRatedProduct />
-
-                                {/* tag clouds */}
-                                <ShopTags />
-                            </div>
+                            {/* sidebar */}
+                           <ShopSidebar/>
 
                             <div className='order-1 md:order-2'>
-                                <div className='hidden md:flex justify-between mb-12 pl-0 lg:pl-2 py-2'>
+
+                                <div className='hidden md:flex justify-between pl-0 lg:pl-2 py-2'>
                                     <div className='flex items-center gap-4'>
                                         <div className='flex items-center gap-2'>
                                             <button
@@ -135,7 +104,7 @@ const shop: NextPage = () => {
                                                 <span className='block text-sm font-bold text-gray-black w-[115px] overflow-hidden whitespace-nowrap text-ellipsis'>
                                                     {selectedSort.name}
                                                 </span>
-                                                <ChevronDownIcon width={16} className="text-gray-black"/>
+                                                <ChevronDownIcon width={16} className="text-gray-black" />
                                             </Listbox.Button>
 
 
@@ -160,19 +129,12 @@ const shop: NextPage = () => {
                                         </Listbox>
                                     </div>
                                 </div>
+                                
+                                {/* filters */}
+                                <ShopProductFilter/>
 
-                                <div className='self-start grid grid-cols-1
-                            gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-2
-                            xl:grid-cols-3 2xl:grid-cols-4 pl-0 lg:pl-2' >
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                    <ProductCard />
-                                </div>
+                                {/* products */}
+                                <ShopProducts />
                             </div>
                         </div>
                     </div>
