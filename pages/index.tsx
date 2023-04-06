@@ -9,11 +9,17 @@ import Subscribe from '@/components/Subscribe/Subscribe'
 import TopProducts from '@/components/TopProducts/TopProducts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/Layout'
+import Modal from '@/components/Modal/Modal'
 
 
 const Home: NextPage = () => {
+  let [isOpen, setIsOpen] = useState(true);
+
+  React.useEffect(() => {
+    setIsOpen(true)
+  }, [])
 
   return (
     <>
@@ -22,16 +28,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
       <Layout>
         <HomeBanner />
         <FeaturedCategories />
         <HomeCategory />
         <PopularProduct />
-        <DailyBestSells/>
-        <DealsOfTheDay/>
-        <TopProducts/>
+        <DailyBestSells />
+        <DealsOfTheDay />
+        <TopProducts />
         <Subscribe />
-        <OurAdvantage/>
+        <OurAdvantage />
       </Layout>
     </>
   )

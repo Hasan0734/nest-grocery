@@ -32,6 +32,13 @@ body {
 
 }
 
+.home_popup{
+    background-image: url('/assets/popup-1.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    
+}
 
 .hover-dropdwon-item {
     transition: all 0.3s;

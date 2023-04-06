@@ -60,7 +60,7 @@ const shop: NextPage = () => {
 
                             <div className='order-1 md:order-2'>
 
-                                <div className='hidden md:flex justify-between pl-0 lg:pl-2 py-2'>
+                                <div className='hidden md:flex justify-between pl-0 lg:pl-2 py-2 mb-6'>
                                     <div className='flex items-center gap-4'>
                                         <div className='flex items-center gap-2'>
                                             <button
@@ -131,7 +131,7 @@ const shop: NextPage = () => {
                                 </div>
                                 
                                 {/* filters */}
-                                <ShopProductFilter/>
+                                {/* <ShopProductFilter/> */}
 
                                 {/* products */}
                                 <ShopProducts />
