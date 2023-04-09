@@ -35,12 +35,14 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
+                <Link href={"/vendors"}
+                        className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
+                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                        Vendors
 
-                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center'>
-                        <span>Vendors</span>
-                        <ChevronDownIcon className="w-3" />
-                    </button>
+
+                    </Link>
+                   
 
                 </li>
                 <li className='nav_item_hover'>
@@ -57,7 +59,7 @@ const Menu = () => {
                     <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E] flex gap-1 items-center '>
                         <span>Blog</span>
-                        <ChevronDownIcon className="w-3" />
+                      
                     </button>
 
                 </li>
