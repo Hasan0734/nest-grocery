@@ -61,15 +61,7 @@ const Menu = () => {
                     </button>
 
                 </li>
-                <li>
-
-                    <button className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center'>
-                        <span>Pages</span>
-                        <ChevronDownIcon className="w-3" />
-                    </button>
-
-                </li>
+               
                 <li>
                     <Link href={"/about"} legacyBehavior>
                         <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2

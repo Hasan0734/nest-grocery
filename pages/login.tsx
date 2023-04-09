@@ -105,7 +105,7 @@ const Login = () => {
                                             </div>
                                             <Link
                                                 className='text-light-gray text-sm'
-                                                href={'/forgot-passwrod'}
+                                                href={'/forgot-password'}
                                             >Forgot password?</Link>
                                         </div>
                                         <div>
