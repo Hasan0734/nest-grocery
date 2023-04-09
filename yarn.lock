@@ -187,6 +187,13 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.35.0.tgz"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@flaticon/flaticon-uicons@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@flaticon/flaticon-uicons/-/flaticon-uicons-2.0.1.tgz#3abdc879f503d0974a5324a9274b3d5624611e84"
+  integrity sha512-AOnYdo6YfwfcHwhW7tKOS6c0wwaOLz4iQlJ0sEPLLdVk5Xk8pbq+Qf3UENBN+CRNJVdx22syw9zrkEKqR6Gm3A==
+  optionalDependencies:
+    esbuild-linux-64 "^0.14.5"
+
 "@floating-ui/core@^1.2.4":
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.2.5.tgz#612f0d203e6f647490d572c7b798eebac9e3cf54"
@@ -1145,6 +1152,11 @@ es-to-primitive@^1.2.1:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
+
+esbuild-linux-64@^0.14.5:
+  version "0.14.54"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.14.54.tgz#de5fdba1c95666cf72369f52b40b03be71226652"
+  integrity sha512-EgjAgH5HwTbtNsTqQOXWApBaPVdDn7XcK+/PtJwZLT1UmpLoznPd8c5CxqsH2dQK3j05YsB3L17T8vE7cp4cCg==
 
 escalade@^3.1.1:
   version "3.1.1"
