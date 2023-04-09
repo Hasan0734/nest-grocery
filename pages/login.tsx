@@ -8,9 +8,9 @@ import Link from 'next/link';
 import React from 'react';
 import { Home } from 'react-feather';
 
-const login = () => {
+const Login = () => {
 
-    const [seCode, setSeCode] = React.useState(null);
+
 
     const code = Math.floor(1000 + Math.random() * 9000).toString();
 
@@ -18,7 +18,7 @@ const login = () => {
     return (
         <>
             <Head>
-                <title>About -Nest </title>
+                <title>Login -Nest </title>
 
             </Head>
 
@@ -127,4 +127,4 @@ const login = () => {
     );
 };
 
-export default login;
+export default Login;

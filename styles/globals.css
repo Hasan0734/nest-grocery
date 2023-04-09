@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+::selection{
+    background: #3BB77E;
+    color: #fff;
+}
+
 html {
     scroll-behavior: smooth;
 }
