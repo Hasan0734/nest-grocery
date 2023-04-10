@@ -12,6 +12,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Vendors from '@/components/Vendors/Vendors';
 
+
 const showNumber = [
     { num: 50 },
     { num: 100 },
@@ -77,7 +78,7 @@ const vendors = () => {
                 {/* view  type */}
                 <section className='my-10'>
 
-                    <div className='max-w-5xl px-4 md:px-0 mx-auto 
+                    <div className='max-w-5xl px-4 2xl:px-0 mx-auto 
                     flex justify-between items-center flex-wrap gap-8'>
                         <div>
                             <p>We have <strong className='text-green-black'>780</strong> vendors now</p>
@@ -237,7 +238,10 @@ const vendors = () => {
 
                 <Subscribe />
                 <OurAdvantage />
+
+              
             </Layout>
+
         </>
     );
 };

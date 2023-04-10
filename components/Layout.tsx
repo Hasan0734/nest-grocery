@@ -5,6 +5,9 @@ import MainNavbar from './MainNavbar/MainNavbar';
 import MobileMenu from './MobileMenu/MobileMenu';
 import SecondHeader from './SecondHeader/SecondHeader';
 import TopHeader from './TopHeader/TopHeader';
+import ScrollToTop from 'react-scroll-to-top';
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
+
 
 const Layout = ({ children }: any) => {
 
@@ -17,7 +20,13 @@ const Layout = ({ children }: any) => {
             <MainNavbar />
             {children}
             <Footer />
-           {router.pathname === '/' &&  <MobileMenu />}
+            {router.pathname === '/' && <MobileMenu />}
+
+            <ScrollToTop
+                    className='flex items-center justify-center duration-300 hover:bg-green-black hover:text-white'
+                    smooth 
+                    component={<ArrowUpIcon className='w-5 h-5'/>}
+                    />
         </>
     );
 };
