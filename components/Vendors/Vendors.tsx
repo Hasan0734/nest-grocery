@@ -1,5 +1,6 @@
 import React from 'react';
 import GridCard from './GridCard';
+import ListCard from './ListCard';
 
 const vendors = [
     {
@@ -148,17 +149,25 @@ const vendors = [
     },
 ]
 
-const Vendors = () => {
+const Vendors = ({ layout }: any) => {
+    console.log(layout)
     return (
         <section className='py-16'>
             <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
-                <div className='grid grid-cols-1 xs:grid-cols-2
-                 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-                    {vendors?.map((vendor: any) => <GridCard
-                        position="right-0"
-                        radius="rounded-bl-xl"
-                        vendor={vendor}
-                    />)}
+                <div className={`grid grid-cols-1 ${layout === 'GRID' ? 'xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4' :
+                  'md:grid-cols-2'} gap-x-6 gap-y-10`}>
+                    {vendors?.map((vendor: any) => (
+                        (layout === 'GRID' ? <GridCard
+                            position="right-0"
+                            radius="rounded-bl-xl"
+                            vendor={vendor}
+                        /> : <ListCard
+                            position="right-0"
+                            radius="rounded-bl-xl"
+                            vendor={vendor}
+                        />)
+
+                    ))}
                 </div>
             </div>
         </section>

@@ -5,7 +5,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 
 const GridCard = ({ background = "bg-[#3bb77e]",
-    top = "top-0", position = "left-0", radius = "rounded-br-2xl", vendor }: any) => {
+    top = "top-0", position = "left-0",
+    radius = "rounded-br-2xl", vendor }: any) => {
 
 
 
@@ -67,7 +68,7 @@ const GridCard = ({ background = "bg-[#3bb77e]",
                  text-white font-semibold text-[12px] rounded-br-2xl'>10%</div>
             </div> */}
 
-            {vendor?.type && <div className={`absolute ${'top-0'} ${position} z-10`}>
+            {vendor?.type && <div className={`absolute ${top} ${position} z-10`}>
                 <div className={`${vendor.type === 'Mall' ?
                     "bg-pink-500" : vendor.type === 'Preferred' ? "bg-orange-500" :
                         background} ${radius} px-5 py-2

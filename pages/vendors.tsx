@@ -233,7 +233,7 @@ const vendors = () => {
                 </section>
 
                 {/* vendors */}
-                <Vendors />
+                <Vendors layout={layout} />
 
                 <Subscribe />
                 <OurAdvantage />
