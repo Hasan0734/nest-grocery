@@ -10,6 +10,7 @@ import { Grid, Home, List } from 'react-feather';
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
+import Vendors from '@/components/Vendors/Vendors';
 
 const showNumber = [
     { num: 50 },
@@ -76,11 +77,12 @@ const vendors = () => {
                 {/* view  type */}
                 <section className='my-10'>
 
-                    <div className='max-w-5xl mx-auto flex justify-between items-center'>
+                    <div className='max-w-5xl px-4 md:px-0 mx-auto 
+                    flex justify-between items-center flex-wrap gap-8'>
                         <div>
                             <p>We have <strong className='text-green-black'>780</strong> vendors now</p>
                         </div>
-                        <div className='flex gap-4 items-center'>
+                        <div className='flex gap-4 items-center flex-wrap'>
                             <div className='flex items-center gap-2'>
                                 <button
                                     onClick={() => setLayout('GRID')}
@@ -230,6 +232,8 @@ const vendors = () => {
                     </div>
                 </section>
 
+                {/* vendors */}
+                <Vendors />
 
                 <Subscribe />
                 <OurAdvantage />
