@@ -32,7 +32,7 @@ const GridCard = ({ background = "bg-[#3bb77e]",
                 <div className=''>
 
                     <h3 className='text-2xl text-gray-black font-bold mb-1'>
-                        <Link href={"/vendors/id"}>{vendor.name}</Link>
+                        <Link href={`/vendor/${vendor.id}`}>{vendor.name}</Link>
                     </h3>
 
                     <div className='flex gap-2 items-center'>
@@ -55,7 +55,7 @@ const GridCard = ({ background = "bg-[#3bb77e]",
                     </li>
                 </ul>
                 <div className='mt-8 mb-4'>
-                    <Link href={'/vendor/id'} className='font-bold text-white text-sm bg-green-black px-3 py-2 rounded-md'>
+                    <Link href={`/vendor/${vendor.id}`} className='font-bold text-white text-sm bg-green-black px-3 py-2 rounded-md'>
                         <span> Visit Store</span> <FaArrowRight className='w-3 h-3 inline' />
                     </Link>
                 </div>
