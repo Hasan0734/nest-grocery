@@ -6,12 +6,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
-import { Grid, Home, List } from 'react-feather';
+import { Check, Grid, Home, List } from 'react-feather';
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
-import ShopCategories from '@/components/ShopCategories/ShopCategories';
 import CategoryListBox from '@/components/Shared/CategoryListBox';
+import Checkbox from '@/components/Shared/Checkbox';
 
 const showNumber = [
     { num: 50 },
@@ -215,7 +215,7 @@ const VendorDetail = () => {
 
                                 {/* product categories */}
                                 <div className='mt-10 border border-gray-200 rounded-2xl 
-                            shadow-[8px_5px_10px_rgba(0,0,0,0.05)] p-5 lg:p-8'>
+                                    shadow-[8px_5px_10px_rgba(0,0,0,0.05)] p-5 lg:p-8'>
                                     <h1
                                         className='text-gray-black text-2xl font-bold
                                 border-b border-gray-200 pb-4 relative before:absolute 
@@ -227,36 +227,56 @@ const VendorDetail = () => {
                                     <div className='mt-10'>
                                         <div className="mt-6">
                                             <h4 className='text-sm text-gray-black font-extrabold'>Color</h4>
+                                            
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="red" id="red" />
-                                                <label className='text-sm font-medium' htmlFor="red">Red (10)</label>
+                                                <Checkbox
+                                                    title={'Red (10)'}
+                                                    name={'red'}                                               
+                                                />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="green" id="green" />
-                                                <label className='text-sm font-medium' htmlFor="green">Green (10)</label>
+                                                <Checkbox
+                                                    title={'Green (10)'}
+                                                    name={'green'}                                               
+                                                />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="blue" id="blue" />
-                                                <label className='text-sm font-medium' htmlFor="blue">Blue (52)</label>
+                                                <Checkbox
+                                                    title={'Blue (52)'}
+                                                    name={'blue'}                                               
+                                                />
                                             </div>
 
                                         </div>
+
                                         <div className="mt-6">
-                                            <h4 className='text-sm text-gray-black font-extrabold'>item Condition</h4>
+                                            <h4 className='text-sm text-gray-black font-extrabold'>Item Condition</h4>
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="new" id="new" />
-                                                <label className='text-sm font-medium' htmlFor="new">New (1506)</label>
+                                                <Checkbox
+                                                    title={'New (1506)'}
+                                                    name={'new'}                                                  
+                                                />
+                                           
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="refurbished" id="refurbished" />
-                                                <label className='text-sm font-medium' htmlFor="refurbished">Refurbished (27)</label>
+                                            
+                                                <Checkbox
+                                                    title={'Refurbished (27)'}
+                                                    name={'refurbished'}                                              
+                                                />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
-                                                <input type="checkbox" name="used" id="used" />
-                                                <label className='text-sm font-medium' htmlFor="used">Used (56)</label>
+                                                <Checkbox
+                                                    title={'Used (20)'}
+                                                    name={'used'}     
+                                                />
                                             </div>
 
+
                                         </div>
+
+
+
                                         <div className='mt-4'>
                                             <button className='rounded-md text-white flex items-center
                                          gap-1 pl-6 hover:pl-8 duration-300 hover:bg-orange-light pr-4 py-[10px] bg-green-black text-sm'>
@@ -272,6 +292,7 @@ const VendorDetail = () => {
 
                             </div>
 
+                            {/* main part */}
                             <div>
                                 {/* view  type */}
                                 <div className=''>
