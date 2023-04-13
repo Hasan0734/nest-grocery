@@ -310,3 +310,11 @@ body {
 .team_card:hover .card_content .content{
    transform: translateY(-100px);
 }
+
+
+.vendor-conver{
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+   
+}

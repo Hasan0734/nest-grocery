@@ -7,9 +7,9 @@ const CategoryListBox = ({ category }: any) => {
     const subRef: any = React.useRef()
     return (
         <>
-            <li className='my-[8px]'>
-                <div className='border border-gray-200 p-2 rounded
-             flex justify-between items-center'>
+            <li className='my-4'>
+                <div className='border border-gray-200 hover:border-green-black p-2 rounded
+             flex justify-between items-center hover:shadow-[0_8px_10px_rgba(0,0,0,0.05)] duration-300'>
                     <Link href={`/`} className='flex gap-2 items-center'>
                         <img
                             className='w-[30px] ' src={category.icon} alt="" />
@@ -24,7 +24,6 @@ const CategoryListBox = ({ category }: any) => {
                     </div>
                 </div>
 
-
                 {/* sub category */}
 
                 {category.sub?.length > 0 && (
@@ -36,7 +35,7 @@ const CategoryListBox = ({ category }: any) => {
                     >
                         {category.sub?.map((sub: any) => <li
                             key={sub.id}
-                            className={`p-2 flex  justify-between items-center duration-300 my-2 `}>
+                            className={`p-2 flex  justify-between items-center duration-300 my-4 `}>
                     
                             <Link href={`/`} className='flex gap-2 items-center'>
                                 <img
