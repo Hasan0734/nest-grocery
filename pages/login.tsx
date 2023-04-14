@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
+import Checkbox from '@/components/Shared/Checkbox';
 import Subscribe from '@/components/Subscribe/Subscribe';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import Head from 'next/head';
@@ -92,16 +93,11 @@ const Login = () => {
 
                                         <div className='flex items-center justify-between mt-3 mb-10'>
                                             <div className='flex items-center gap-1'>
-                                                <input
-                                                    className=''
-                                                    type="checkbox"
-                                                    name=""
-                                                    id="remember" />
-                                                <label
-                                                    className='text-sm'
-                                                    htmlFor="remember"
-                                                >Remember me
-                                                </label>
+                                            
+                                                <Checkbox
+                                                    title={'Remember me'}
+                                                    name={'remember'}     
+                                                />
                                             </div>
                                             <Link
                                                 className='text-light-gray text-sm'

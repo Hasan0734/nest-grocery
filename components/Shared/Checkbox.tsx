@@ -11,7 +11,8 @@ const Checkbox = ({ title = "", name = "" }: any) => {
                 className='cursor-pointer relative flex items-center gap-2'
                 htmlFor={name}>
                 <input type="checkbox"
-                    className={`peer  overflow-hidden appearance-none rounded-sm  w-[17px] h-[17px] border border-[#ced4da] checked:border-green-black checked:bg-green-black `}
+                    className={`peer  overflow-hidden appearance-none rounded-sm 
+                     w-[17px] h-[17px] border border-[#ced4da] checked:border-green-black checked:bg-green-black `}
 
                     name={name} id={name} />
                 <Check

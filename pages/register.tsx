@@ -1,6 +1,9 @@
 import Layout from '@/components/Layout';
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
+import Checkbox from '@/components/Shared/Checkbox';
+import InputBox from '@/components/Shared/InputBox';
+import RadioBtn from '@/components/Shared/RadioBtn';
 import Subscribe from '@/components/Subscribe/Subscribe';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import Head from 'next/head';
@@ -50,24 +53,29 @@ const Register = () => {
 
                                 <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
                                     <div className='mt-6'>
-                                        <input
-                                            className='placeholder:text-[#838383]  w-full rounded-lg py-4 px-3 border border-gray-200 outline-none my-2'
-                                            type="text"
-                                            placeholder='Username *' />
-                                        <input
-                                            className='placeholder:text-[#838383]  w-full rounded-lg py-4 px-3 border border-gray-200 outline-none my-2'
-                                            type="text"
-                                            placeholder='Email *' />
 
-                                        <input
-                                            className='placeholder:text-[#838383]  w-full rounded-lg py-4 px-3 border border-gray-200 outline-none my-2'
-                                            type="password"
-                                            placeholder='Password *' />
+                                        <InputBox
+                                            type="text"
+                                            placeholder="Username *"
+                                            name="userName"
+                                        />
+                                        <InputBox
+                                            type="text"
+                                            placeholder="Email *"
+                                            name="email"
+                                        />
 
-                                        <input
-                                            className='placeholder:text-[#838383]  w-full rounded-lg py-4 px-3 border border-gray-200 outline-none my-2'
+                                        <InputBox
                                             type="password"
-                                            placeholder='Confirm Password *' />
+                                            placeholder="Password *"
+                                            name="password"
+                                        />
+                                        <InputBox
+                                            type="password"
+                                            placeholder="Confirm Password *"
+                                            name="cofirm_password"
+                                        />
+
 
                                         <div className='flex  justify-start md:justify-between items-center my-2 gap-4'>
 
@@ -97,41 +105,33 @@ const Register = () => {
 
                                         </div>
 
-                                        <div className='mb-10 mt-4'>
-                                            <div className="flex items-center gap-1">
-                                                <input
-                                                    className='bg-green-black'
-                                                    type="radio"
-                                                    id='customer'
-                                                    name="role" />
-                                                <label
-                                                    className='text-sm text-black font-semibold'
-                                                    htmlFor="customer">I am a customer</label>
+                                        <div className='mb-10 mt-4 ml-1'>
+
+                                            <div className='mt-3 flex'>
+                                                <RadioBtn
+                                                    label="I am a customer"
+                                                    name="role"
+                                                    id="customer"
+                                                />
                                             </div>
-                                            <div className="flex items-center gap-1 mt-3">
-                                                <input
-                                                    className='bg-green-black'
-                                                    type="radio"
-                                                    id='vendor'
-                                                    name='role' />
-                                                <label
-                                                    className='text-sm text-black font-semibold'
-                                                    htmlFor="vendor">I am a vendor</label>
+
+
+                                            <div className="mt-3 flex">
+                                                <RadioBtn
+                                                    label="I am a vendor"
+                                                    name="role"
+                                                    id="vendor"
+                                                />
                                             </div>
                                         </div>
 
                                         <div className='flex items-center justify-between mt-3 mb-10'>
                                             <div className='flex items-center gap-1'>
-                                                <input
-                                                    className='focus:ring-0 checked:text-pink-500 focus:ring-offset-0 bg-gray-300 border-2 border-gray-400 p-2 md:p-3 cursor-pointer'
-                                                    type="checkbox"
-                                                    name=""
-                                                    id="remember" />
-                                                <label
-                                                    className='text-sm'
-                                                    htmlFor="remember"
-                                                >I agree to terms & Policy.
-                                                </label>
+
+                                                <Checkbox
+                                                    title={'I agree to terms & Policy.'}
+                                                    name={'agree'}
+                                                />
                                             </div>
                                             <Link
                                                 className='text-green-black text-sm flex items-center gap-2'
