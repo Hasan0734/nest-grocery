@@ -12,6 +12,9 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import CategoryListBox from '@/components/Shared/CategoryListBox';
 import Checkbox from '@/components/Shared/Checkbox';
+import RangeSlider from '@/components/Shared/RangeSlider';
+import DealsOfTheDay from '@/components/DealsOfTheDay/DealsOfTheDay';
+import ProductCard from '@/components/Shared/ProductCard';
 
 const showNumber = [
     { num: 50 },
@@ -186,13 +189,13 @@ const VendorDetail = () => {
                     <div className='max-w-xl md:max-w-3xl lg:max-w-8xl mx-auto px-4 2xl:px-0'>
                         <div className='flex flex-col lg:flex-row  gap-5 xl:gap-10'>
                             {/* sidebar */}
-                            <div className='w-[300px]'>
+                            <div className='min-w-[300px]'>
                                 <div>
                                     <img className='w-full rounded-xl' src="/assets/banner-10.jpg" alt="" />
                                 </div>
 
                                 {/* product categories */}
-                                <div className='mt-10 border border-gray-200 rounded-2xl 
+                                <div className='mt-8 border border-gray-200 rounded-2xl 
                             shadow-[8px_5px_10px_rgba(0,0,0,0.05)] p-5 lg:p-8'>
                                     <h1
                                         className='text-gray-black text-2xl font-bold
@@ -214,7 +217,7 @@ const VendorDetail = () => {
                                 </div>
 
                                 {/* product categories */}
-                                <div className='mt-10 border border-gray-200 rounded-2xl 
+                                <div className='mt-8 border border-gray-200 rounded-2xl 
                                     shadow-[8px_5px_10px_rgba(0,0,0,0.05)] p-5 lg:p-8'>
                                     <h1
                                         className='text-gray-black text-2xl font-bold
@@ -224,26 +227,33 @@ const VendorDetail = () => {
                                         Fill by price
                                     </h1>
 
-                                    <div className='mt-10'>
+                                    <div className=''>
+
+                                        <RangeSlider
+                                            min={0}
+                                            max={2000}
+                                            onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+                                        />
+
                                         <div className="mt-6">
                                             <h4 className='text-sm text-gray-black font-extrabold'>Color</h4>
-                                            
+
                                             <div className='my-3 flex items-center gap-2'>
                                                 <Checkbox
                                                     title={'Red (10)'}
-                                                    name={'red'}                                               
+                                                    name={'red'}
                                                 />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
                                                 <Checkbox
                                                     title={'Green (10)'}
-                                                    name={'green'}                                               
+                                                    name={'green'}
                                                 />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
                                                 <Checkbox
                                                     title={'Blue (52)'}
-                                                    name={'blue'}                                               
+                                                    name={'blue'}
                                                 />
                                             </div>
 
@@ -254,28 +264,26 @@ const VendorDetail = () => {
                                             <div className='my-3 flex items-center gap-2'>
                                                 <Checkbox
                                                     title={'New (1506)'}
-                                                    name={'new'}                                                  
+                                                    name={'new'}
                                                 />
-                                           
+
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
-                                            
+
                                                 <Checkbox
                                                     title={'Refurbished (27)'}
-                                                    name={'refurbished'}                                              
+                                                    name={'refurbished'}
                                                 />
                                             </div>
                                             <div className='my-3 flex items-center gap-2'>
                                                 <Checkbox
                                                     title={'Used (20)'}
-                                                    name={'used'}     
+                                                    name={'used'}
                                                 />
                                             </div>
 
 
                                         </div>
-
-
 
                                         <div className='mt-4'>
                                             <button className='rounded-md text-white flex items-center
@@ -288,8 +296,15 @@ const VendorDetail = () => {
 
                                 </div>
 
-
-
+                                <div className='mt-8 relative'>
+                                    <img className='w-full rounded-xl' src="/assets/banner-11.png" alt="" />
+                                    <div className='absolute top-16 left-10 max-w-[120px] z-10 '>
+                                        <span className='text-[#adadad] text-sm'>Oganic</span>
+                                        <h2 className='text-2xl text-gray-black font-bold hover:-translate-y-1 duration-300'>
+                                            Save 17% on <span className='text-green-black'>Oganic</span> Juice
+                                        </h2>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* main part */}
@@ -297,10 +312,10 @@ const VendorDetail = () => {
                                 {/* view  type */}
                                 <div className=''>
 
-                                    <div className='max-w-5xl px-4 2xl:px-0 mx-auto 
+                                    <div className=' px-4 2xl:px-0 mx-auto 
                                     flex justify-between items-center flex-wrap gap-8'>
                                         <div>
-                                            <p>We have <strong className='text-green-black'>780</strong> vendors now</p>
+                                            <p className=''>We have <strong className='text-green-black'>780</strong> vendors now</p>
                                         </div>
                                         <div className='flex gap-4 items-center flex-wrap'>
                                             <div className='flex items-center gap-2'>
@@ -452,9 +467,20 @@ const VendorDetail = () => {
                                     </div>
                                 </div>
 
-
-
                                 {/* products */}
+                                <div className='grid grid-cols-4 mt-10 gap-7'>
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                                    <ProductCard />
+                          
+                                </div>
+
+                                <DealsOfTheDay />
                             </div>
 
                         </div>
