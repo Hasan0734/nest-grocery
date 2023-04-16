@@ -6,15 +6,19 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
-import { Check, Grid, Home, List } from 'react-feather';
+import { Grid, Home, List } from 'react-feather';
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import CategoryListBox from '@/components/Shared/CategoryListBox';
 import Checkbox from '@/components/Shared/Checkbox';
 import RangeSlider from '@/components/Shared/RangeSlider';
-import DealsOfTheDay from '@/components/DealsOfTheDay/DealsOfTheDay';
+
 import ProductCard from '@/components/Shared/ProductCard';
+import Pagination from '@/components/Shared/Pagination';
+import { useRouter } from 'next/router';
+import queryString from 'query-string';
+
 
 const showNumber = [
     { num: 50 },
@@ -76,6 +80,55 @@ const VendorDetail = () => {
     const [selected, setSelected] = useState(showNumber[0]);
     const [selectSort, setSelectSort] = useState(sorts[0]);
     const [layout, setLayout] = useState('GRID')
+    const [page, setPage] = useState(1)
+    const [limit, setLimit] = useState(2);
+    const router = useRouter();
+
+    console.log(page)
+
+    let totalPage = Math.ceil(30 / limit);
+
+    console.log({totalPage})
+
+    const pushQuery = (qValue: any) => {
+
+        const str = queryString.stringify(qValue, { arrayFormat: "comma", sort: false });
+        router.push({ pathname: `/vendor/${router.query.vendorId}`, query: str });
+
+    }
+
+
+    const handlePageChange = (value: any) => {
+        const prevQuery = { ...router.query };
+        delete prevQuery.vendorId
+
+        // const page: any = router.query?.page || 1
+
+        if (value === "... ") {
+            setPage(1)
+            // pushQuery({ ...prevQuery, page: 1 })
+
+        } else if (value === 'left') {
+            if (page !== 1) {
+                setPage(page - 1)
+                // pushQuery({ ...prevQuery, page: page - 1 })
+            }
+        }
+        else if (value === "right") {
+
+            if (page !== totalPage) {
+                setPage(page + 1)
+                // pushQuery({ ...prevQuery, page: page + 1 })
+            }
+        } else if ( value === " ...") {
+            setPage(totalPage)
+            // pushQuery({ ...prevQuery, page: totalPage })
+        }
+        else {
+            setPage(value)
+            // pushQuery({ ...prevQuery, page: value })
+        }
+    }
 
     return (
         <>
@@ -468,7 +521,7 @@ const VendorDetail = () => {
                                 </div>
 
                                 {/* products */}
-                                <div className='grid grid-cols-4 mt-10 gap-7'>
+                                <div className='grid lg:grid-cols-3 2xl:grid-cols-4 mt-10 gap-7'>
                                     <ProductCard />
                                     <ProductCard />
                                     <ProductCard />
@@ -477,10 +530,21 @@ const VendorDetail = () => {
                                     <ProductCard />
                                     <ProductCard />
                                     <ProductCard />
-                          
+
                                 </div>
 
-                                <DealsOfTheDay />
+                                {/* paginate */}
+                                <div className='mt-10'>
+                                    <Pagination
+                                        totalPage={totalPage}
+                                        page={page}
+                                        limit={limit}
+                                        siblings={1}
+                                        onPageChange={handlePageChange}
+                                    />
+                                </div>
+
+                                {/* <DealsOfTheDay /> */}
                             </div>
 
                         </div>
