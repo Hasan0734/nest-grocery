@@ -2,11 +2,12 @@ import _ from "lodash"
 
 export const returnPaginationRange = (totalPage: number, page: number, limit: number, siblings: number) => {
 
+    console.log({page})
+
     let totalPageNoInArray = 7 + siblings;
-    console.log({total: totalPageNoInArray, hello: totalPageNoInArray >= totalPage})
     if (totalPageNoInArray >= totalPage) {
         _.range(1, totalPage + 1);
-    
+
     }
 
     let leftSiblingsIndex = Math.max(page - siblings, 1);
@@ -30,5 +31,5 @@ export const returnPaginationRange = (totalPage: number, page: number, limit: nu
         let middleRange = _.range(leftSiblingsIndex, rightSiblingsIndex + 1);
         return [1, "... ", ...middleRange, " ...", totalPage];
     }
-    
+
 }

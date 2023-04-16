@@ -16,8 +16,7 @@ import RangeSlider from '@/components/Shared/RangeSlider';
 
 import ProductCard from '@/components/Shared/ProductCard';
 import Pagination from '@/components/Shared/Pagination';
-import { useRouter } from 'next/router';
-import queryString from 'query-string';
+
 
 
 const showNumber = [
@@ -80,55 +79,6 @@ const VendorDetail = () => {
     const [selected, setSelected] = useState(showNumber[0]);
     const [selectSort, setSelectSort] = useState(sorts[0]);
     const [layout, setLayout] = useState('GRID')
-    const [page, setPage] = useState(1)
-    const [limit, setLimit] = useState(2);
-    const router = useRouter();
-
-    console.log(page)
-
-    let totalPage = Math.ceil(30 / limit);
-
-    console.log({totalPage})
-
-    const pushQuery = (qValue: any) => {
-
-        const str = queryString.stringify(qValue, { arrayFormat: "comma", sort: false });
-        router.push({ pathname: `/vendor/${router.query.vendorId}`, query: str });
-
-    }
-
-
-    const handlePageChange = (value: any) => {
-        const prevQuery = { ...router.query };
-        delete prevQuery.vendorId
-
-        // const page: any = router.query?.page || 1
-
-        if (value === "... ") {
-            setPage(1)
-            // pushQuery({ ...prevQuery, page: 1 })
-
-        } else if (value === 'left') {
-            if (page !== 1) {
-                setPage(page - 1)
-                // pushQuery({ ...prevQuery, page: page - 1 })
-            }
-        }
-        else if (value === "right") {
-
-            if (page !== totalPage) {
-                setPage(page + 1)
-                // pushQuery({ ...prevQuery, page: page + 1 })
-            }
-        } else if ( value === " ...") {
-            setPage(totalPage)
-            // pushQuery({ ...prevQuery, page: totalPage })
-        }
-        else {
-            setPage(value)
-            // pushQuery({ ...prevQuery, page: value })
-        }
-    }
 
     return (
         <>
@@ -536,11 +486,7 @@ const VendorDetail = () => {
                                 {/* paginate */}
                                 <div className='mt-10'>
                                     <Pagination
-                                        totalPage={totalPage}
-                                        page={page}
-                                        limit={limit}
-                                        siblings={1}
-                                        onPageChange={handlePageChange}
+                                        totalItem={30}                                 
                                     />
                                 </div>
 
