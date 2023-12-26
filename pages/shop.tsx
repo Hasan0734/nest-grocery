@@ -1,9 +1,9 @@
 import Layout from '@/components/Layout';
 import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
-import ShopProductFilter from '@/components/ShopProductFilter/ShopProductFilter';
-import ShopProducts from '@/components/ShopProducts/ShopProducts';
-import ShopSidebar from '@/components/ShopSidebar/ShopSidebar';
+import ShopProductFilter from '@/components/shop/ShopProductFilter/ShopProductFilter';
+import ShopProducts from '@/components/shop/ShopProducts/ShopProducts';
+import ShopSidebar from '@/components/shop/ShopSidebar/ShopSidebar';
 import Subscribe from '@/components/Subscribe/Subscribe';
 import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon, ChevronRightIcon, FunnelIcon } from '@heroicons/react/24/outline';
@@ -131,7 +131,7 @@ const shop: NextPage = () => {
                                 </div>
                                 
                                 {/* filters */}
-                                {/* <ShopProductFilter/> */}
+                                 <ShopProductFilter/>
 
                                 {/* products */}
                                 <ShopProducts />

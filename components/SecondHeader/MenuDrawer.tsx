@@ -8,7 +8,7 @@ const menuItems = [
     { id: 1, title: "Home", route: "/" },
     { id: 2, title: "About Us", route: "/about-us" },
     { id: 3, title: "Shop", route: "/shop" },
-    { id: 4, title: "Vendors", route: "/vendors" },
+    { id: 4, title: "Vendors", route: "/index" },
     { id: 5, title: "Mega Menu", route: "/mega-menu" },
     { id: 6, title: "Blog", route: "/blog" },
     { id: 7, title: "Contact", route: "/contact" },
