@@ -2,6 +2,7 @@ import React from 'react';
 import ShopTags from "@/components/shop/ShopTags/ShopTags";
 import BlogCategories from "@/components/Blogs/BlogCategories";
 import LatestBlogPost from "@/components/Blogs/LatestBlogPost";
+import ShopTrendingProduct from "@/components/shop/ShopTrendingProduct/ShopTrendingProduct";
 
 const BlogSidebar = () => {
     return (
@@ -27,7 +28,7 @@ const BlogSidebar = () => {
                 </div>
 
                 <LatestBlogPost/>
-
+                <ShopTrendingProduct/>
                 <BlogCategories/>
 
                 {/* tag clouds */}
