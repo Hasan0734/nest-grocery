@@ -112,7 +112,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
 
                             </div>
 
-                            {/* soical links */}
+                            {/* social links */}
                             <ul className='mt-5 flex gap-2'>
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>

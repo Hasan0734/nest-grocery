@@ -7,7 +7,8 @@ const ProductCart = () => {
             <div className='flex gap-3 px-4 border-b border-gray-200 py-6'>
                 <div className=''>
 
-                    <img className='w-[90px] h-[80px] border p-1 border-gray-200 rounded-md ' src='/assets/popular-product/product-1-1.jpg' />
+                    <img className='w-[90px] h-[80px] border p-1 border-gray-200 rounded-md '
+                         src='/assets/popular-product/product-1-1.jpg' alt={"product-image"} />
                 </div>
                 <div>
                     <div className='flex justify-between items-center gap-2'>

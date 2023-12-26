@@ -46,7 +46,7 @@ const MegaMenuContent = () => {
                             <ul className='mt-4'>
                                 {menu.items.map((item: any) => (<li className='my-2' key={item.id}>
                                     <Link href={`/${slugify(item.title, '-')}`} legacyBehavior>
-                                        <a className='text-[#7e7e7e] font-semibold'>{item.title}</a>
+                                        <a className='text-[#7e7e7e] font-semibold' >{item.title}</a>
                                     </Link>
                                 </li>))}
                             </ul>

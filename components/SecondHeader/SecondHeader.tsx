@@ -7,7 +7,6 @@ import CartDrawer from './CartDrawer';
 import MenuDrawer from './MenuDrawer';
 
 
-
 const SecondHeader = () => {
     const [cartDrawer, setCartDrawer] = useState(false);
     const [menuDrawer, setMenuDrawer] = useState(false);
@@ -23,7 +22,6 @@ const SecondHeader = () => {
     }
 
 
-
     return (
         <>
             <div className='border border-gray-200'>
@@ -31,14 +29,14 @@ const SecondHeader = () => {
                     <div className='flex items-center justify-between gap-10 xl:gap-20'>
                         <div className='flex flex-col xl:flex-row  gap-8  xl:items-center w-full'>
                             <div className='flex justify-between'>
-                                <img className='w-44 xl:w-64' src='/assets/logo.png' />
+                                <img className='w-44 xl:w-64' src='/assets/logo.png' alt={"logo"} />
                                 <ul className=' flex lg:hidden  space-x-5 items-center'>
 
                                     <li >
                                         <button onClick={() => setCartDrawer(true)} className='flex items-center space-x-1 cursor-pointer relative'>
                                             <ShoppingCartIcon className='w-8 text-gray-600' />
                                             <div className='absolute p-1 -top-1 -left-3 rounded-full w-6 h-6 flex justify-center items-center bg-[#3BB77E] text-white'>
-                                                <span>0</span>
+                                                <span>5</span>
                                             </div>
                                         </button>
                                     </li>
@@ -53,18 +51,18 @@ const SecondHeader = () => {
                                 </ul>
                             </div>
 
-                            {/* Search text iput  */}
+                            {/* Search text input  */}
 
                             <SearchInput />
                         </div>
                         <div className='hidden lg:block '>
                             <div className='flex gap-5 justify-between lg:min-w-[600px]'>
                                 <div className='flex items-center'>
-                                    <button className='border 
-                            hover:-translate-y-1 duration-200 border-gray-200
-                             drop-shadow-[0_10px_6px_rgba(0,0,0,0.05)]
-                              bg-white px-3 py-[6px] rounded flex items-center space-x-2'>
+                                    <button
+                                        className='border hover:-translate-y-1 duration-200 border-gray-200 drop-shadow-[0_10px_6px_rgba(0,0,0,0.05)]
+                                              bg-white px-3 py-[6px] rounded flex items-center space-x-2'>
                                         <span className='text-[#3BB77E]'>Become Vendor</span>
+
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             fill="none" viewBox="0 0 24 24"
                                             strokeWidth={1.5} stroke="currentColor"

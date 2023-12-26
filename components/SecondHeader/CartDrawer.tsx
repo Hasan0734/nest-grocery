@@ -14,8 +14,8 @@ const CartDrawer = ({ handleOutSideClick, cartDrawer, setCartDrawer }: any) => {
                     <div
                         className='py-5 px-7 border-b border-gray-200 sticky
                          top-0 bg-white z-30'>
-                        <XMarkIcon onClick={() => setCartDrawer(false)} className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-[#3BB77E] p-1 w-6 rounded-full bg-[#3BB77E]/30' />
-
+                        <XMarkIcon onClick={() => setCartDrawer(false)}
+                                   className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-[#3BB77E] p-1 w-6 rounded-full bg-[#3BB77E]/30' />
                     </div>
                     <div className='max-h-[500px] overflow-y-scroll'>
                         <ProductCart />

@@ -1,7 +1,6 @@
 import _ from "lodash"
 
 export const returnPaginationRange = (totalPage: number, page: number, limit: number, siblings: number) => {
-
     console.log({page})
 
     let totalPageNoInArray = 7 + siblings;
@@ -33,3 +32,4 @@ export const returnPaginationRange = (totalPage: number, page: number, limit: nu
     }
 
 }
+

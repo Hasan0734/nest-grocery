@@ -33,6 +33,8 @@ module.exports = {
         "green-black": "#3bb773",
         "light-gray": "#7e7e7e",
         "orange-light": "#fdc040",
+        primary: "#3bb773",
+        bgSoft: "#3bb77e8f"
       },
     },
   },

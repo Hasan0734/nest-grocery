@@ -29,18 +29,18 @@ const Subscribe = () => {
             <div className='max-w-8xl mx-auto px-4 2xl:px-0'>
                 <div className='relative
                 rounded-[30px] min-h-[350px]
-                 lg:min-h-[450px] 2xl:min-h-[538px]'
+                 lg:min-h-[469px]'
                     style={{ backgroundImage: 'url(/assets/banner-10-min.png)' }}>
 
                     <div
                         className='text-center sm:text-left 
-                        w-full sm:w-3/5 lg:w-[45%] xl:w-[50%] 2xl:w-[45%] absolute
-                        left-2 px-2 sm:left-[5%] lg:left-[8%] translate-y-[10%]
-                        md:translate-y-[30%] top-0 z-10'>
+                        w-full sm:w-3/5 lg:w-[45%] xl:w-[60%] absolute
+                        left-2 px-2 sm:left-[5%] translate-y-[10%]
+                        md:translate-y-[14%] top-0 z-10'>
 
                         <h1
                             className='text-[22px] lg:text-[40px] text-start
-                            2xl:text-[50px] leading-[28px] lg:leading-[50px]
+                            2xl:text-[70px] leading-[28px] lg:leading-[50px]
                              2xl:leading-[80px]
                             font-bold text-[#253d4e] mb-4 lg:mb-8'>
 
@@ -55,10 +55,10 @@ const Subscribe = () => {
 
                             Start Your Daily Shopping with <span className='text-[#3bb77e]'>Nest Mart</span>
                         </p>
-                        <BannerForm />
+                        <BannerForm className={"sm:w-1/2"}/>
                     </div>
                     <div className='absolute right-10 bottom-0 flex justify-end'>
-                        <img className='w-full md:w-[50%]' src="/assets/banner-9-min.png" alt="" />
+                        <img className='w-full md:w-[65%]' src="/assets/banner-9-min.png" alt="" />
                     </div>
                 </div>
             </div>

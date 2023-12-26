@@ -14,7 +14,7 @@ const CardContent = ({ deal }: any) => {
 
 
                 <Countdown
-                    date={new Date("Jan 5, 2024 15:37:25").getTime()}
+                    date={new Date("Jan 5, 2028 15:37:25").getTime()}
                     renderer={CounterBox}
                 />
 

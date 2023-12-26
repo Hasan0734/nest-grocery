@@ -1,9 +1,10 @@
 import React from 'react';
+import {cn} from "@/utls/utils";
 
-const BannerForm = () => {
+const BannerForm = ({className}:{className?: String}) => {
     return (
         <div className='flex md:block justify-start pr-2 pl-2'>
-            <form className='relative w-full sm:w-[85%]'>
+            <form className={cn('relative w-full sm:w-[85%]', className)}>
                 <input
                     className='bg-white rounded-full 
                     py-2 md:py-4 w-full pl-4 pr-20 md:pr-32 outline-none'

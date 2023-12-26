@@ -23,7 +23,7 @@ const Layout = ({ children }: any) => {
             {router.pathname === '/' && <MobileMenu />}
 
             <ScrollToTop
-                    className='flex items-center justify-center duration-300 hover:bg-green-black hover:text-white'
+                    className='flex items-center justify-center duration-300 hover:bg-green-black hover:text-white mb-8 md:mb-0 '
                     smooth 
                     component={<ArrowUpIcon className='w-5 h-5'/>}
                     />

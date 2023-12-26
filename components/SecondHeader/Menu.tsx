@@ -2,23 +2,33 @@ import Link from 'next/link';
 import React from 'react';
 import { ArrowPathIcon, HeartIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import ProductCart from './ProductCart';
+import ProductCount from './ProductCount';
+
 
 const Menu = () => {
     return (
         <>
             <ul className=' flex space-x-5 items-center'>
                 <li>
-                    <Link href="/compair" legacyBehavior>
+                    <Link href="/compare" legacyBehavior>
                         <a className='flex space-x-1 items-center'>
-                            <ArrowPathIcon className='w-7 text-gray-600' />
+
+                            <div className='relative'>
+                                <ArrowPathIcon className='w-7 text-gray-600' />
+                                <ProductCount total={0}/>
+                            </div>
+
                             <span>Compare</span>
                         </a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/wishlisht" legacyBehavior>
-                        <a className='flex space-x-1 items-center'>
-                            <HeartIcon className='w-7 text-gray-600' />
+                        <a className='flex items-center space-x-1 '>
+                            <div className='relative'>
+                                <HeartIcon className='w-7 text-gray-600' />
+                                <ProductCount total={0}/>
+                            </div>
                             <span>Wishlist</span>
                         </a>
                     </Link>
@@ -27,9 +37,7 @@ const Menu = () => {
                     <div className='flex items-center space-x-1 cursor-pointer'>
                         <div className='relative'>
                             <ShoppingCartIcon className='w-7 text-gray-600' />
-                            <div className='absolute p-1 -top-[12px] -right-1 rounded-full w-6 h-6 flex justify-center items-center bg-[#3BB77E] text-white'>
-                                <span>1</span>
-                            </div>
+                           <ProductCount total={3}/>
                         </div>
 
                         <span className='text-gray-600'>Cart</span>
@@ -37,9 +45,10 @@ const Menu = () => {
                     <div className=' absolute right-0 border hover-dropdwon-item border-gray-200 bg-white invisible w-[300px]  rounded-lg z-50'>
 
                         <div>
-                            <div className='max-h-[380px] overflow-y-scroll'>
+                            <div className='max-h-[380px] overflow-y-auto scrollbar-thin scrollbar-thumb-bgSoft scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
                                 <ProductCart />
-
+                                <ProductCart />
+                                <ProductCart />
                             </div>
                             <hr />
                             {/* sub total */}
