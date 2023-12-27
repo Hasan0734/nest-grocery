@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import Countdown from 'react-countdown'
 import CounterBox from './CounterBox'
 import ProductRating from '../Shared/ProductRating'
@@ -56,12 +56,13 @@ export default function Modal({ isOpen, setIsOpen }: any) {
                                     </div>
                                     <div className='p-4 home_popup'>
                                         <h4 className='text-[#fdc040] text-[16px] font-bold'>Deal of the Day</h4>
-
+                                        <a href={'/'} className='' tabIndex={-1}>
                                         <h4 className='mb-5 text-gray-black text-[45px] leading-[60px] max-w-[59%] font-bold'>
-                                            <Link href={'/'} className=''>
+
                                                 Seeds of change Organic Red Rice
-                                            </Link>
+
                                         </h4>
+                                        </a>
                                         <div className='flex space-x-4 items-center mb-5'>
                                             <h4 className='text-green-black text-[50px]
                                              font-bold'>$28.85</h4>
@@ -71,7 +72,7 @@ export default function Modal({ isOpen, setIsOpen }: any) {
                                         <div className='mb-8'>
                                             <h5 className='text-[16x] text-light-gray mb-5 font-semibold'>Hurry Up! Offer End In:</h5>
                                             <Countdown
-                                                date={new Date("Jan 5, 2024 15:37:25").getTime()}
+                                                date={new Date("Jan 5, 2026 15:37:25").getTime()}
                                                 renderer={CounterBox}
                                             />
 

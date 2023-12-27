@@ -10,6 +10,7 @@ import OurAdvantage from "@/components/OurAdvantage/OurAdvantage";
 import BlogSidebar from "@/components/Blogs/BlogSidebar";
 
 import BlogCard from "@/components/Blogs/BlogCard";
+import Pagination from "@/components/Shared/Pagination";
 
 export const blogs = [
     {
@@ -133,10 +134,11 @@ const Blogs = () => {
 
                 <section className={'my-10'}>
                     <div className='max-w-xl md:max-w-3xl lg:max-w-8xl mx-auto px-4 2xl:px-0'>
-                        <div className='flex flex-col lg:flex-row  gap-5 xl:gap-10'>
+                        <div className='flex flex-col lg:flex-row  gap-5 xl:gap-10 items-start' >
                             <div className={'w-full flex flex-col gap-8'}>
 
                                 {blogs.map( blog => ( <BlogCard key={blog.id} blog={blog}/>))}
+                                <Pagination totalItem={blogs?.length }/>
                             </div>
                         <BlogSidebar/>
                         </div>

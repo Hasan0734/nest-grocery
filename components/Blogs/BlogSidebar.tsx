@@ -7,7 +7,7 @@ import ShopTrendingProduct from "@/components/shop/ShopTrendingProduct/ShopTrend
 const BlogSidebar = () => {
     return (
         <>
-            <div className='w-full lg:max-w-[350px] pr-0 lg:pr-4'>
+            <div className='w-full lg:max-w-[350px] pr-0 lg:pr-4 sticky -top-[1400px]'>
 
                 {/* search bar */}
                 <div className='mb-10'>
@@ -22,7 +22,6 @@ const BlogSidebar = () => {
                                 id='searchText' />
                             <input className='absolute right-0 bg-green-black text-sm font-bold text-white rounded-xl py-[18px] px-6' type="submit" value="Search" />
                         </div>
-
 
                     </form>
                 </div>

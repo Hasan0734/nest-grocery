@@ -109,7 +109,7 @@ const Footer = () => {
                                         <a
                                             href='https://facebook.com/'
                                             target={"_blank"}
-                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center'>
+                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center hover:-translate-y-1 duration-300'>
                                             <FaFacebookF className='text-white' size={15} />
                                         </a>
                                     </li>
@@ -117,7 +117,7 @@ const Footer = () => {
                                         <a
                                             href='https://twitter.com/'
                                             target={"_blank"}
-                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center'>
+                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center hover:-translate-y-1 duration-300'>
                                             <FaTwitter className='text-white' size={15} />
                                         </a>
                                     </li>
@@ -125,7 +125,7 @@ const Footer = () => {
                                         <a
                                             href='https://twitter.com/'
                                             target={"_blank"}
-                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center'>
+                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center hover:-translate-y-1 duration-300'>
                                             <FaSkype className='text-white' size={15} />
                                         </a>
                                     </li>
@@ -133,7 +133,7 @@ const Footer = () => {
                                         <a
                                             href='https://twitter.com/'
                                             target={"_blank"}
-                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center'>
+                                            className='bg-[#3bb77e] rounded-full w-[30px] h-[30px] flex items-center justify-center hover:-translate-y-1 duration-300'>
                                             <FaInstagram className='text-white' size={15} />
                                         </a>
                                     </li>

@@ -68,10 +68,10 @@ const BlogDetails = () => {
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet id enim, libero sit. Est donec lobortis cursus amet, cras elementum libero convallis feugiat. Nulla faucibus facilisi tincidunt a arcu, sem donec sed sed. Tincidunt morbi scelerisque lectus non. At leo mauris, vel augue. Facilisi diam consequat amet, commodo lorem nisl, odio malesuada cras. Tempus lectus sed libero viverra ut. Facilisi rhoncus elit sit sit.</p>
                                         </div>
                                     </div>
-                                        <div className={'border-t border-gray-200 py-10 flex items-center justify-between'}>
-                                                <div className={'flex items-center gap-3'}>
-                                                     <span className={'font-semibold'}>Tags</span>
-                                                    <ul className={'flex items-center gap-2'}>
+                                        <div className={'border-t border-gray-200 py-10 grid lg:grid-cols-2 gap-4 space-y-5 lg:space-y-0'}>
+                                                <div className={' space-y-2'}>
+                                                     <span className={'font-semibold underline underline-offset-4'}>Tags</span>
+                                                    <ul className={'flex items-center gap-2 flex-wrap'}>
                                                         <li>
                                                             <Link href={`/blogs/tag/salad`}
                                                                   className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
@@ -89,9 +89,10 @@ const BlogDetails = () => {
                                                     </ul>
                                                 </div>
 
-                                            <div className={'flex items-center gap-3'}>
-                                                <span className={'font-semibold'}>Posted In</span>
-                                                <ul className={'flex items-center gap-2'}>
+                                            <div className={' space-y-2'}>
+                                                <span className={'font-semibold whitespace-nowrap underline underline-offset-4'}>Posted In</span>
+
+                                                <ul className={'flex items-center gap-2  flex-wrap'}>
                                                     <li>
                                                         <Link href={`/blogs/category/salad`}
                                                               className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
@@ -111,6 +112,34 @@ const BlogDetails = () => {
                                                               className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
                                                                   'hover:text-primary-text duration-300 hover:-translate-y-1 text-sm font-semibold'}>
                                                             #Salad
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href={`/blogs/category/uncategorized`}
+                                                              className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
+                                                                  'hover:text-primary-text duration-300 hover:-translate-y-1 text-sm font-semibold'}>
+                                                            #Uncategorized
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href={`/blogs/category/uncategorized`}
+                                                              className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
+                                                                  'hover:text-primary-text duration-300 hover:-translate-y-1 text-sm font-semibold'}>
+                                                            #Uncategorized
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href={`/blogs/category/uncategorized`}
+                                                              className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
+                                                                  'hover:text-primary-text duration-300 hover:-translate-y-1 text-sm font-semibold'}>
+                                                            #Uncategorized
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href={`/blogs/category/uncategorized`}
+                                                              className={'flex items-center gap-2 bg-primary px-4 py-2.5 text-white rounded hover:bg-warning ' +
+                                                                  'hover:text-primary-text duration-300 hover:-translate-y-1 text-sm font-semibold'}>
+                                                            #Uncategorized
                                                         </Link>
                                                     </li>
                                                     <li>
@@ -146,7 +175,7 @@ const BlogDetails = () => {
                                                         id={'fullName'} name={'fullName'}/>
                                                 </div>
                                                 <div className={'space-y-1'}>
-                                                    <label className={'text-lg block'} htmlFor={'email'}>Full Name</label>
+                                                    <label className={'text-lg block'} htmlFor={'email'}>Email</label>
                                                     <input
                                                         placeholder={'ex. john@example.com'}
                                                         className={' p-4 w-full rounded-lg outline-0 border border-gray-200 focus:border-primary/30  ' +

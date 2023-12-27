@@ -35,7 +35,7 @@ const MainNavbar = () => {
 
                             <NavCategory />
 
-                            <Link href="/hot-deals" legacyBehavior>
+                            <Link href="/" legacyBehavior>
                                 <a className='flex items-center gap-1 font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-[#3BB77E]'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={21} viewBox="0 0 20 21" fill="none">
