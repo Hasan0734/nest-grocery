@@ -12,6 +12,7 @@ import Head from 'next/head'
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import Modal from '@/components/Modal/Modal'
+import RecentViewedProduct from "@/components/Shared/RecentViewedProduct";
 
 
 const Home: NextPage = () => {
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
         <DailyBestSells />
         <DealsOfTheDay />
         <TopProducts />
+          <RecentViewedProduct/>
         <Subscribe />
         <OurAdvantage />
       </Layout>
