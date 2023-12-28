@@ -111,9 +111,6 @@ const FortgotPassword = () => {
                         </form>
                     </div>
                 </section>
-
-                <Subscribe />
-                <OurAdvantage />
             </Layout>
         </>
     );

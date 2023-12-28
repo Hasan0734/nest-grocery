@@ -145,8 +145,6 @@ const Blogs = () => {
                     </div>
                 </section>
 
-                <Subscribe />
-                <OurAdvantage/>
             </Layout>
         </>
     );

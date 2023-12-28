@@ -38,9 +38,7 @@ const Home: NextPage = () => {
         <DailyBestSells />
         <DealsOfTheDay />
         <TopProducts />
-          <RecentViewedProduct/>
-        <Subscribe />
-        <OurAdvantage />
+
       </Layout>
     </>
   )

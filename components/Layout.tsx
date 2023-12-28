@@ -7,6 +7,9 @@ import SecondHeader from './SecondHeader/SecondHeader';
 import TopHeader from './TopHeader/TopHeader';
 import ScrollToTop from 'react-scroll-to-top';
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
+import RecentViewedProduct from "@/components/Shared/RecentViewedProduct";
+import Subscribe from "@/components/Subscribe/Subscribe";
+import OurAdvantage from "@/components/OurAdvantage/OurAdvantage";
 
 
 const Layout = ({ children }: any) => {
@@ -19,6 +22,9 @@ const Layout = ({ children }: any) => {
             <SecondHeader />
             <MainNavbar />
             {children}
+            <RecentViewedProduct/>
+            <Subscribe />
+            <OurAdvantage />
             <Footer />
             {router.pathname === '/' && <MobileMenu />}
 

@@ -115,9 +115,6 @@ const Login = () => {
                     </div>
                 </section>
 
-                <Subscribe />
-                <OurAdvantage />
-
             </Layout>
         </>
     );

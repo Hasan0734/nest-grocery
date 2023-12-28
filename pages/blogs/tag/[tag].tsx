@@ -48,8 +48,6 @@ const BlogByCategory = () => {
                     </div>
                 </section>
 
-                <Subscribe />
-                <OurAdvantage/>
             </Layout>
         </>
     );

@@ -200,9 +200,6 @@ const Register = () => {
                     </div>
                 </section>
 
-                <Subscribe />
-                <OurAdvantage />
-
             </Layout>
         </>
     );

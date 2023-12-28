@@ -358,8 +358,6 @@ const About: NextPage = () => {
           </div>
         </section>
 
-        <Subscribe />
-        <OurAdvantage/>
       </Layout>
     </>
   )

@@ -47,9 +47,6 @@ const BlogByCategory = () => {
                         </div>
                     </div>
                 </section>
-
-                <Subscribe />
-                <OurAdvantage/>
             </Layout>
         </>
     );

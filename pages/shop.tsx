@@ -140,8 +140,6 @@ const shop: NextPage = () => {
                     </div>
                 </section>
 
-                <Subscribe />
-                <OurAdvantage />
             </Layout>
         </>
     );

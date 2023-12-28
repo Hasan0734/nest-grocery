@@ -234,11 +234,6 @@ const index = () => {
 
                 {/* index */}
                 <Vendors layout={layout} />
-
-                <Subscribe />
-                <OurAdvantage />
-
-              
             </Layout>
 
         </>
