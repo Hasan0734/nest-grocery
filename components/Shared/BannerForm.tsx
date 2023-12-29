@@ -11,7 +11,7 @@ const BannerForm = ({className}:{className?: String}) => {
                     type="text"
                     placeholder='Your email address' />
                 <input
-                    className='absolute bottom-0 top-0 right-0 bg-[#3bb77e] text-sm md:text-[20px]
+                    className='absolute bottom-0 top-0 right-0 bg-primary text-sm md:text-[20px]
                     px-2 md:px-6 py-[8px] md:py-[18px] font-semibold rounded-full text-white'
                     type="submit"
                     value={"Subscribe"} />

@@ -29,7 +29,7 @@ const NavCategory = () => {
                 >
                     <button
                         onClick={() => setOpenCategory(!openCategory)}
-                        className='rounded flex gap-1 bg-[#3BB77E] px-6 2xl:px-4 py-3 items-center'>
+                        className='rounded flex gap-1 bg-primary px-6 2xl:px-4 py-3 items-center'>
                         <Squares2X2Icon strokeWidth={2} className='w-4 text-white' />
                         <span className='text-white font-bold font-quicksand'>Browse All Categories</span>
                         <ChevronDownIcon strokeWidth={2} className='w-4 text-white' />

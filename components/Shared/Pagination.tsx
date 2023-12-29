@@ -87,7 +87,7 @@ const Pagination = ({ totalItem, page = 1, limit = 5, siblings = 1, paginateType
             <ul className='flex items-center gap-3'>
                 <li onClick={() => handlePageChange('left')}>
                     <span
-                        className='page-link hover:bg-green-black hover:text-white
+                        className='page-link hover:bg-primary hover:text-white
                         duration-200 bg-gray-200'>
                         <ChevronLeftIcon className='' />
                     </span>
@@ -99,7 +99,7 @@ const Pagination = ({ totalItem, page = 1, limit = 5, siblings = 1, paginateType
                             <li onClick={() => handlePageChange(value)} key={value}>
                                 <span
                                     className='page-link
-                                     bg-green-black text-white'>
+                                     bg-primary text-white'>
                                     {value}
                                 </span>
                             </li>
@@ -108,7 +108,7 @@ const Pagination = ({ totalItem, page = 1, limit = 5, siblings = 1, paginateType
                         return (
                             <li onClick={() => handlePageChange(value)} key={value}>
                                 <span
-                                    className='page-link hover:bg-green-black hover:text-white
+                                    className='page-link hover:bg-primary hover:text-white
                                     duration-200 bg-gray-200'>
                                     {value}
                                 </span>
@@ -119,7 +119,7 @@ const Pagination = ({ totalItem, page = 1, limit = 5, siblings = 1, paginateType
 
                 <li onClick={() => handlePageChange('right')}>
                     <span
-                        className='page-link hover:bg-green-black hover:text-white
+                        className='page-link hover:bg-primary hover:text-white
                         duration-200 bg-gray-200'>
                         <ChevronRightIcon className='' />
                     </span>

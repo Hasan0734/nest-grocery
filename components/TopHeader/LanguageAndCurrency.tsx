@@ -13,7 +13,7 @@ const LanguageAndCurrency = () => {
                 <div className='relative before:block before:absolute before:-right-2 before:w-[1px] before:h-[12px] before:top-2 before:bg-gray-200'>
                     <p className=' text-[#7e7e7e] font-normal tracking-wide text-[13px] font-roboto p-1'>
                         Need help? Call Us:
-                        <a className='text-[#3BB77E]' href='tel:+88017XXXXX'>+88017XXXXX</a>
+                        <a className='text-primary' href='tel:+88017XXXXX'>+88017XXXXX</a>
                     </p>
                 </div>
 

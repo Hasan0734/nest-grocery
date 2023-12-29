@@ -7,7 +7,7 @@ import ShopTrendingProduct from '../ShopTrendingProduct/ShopTrendingProduct';
 const ShopSidebar = () => {
     return (
         <>
-            <div className='order-2 md:order-1 min-w-full sm:min-w-[400px] pr-0 lg:pr-4'>
+            <div className='order-2 md:order-1 min-w-full sm:min-w-[350px] pr-0 lg:pr-4 space-y-12'>
 
                 {/* search bar */}
                 <div className='mb-10'>
@@ -20,7 +20,7 @@ const ShopSidebar = () => {
           outline-none py-[15px] pl-2 pr-[100px] w-full'
                                 type="text"
                                 id='searchText' />
-                            <input className='absolute right-0 bg-green-black text-sm font-bold text-white rounded-xl py-[18px] px-6' type="submit" value="Search" />
+                            <input className='absolute right-0 bg-primary text-sm font-bold text-white rounded-xl py-[18px] px-6' type="submit" value="Search" />
                         </div>
 
 
@@ -37,7 +37,7 @@ const ShopSidebar = () => {
                 <ShopTopRatedProduct />
 
                 {/* tag clouds */}
-                <ShopTags />
+                {/*<ShopTags />*/}
             </div>
         </>
     );

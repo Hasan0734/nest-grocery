@@ -42,7 +42,7 @@ const index = () => {
                 <BreadCrumbs>
                     <ul className='flex items-center gap-3'>
                         <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                                 <Home size={15} />
                                 <span className='font-medium text-sm'>Home</span>
                             </Link>
@@ -60,12 +60,12 @@ const index = () => {
 
                         <form className='relative'>
                             <input
-                                className='border-[1px] border-green-black/50 
+                                className='border-[1px] border-primary/50 
                                 rounded-full py-[18px] bg-white outline-none
                                  pl-5 w-full drop-shadow-[0_5px_8px_rgba(0,0,0,0.09)]'
                                 type="text"
                                 placeholder='Search index (by name or ID)...' />
-                            <button className='bg-white hover:bg-green-black hover:text-white focus:text-white focus:bg-green-black
+                            <button className='bg-white hover:bg-primary hover:text-white focus:text-white focus:bg-primary
                             bottom-[1px] top-[1px] py-[17px] px-8 right-[1px] rounded-full absolute duration-200'>
                                 <MagnifyingGlassIcon strokeWidth={2} width={25} className='' />
                             </button>
@@ -80,21 +80,21 @@ const index = () => {
                     <div className='max-w-5xl px-4 2xl:px-0 mx-auto 
                     flex justify-between items-center flex-wrap gap-8'>
                         <div>
-                            <p>We have <strong className='text-green-black'>780</strong> index now</p>
+                            <p>We have <strong className='text-primary'>780</strong> index now</p>
                         </div>
                         <div className='flex gap-4 items-center flex-wrap'>
                             <div className='flex items-center gap-2'>
                                 <button
                                     onClick={() => setLayout('GRID')}
 
-                                    className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "GRID" ? "bg-green-black text-white" : "text-gray-400 bg-[#def9ec] "}`}>
+                                    className={`p-[10px] rounded-md hover:bg-primary hover:text-white ${layout === "GRID" ? "bg-primary text-white" : "text-gray-400 bg-[#def9ec] "}`}>
                                     <Grid strokeWidth={3} size={20} />
                                 </button>
 
                                 <button
                                     onClick={() => setLayout('LIST')}
 
-                                    className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "LIST" ? "bg-green-black text-white" : "text-gray-400 bg-[#def9ec] "}`}
+                                    className={`p-[10px] rounded-md hover:bg-primary hover:text-white ${layout === "LIST" ? "bg-primary text-white" : "text-gray-400 bg-[#def9ec] "}`}
                                 >
                                     <List strokeWidth={3} size={20} />
                                 </button>
@@ -129,7 +129,7 @@ const index = () => {
                                                 <Listbox.Option
                                                     key={index}
                                                     className={({ active }) =>
-                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-green-black text-white' : 'text-gray-900'
+                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-white' : 'text-gray-900'
                                                         }`
                                                     }
                                                     value={number}
@@ -144,7 +144,7 @@ const index = () => {
                                                             </span>
 
                                                             {selected ? (
-                                                                <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-green-black'}`}>
+                                                                <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-primary'}`}>
                                                                     <CheckIcon className="h-5 w-5" aria-hidden="true" />
                                                                     {active}
 
@@ -195,7 +195,7 @@ const index = () => {
                                                 <Listbox.Option
                                                     key={index}
                                                     className={({ active }) =>
-                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-green-black text-white' : 'text-gray-900'
+                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-white' : 'text-gray-900'
                                                         }`
                                                     }
                                                     value={sort}
@@ -211,7 +211,7 @@ const index = () => {
 
                                                             {selected ? (
 
-                                                                <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-green-black'}`}>
+                                                                <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-primary'}`}>
                                                                     <CheckIcon className="h-5 w-5" aria-hidden="true" />
                                                                     {active}
 

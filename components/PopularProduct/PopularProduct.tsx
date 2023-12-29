@@ -47,9 +47,9 @@ const PopularProduct = () => {
                             onClick={() => setCategory(slugify(category.name, '-'))}>
                             <a
                                 className={`text-[#253d4e] font-semibold
-                                 text-[15px] cursor-pointer hover:text-[#3bb77e]
+                                 text-[15px] cursor-pointer hover:text-primary
                                  hover:-translate-y-[3px] block duration-300
-                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-[#3bb77e]' : ""}`}>
+                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-primary' : ""}`}>
                                 {category.name}
                             </a>
                         </li>))}

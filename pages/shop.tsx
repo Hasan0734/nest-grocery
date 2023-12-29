@@ -40,7 +40,7 @@ const shop: NextPage = () => {
                 <BreadCrumbs>
                     <ul className='flex items-center gap-3'>
                         <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                                 <Home size={15} />
                                 <span className='font-medium text-sm'>Home</span>
                             </Link>
@@ -66,14 +66,14 @@ const shop: NextPage = () => {
                                             <button
                                                 onClick={() => setLayout('GRID')}
 
-                                                className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "GRID" ? "bg-green-black text-white" : "text-gray-black bg-[#def9ec] "}`}>
+                                                className={`p-[10px] rounded-md hover:bg-primary hover:text-white ${layout === "GRID" ? "bg-primary text-white" : "text-gray-black bg-[#def9ec] "}`}>
                                                 <Grid strokeWidth={3} size={20} />
                                             </button>
 
                                             <button
                                                 onClick={() => setLayout('LIST')}
 
-                                                className={`p-[10px] rounded-md hover:bg-green-black hover:text-white ${layout === "LIST" ? "bg-green-black text-white" : "text-gray-black bg-[#def9ec] "}`}
+                                                className={`p-[10px] rounded-md hover:bg-primary hover:text-white ${layout === "LIST" ? "bg-primary text-white" : "text-gray-black bg-[#def9ec] "}`}
                                             >
                                                 <List strokeWidth={3} size={20} />
                                             </button>
@@ -82,7 +82,7 @@ const shop: NextPage = () => {
 
                                         <button className='border border-gray-200 rounded-full px-4 py-1 flex items-center gap-1 shadow-[0_5px_10px_rgba(0,0,0,0.08)]'>
 
-                                            <FunnelIcon className='text-green-black' width={20} />
+                                            <FunnelIcon className='text-primary' width={20} />
 
                                             <span className='text-gray-black text-[16px] font-bold'>Filter</span>
 
@@ -110,7 +110,7 @@ const shop: NextPage = () => {
 
                                             <Listbox.Options
 
-                                                className="absolute top-[45px] bg-white z-20 border max-h-[150px] overflow-y-scroll scrollbar-thin scrollbar-thumb-green-black  scrollbar-track-gray-100
+                                                className="absolute top-[45px] bg-white z-20 border max-h-[150px] overflow-y-scroll scrollbar-thin scrollbar-thumb-primary  scrollbar-track-gray-100
                                            scrollbar-thumb-rounded-full 
 
 

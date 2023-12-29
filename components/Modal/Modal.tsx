@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Fragment } from 'react'
 import Countdown from 'react-countdown'
 import CounterBox from './CounterBox'
-import ProductRating from '../Shared/ProductRating'
+import ProductRating from '../Shared/Rating'
 
 export default function Modal({ isOpen, setIsOpen }: any) {
 
@@ -56,15 +56,15 @@ export default function Modal({ isOpen, setIsOpen }: any) {
                                     </div>
                                     <div className='p-4 home_popup'>
                                         <h4 className='text-[#fdc040] text-[16px] font-bold'>Deal of the Day</h4>
-                                        <a href={'/'} className='' tabIndex={-1}>
-                                        <h4 className='mb-5 text-gray-black text-[45px] leading-[60px] max-w-[59%] font-bold'>
+                                        <a href={'/products/12'} className='' tabIndex={-1}>
+                                        <span className='mb-5 block text-gray-black text-[45px] leading-[60px] max-w-[59%] font-bold'>
 
                                                 Seeds of change Organic Red Rice
 
-                                        </h4>
+                                        </span>
                                         </a>
                                         <div className='flex space-x-4 items-center mb-5'>
-                                            <h4 className='text-green-black text-[50px]
+                                            <h4 className='text-primary text-[50px]
                                              font-bold'>$28.85</h4>
                                             <h4 className='text-[#b6b6b6] text-[28px]
                                              font-bold line-through decoration-[3px]'>$32.80</h4>
@@ -84,7 +84,7 @@ export default function Modal({ isOpen, setIsOpen }: any) {
                                             </span>
                                         </div>
                                         <button className='flex items-center gap-2
-                                         bg-green-black hover:bg-orange-light duration-300 py-4 px-4 rounded-md text-white'>
+                                         bg-primary hover:bg-orange-light duration-300 py-4 px-4 rounded-md text-white'>
                                             <ShoppingCartIcon width={20} />
                                             <span className='font-semibold'>Add to cart</span>
                                         </button>

@@ -3,16 +3,13 @@ import DailyBestSells from '@/components/home/DailyBestSells/DailyBestSells'
 import DealsOfTheDay from '@/components/home/DealsOfTheDay/DealsOfTheDay'
 import FeaturedCategories from '@/components/home/FeaturedCategories/FeaturedCategories'
 import HomeCategory from '@/components/home/HomeCategory/HomeCategory'
-import OurAdvantage from '@/components/OurAdvantage/OurAdvantage'
 import PopularProduct from '@/components/PopularProduct/PopularProduct'
-import Subscribe from '@/components/Subscribe/Subscribe'
-import TopProducts from '@/components/home/TopProducts/TopProducts'
+import TopProducts from '@/components/Shared/TopProducts/TopProducts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import Modal from '@/components/Modal/Modal'
-import RecentViewedProduct from "@/components/Shared/RecentViewedProduct";
 
 
 const Home: NextPage = () => {

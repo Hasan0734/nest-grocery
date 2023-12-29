@@ -120,7 +120,7 @@ const Blogs = () => {
                 <BreadCrumbs>
                     <ul className='flex items-center gap-3'>
                         <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                                 <Home size={15} />
                                 <span className='font-medium text-sm'>Home</span>
                             </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductRating from '../../Shared/ProductRating';
+import ProductRating from '../Rating';
 import Link from 'next/link';
 import { NumericFormat } from 'react-number-format';
 
@@ -9,13 +9,13 @@ const TopProductCard = ({ product }: any) => {
     return (
         <>
             <div className='flex py-3 hover:-translate-y-2 duration-300'>
-                <Link href='/'>
+                <Link href='/products/12'>
                     <img className='w-32 h-full' src={product.image} alt="" />
                 </Link>
                 <div className='py-2 px-4'>
                     <h6 className='my-1'>
-                        <Link href='/'
-                            className='leading-6 line-clamp-2 text-[16px] font-bold text-[#253d4e] hover:text-[#3bb77e]'>
+                        <Link href='/products/12'
+                            className='leading-6 line-clamp-2 text-[16px] font-bold text-[#253d4e] hover:text-primary'>
                             {product.name}
                         </Link>
                     </h6>
@@ -25,7 +25,7 @@ const TopProductCard = ({ product }: any) => {
                     </div>
                     {!product.price_range && <div className='flex gap-x-1 mt-2'>
                         <h5
-                            className='text-[#3bb77e] 
+                            className='text-primary 
                          text-[18px] font-bold underline'>
                             <NumericFormat
                                 displayType='text'
@@ -52,7 +52,7 @@ const TopProductCard = ({ product }: any) => {
                     </div>}
                     {product.price_range && <div className='flex gap-x-1 mt-2'>
                         <h5
-                            className='text-[#3bb77e] 
+                            className='text-primary 
                         text-[18px] font-bold'>
                             <NumericFormat
                                 displayType='text'

@@ -15,7 +15,7 @@ const CartDrawer = ({ handleOutSideClick, cartDrawer, setCartDrawer }: any) => {
                         className='py-5 px-7 border-b border-gray-200 sticky
                          top-0 bg-white z-30'>
                         <XMarkIcon onClick={() => setCartDrawer(false)}
-                                   className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-[#3BB77E] p-1 w-6 rounded-full bg-[#3BB77E]/30' />
+                                   className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-primary p-1 w-6 rounded-full bg-primary/30' />
                     </div>
                     <div className='max-h-[500px] overflow-y-scroll'>
                         <ProductCart />
@@ -26,15 +26,15 @@ const CartDrawer = ({ handleOutSideClick, cartDrawer, setCartDrawer }: any) => {
                         <ProductCart />
                     </div>
                     <div className='p-3'>
-                        <div className='bg-[#3BB77E]/30  p-[10px] rounded font-quicksand font-semibold'>
-                            <h4 className='text-gray-500'>Sub total: <span className='text-[#3BB77E]'>$45.85</span></h4>
+                        <div className='bg-primary/30  p-[10px] rounded font-quicksand font-semibold'>
+                            <h4 className='text-gray-500'>Sub total: <span className='text-primary'>$45.85</span></h4>
                         </div>
                         <div className='flex justify-between items-center mt-4'>
                             <Link href="/view-cart" legacyBehavior>
-                                <a className='bg-[#3BB77E] px-4 py-3 text-white font-normal text-sm rounded'>View Cart</a>
+                                <a className='bg-primary px-4 py-3 text-white font-normal text-sm rounded'>View Cart</a>
                             </Link>
                             <Link href="/view-cart" legacyBehavior>
-                                <a className='bg-[#3BB77E] px-4 py-3 text-white font-normal text-sm rounded'>Checkout</a>
+                                <a className='bg-primary px-4 py-3 text-white font-normal text-sm rounded'>Checkout</a>
                             </Link>
                         </div>
                     </div>

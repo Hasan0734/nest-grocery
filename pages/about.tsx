@@ -89,7 +89,7 @@ const About: NextPage = () => {
         <BreadCrumbs>
           <ul className='flex items-center gap-3'>
             <li className=' flex space-x-3 items-center' >
-              <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+              <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                 <Home size={15} />
                 <span className='font-medium text-sm'>Home</span>
               </Link>
@@ -173,12 +173,12 @@ const About: NextPage = () => {
                   -translate-y-[50%]
                   left-0  w-full flex justify-between'>
                     <button onClick={() => swiperRef.current?.slidePrev()}
-                      className='bg-white w-9 h-9 hover:bg-[#3bb77e]
+                      className='bg-white w-9 h-9 hover:bg-primary
                        hover:text-white rounded-full p-2 ml-2'>
                       <ArrowLeftIcon className='w-full' />
                     </button>
                     <button onClick={() => swiperRef.current?.slideNext()}
-                      className='bg-white w-9 h-9 hover:bg-[#3bb77e]
+                      className='bg-white w-9 h-9 hover:bg-primary
                        hover:text-white rounded-full p-2 mr-2' >
                       <ArrowRightIcon className='w-full' />
                     </button>
@@ -216,7 +216,7 @@ const About: NextPage = () => {
               </div>
               <div className='flex items-center'>
                 <div className=''>
-                  <h3 className='text-[#3bb77e] text-2xl mb-5 font-bold'>Our performance</h3>
+                  <h3 className='text-primary text-2xl mb-5 font-bold'>Our performance</h3>
                   <h3 className='text-[#253d4e] text-[30px] mb-5 font-bold leading-8'>
                     Your Partner for <br />e-commerce grocery solution
                   </h3>
@@ -272,7 +272,7 @@ const About: NextPage = () => {
           <div className='max-w-7xl  mx-auto px-4 2xl:px-0'>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-20">
               <div className='pr-1'>
-                <h3 className='text-2xl text-[#3bb77e] font-semibold mb-4'>Our Team</h3>
+                <h3 className='text-2xl text-primary font-semibold mb-4'>Our Team</h3>
 
                 <h1 className='text-[#253d4e] text-[30px] font-bold mb-6'>Meet Our Expert Team</h1>
 
@@ -282,7 +282,7 @@ const About: NextPage = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus exercitationem odit mollitia culpa ad tempora, minus ipsum dolorum eius voluptatibus!</p>
                 <br />
                 <br />
-                <Link href={"/"} className="px-3 py-3 bg-[#3bb77e] rounded hover:bg-[#fdc040] duration-300 text-white font-bold text-sm">
+                <Link href={"/"} className="px-3 py-3 bg-primary rounded hover:bg-warning duration-300 text-white font-bold text-sm">
                   View All Members
                 </Link>
               </div>
@@ -297,22 +297,22 @@ const About: NextPage = () => {
                       <ul className='flex gap-2 items-center justify-center mt-4'>
                         <li>
                           <a href="https://facebook.com/h.merinda">
-                            <FaFacebookF className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaFacebookF className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://twitter.com/h.merinda">
-                            <FaTwitter className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaTwitter className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://skype.com/h.merinda">
-                            <FaSkype className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaSkype className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://instagram.com/h.merinda">
-                            <FaInstagram className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaInstagram className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                       </ul>
@@ -331,22 +331,22 @@ const About: NextPage = () => {
                       <ul className='flex gap-2 items-center justify-center mt-4'>
                         <li>
                           <a href="https://facebook.com/h.merinda">
-                            <FaFacebookF className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaFacebookF className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://twitter.com/h.merinda">
-                            <FaTwitter className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaTwitter className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://skype.com/h.merinda">
-                            <FaSkype className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaSkype className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                         <li>
                           <a href="https://instagram.com/h.merinda">
-                            <FaInstagram className='text-[#3bb77e] hover:text-yellow-500' size={18} />
+                            <FaInstagram className='text-primary hover:text-yellow-500' size={18} />
                           </a>
                         </li>
                       </ul>

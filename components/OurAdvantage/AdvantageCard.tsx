@@ -27,7 +27,7 @@ const AdvantageCard = ({ advantage }: any) => {
                     // }}
 
 
-                    className='flex gap-5 items-center advantage_card bg-[#f4f6fa] p-5 rounded-lg  xl:last:hidden'>
+                    className='flex gap-5 items-center advantage_card bg-blue-light p-5 rounded-lg  xl:last:hidden'>
                     <div>
                         <img className='w-[60px] advantage_image' src={advantage.icon} alt="" />
                     </div>

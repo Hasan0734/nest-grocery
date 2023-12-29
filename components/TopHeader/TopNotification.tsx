@@ -20,17 +20,17 @@ const TopNotification = () => {
                 >
                     <SwiperSlide >
                         <Link href={"/"} legacyBehavior>
-                            <a className='text-[#3BB77E] font-semibold' href="">100% secure delivery without contacting the cuorier</a>
+                            <a className='text-primary font-semibold' href="">100% secure delivery without contacting the cuorier</a>
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Link href={"/"} legacyBehavior>
-                            <a className='text-[#3BB77E] font-semibold' href="">Supper Value Deals - Save more with coupons</a>
+                            <a className='text-primary font-semibold' href="">Supper Value Deals - Save more with coupons</a>
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Link href={"/"} legacyBehavior>
-                            <a className='text-[#3BB77E] font-semibold' href="">Trendy 25 silver jewelry, save 35% off tody</a>
+                            <a className='text-primary font-semibold' href="">Trendy 25 silver jewelry, save 35% off tody</a>
                         </Link>
                     </SwiperSlide>
 

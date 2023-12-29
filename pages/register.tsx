@@ -25,7 +25,7 @@ const Register = () => {
                 <BreadCrumbs>
                     <ul className='flex items-center gap-3'>
                         <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                                 <Home size={15} />
                                 <span className='font-medium text-sm'>Home</span>
                             </Link>
@@ -48,7 +48,7 @@ const Register = () => {
                                 <p
                                     className='text-[16px] text-light-gray 
                                  font-normal'>Already have an account? <Link
-                                        className='text-green-black hover:text-orange-light'
+                                        className='text-primary hover:text-orange-light'
                                         href={'/login'}>Login</Link></p>
 
                                 <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
@@ -92,7 +92,7 @@ const Register = () => {
                                                         .split('')
                                                         .map(co => (
                                                             <span
-                                                                className='first:text-green-black
+                                                                className='first:text-primary
                                                                  [&:nth-child(2)]:text-orange-light
                                                                   [&:nth-child(3)]:text-blue-500
                                                                   [&:nth-child(4)]:text-red-500'>
@@ -134,7 +134,7 @@ const Register = () => {
                                                 />
                                             </div>
                                             <Link
-                                                className='text-green-black text-sm flex items-center gap-2'
+                                                className='text-primary text-sm flex items-center gap-2'
                                                 href={'/forgot-passwrod'}
                                             >
                                                 <BookOpen size={23} />
@@ -146,7 +146,7 @@ const Register = () => {
 
                                         <div>
                                             <button
-                                                className=" px-9 py-3 bg-green-black duration-300
+                                                className=" px-9 py-3 bg-primary duration-300
                                                  hover:-translate-y-1 rounded-lg text-white font-bold">
                                                 Submit & Register
                                             </button>

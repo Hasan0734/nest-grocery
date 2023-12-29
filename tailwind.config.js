@@ -29,14 +29,13 @@ module.exports = {
         "8xl": "1586px",
       },
       colors: {
-        "gray-black": "#253d4e",
-        "green-black": "#3bb773",
+        primary: "#3bb77e",
+        warning: '#fdc040',
+        bgSoft: "#3bb77e8f",
         "light-gray": "#7e7e7e",
         "orange-light": "#fdc040",
-        primary: "#3bb773",
-        bgSoft: "#3bb77e8f",
         'primary-text': '#253d4e',
-        warning: '#fdc040'
+        'blue-light': '#f4f6fa'
 
       },
     },

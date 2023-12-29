@@ -7,20 +7,20 @@ const CategoryListBox = ({ category }: any) => {
     const subRef: any = React.useRef()
     return (
         <>
-            <li className='my-4'>
-                <div className='border border-gray-200 hover:border-green-black p-2 rounded
+            <li className=''>
+                <div className='border border-gray-200 hover:border-primary p-2 rounded
              flex justify-between items-center hover:shadow-[0_8px_10px_rgba(0,0,0,0.05)] duration-300'>
                     <Link href={`/`} className='flex gap-2 items-center'>
                         <img
                             className='w-[30px] ' src={category.icon} alt="" />
                         <h6
                             className='text-[15px] text-gray-black
-                     hover:text-green-black font-medium'>{category.name}</h6>
+                     hover:text-primary font-medium'>{category.name}</h6>
                     </Link>
                     <div className='flex items-center gap-2'>
                         {category.sub?.length > 0 && <ChevronDownIcon onClick={() => setIsOpen(!isOpen)} className='border cursor-pointer rounded-full p-[4px]' width={24} />}
 
-                        <span className='bg-green-black text-white text-xs rounded-full px-2 py-[3px] block text-center align-middle' >7</span>
+                        <span className='bg-primary text-white text-xs rounded-full px-2 py-[3px] block text-center align-middle' >7</span>
                     </div>
                 </div>
 
@@ -42,10 +42,10 @@ const CategoryListBox = ({ category }: any) => {
                                     className='w-[30px] ' src={sub.icon} alt="" />
                                 <h6
                                     className='text-[15px] text-gray-black
-                             hover:text-green-black font-medium'>{sub.name}</h6>
+                             hover:text-primary font-medium'>{sub.name}</h6>
                             </Link>
 
-                            <span className='bg-green-black text-white text-xs rounded-full px-2 py-[3px] block text-center align-middle' >7</span>
+                            <span className='bg-primary text-white text-xs rounded-full px-2 py-[3px] block text-center align-middle' >7</span>
 
                         </li>)}
                     </ul>)}

@@ -42,7 +42,7 @@ const MegaMenuContent = () => {
                 <div className='w-full bg-white grid grid-cols-12 gap-10 p-5 rounded-b-lg'>
                     <div className='flex justify-between col-span-9'>
                         {megaMenuData.map((menu: any) => (<div key={menu.id}>
-                            <h2 className='text-[20px] font-quicksand text-[#3BB77E] font-bold'>{menu.title}</h2>
+                            <h2 className='text-[20px] font-quicksand text-primary font-bold'>{menu.title}</h2>
                             <ul className='mt-4'>
                                 {menu.items.map((item: any) => (<li className='my-2' key={item.id}>
                                     <Link href={`/${slugify(item.title, '-')}`} legacyBehavior>
@@ -65,7 +65,7 @@ const MegaMenuContent = () => {
                                         Everyday Fresh & Clean with Our Products
                                     </h4>
 
-                                    <button className='bg-[#3bb77e] px-2 py-[6px] text-white font-semibold text-xs rounded'>
+                                    <button className='bg-primary px-2 py-[6px] text-white font-semibold text-xs rounded'>
                                         Shop Now →
                                     </button>
                                 </div>

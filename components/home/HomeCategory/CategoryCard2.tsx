@@ -25,7 +25,7 @@ const CategoryCard2 = ({ title, parentLink, image }: any) => {
                                 </Link>
                             </h2>
                             <button
-                                className='text-white bg-[#3bb77e] px-3 py-1 rounded text-sm'>
+                                className='text-white bg-primary px-3 py-1 rounded text-sm'>
                                 Shop Now →
                             </button>
                         </div>

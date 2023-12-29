@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryListBox from '../../Shared/CategoryListBox';
 import ShopCardContainer from '../../Shared/ShopCardContainer';
+import {cn} from "@/utls/utils";
 
 
 const categories = [
@@ -74,13 +75,10 @@ const ShopCategories = () => {
         <>
 
             <ShopCardContainer title="Categories">
-
-                <ul className='mt-6'>
+                <ul className={cn(' max-h-[400px] overflow-y-scroll scrollbar space-y-2 pr-2', ' scrollbar-track-transparent')}>
                     {categories.map((category) => <CategoryListBox key={category.id}
                         category={category} />)}
-
                 </ul>
-
             </ShopCardContainer>
 
         </>

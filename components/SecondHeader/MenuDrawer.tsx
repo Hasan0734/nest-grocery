@@ -40,14 +40,14 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                     <div
                         className='py-5 px-7 border-b border-gray-200 sticky
                          top-0 bg-white z-30'>
-                        <XMarkIcon onClick={() => setMenuDrawer(false)} className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-[#3BB77E] p-1 w-6 rounded-full bg-[#3BB77E]/30' />
+                        <XMarkIcon onClick={() => setMenuDrawer(false)} className='cursor-pointer  hover:rotate-180 duration-300 transform-gpu text-primary p-1 w-6 rounded-full bg-primary/30' />
 
                     </div>
                     <div className='py-5 px-7'>
                         {/* search input */}
                         <form className='relative'>
                             <input className='pl-4 pr-12 py-2 bg-gray-300/50 w-full outline-none rounded-md' type="text" placeholder='Search...' />
-                            <button className='focus:bg-[#3BB77E] absolute right-0 rounded-md  px-3 py-[10px]'>
+                            <button className='focus:bg-primary absolute right-0 rounded-md  px-3 py-[10px]'>
                                 <MagnifyingGlassIcon className='w-5 text-gray-700' />
                             </button>
                         </form>
@@ -56,9 +56,9 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
 
                             {/* tab button */}
                             <div className='flex gap-3'>
-                                <button onClick={() => setActiveItem('menu')} className={`duration-200 common_btn  ${activeItem === 'menu' ? "bg-orange-200/70 text-[#3BB77E]" : "bg-gray-300/50  text-gray-600"}`}>Menu</button>
+                                <button onClick={() => setActiveItem('menu')} className={`duration-200 common_btn  ${activeItem === 'menu' ? "bg-orange-200/70 text-primary" : "bg-gray-300/50  text-gray-600"}`}>Menu</button>
 
-                                <button onClick={() => setActiveItem('category')} className={`duration-200 common_btn  ${activeItem === 'category' ? "bg-orange-200/70 text-[#3BB77E]" : "bg-gray-300/50  text-gray-600"}`}>Category</button>
+                                <button onClick={() => setActiveItem('category')} className={`duration-200 common_btn  ${activeItem === 'category' ? "bg-orange-200/70 text-primary" : "bg-gray-300/50  text-gray-600"}`}>Category</button>
                             </div>
                             {/* menus */}
                             {activeItem === "menu" && <ul className={`mt-5`}>
@@ -69,7 +69,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                         <a className='font-semibold text-sm text-gray-700 block '>{menu.title}</a>
                                     </Link>
                                     <div>
-                                        <button className='focus:bg-[#3BB77E] px-2 rounded py-2 focus:text-white text-gray-500'>
+                                        <button className='focus:bg-primary px-2 rounded py-2 focus:text-white text-gray-500'>
                                             <ChevronDownIcon className='w-4 ' />
                                         </button>
                                     </div>
@@ -91,21 +91,21 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                             <div className='mt-5 border border-gray-200 p-3'>
                                 <ul>
                                     <li className='flex gap-2 mt-3'>
-                                        <PhoneIcon className='w-4 text-[#3BB77E]' />
+                                        <PhoneIcon className='w-4 text-primary' />
                                         <span className='text-gray-600 text-sm'>017XXXXXXX</span>
                                     </li>
                                     <li className='flex gap-2 mt-3'>
-                                        <EnvelopeIcon className='w-4 text-[#3BB77E]' />
+                                        <EnvelopeIcon className='w-4 text-primary' />
                                         <span className='text-gray-600 text-sm'>nestcare@nest.com</span>
                                     </li>
 
                                 </ul>
                                 <div className='mt-5'>
                                     <Link href="/signup" legacyBehavior>
-                                        <a className='text-sm font-light text-white bg-[#fdc040] mt-3 text-center block w-full py-2 rounded'>Sign Up</a>
+                                        <a className='text-sm font-light text-white bg-warning mt-3 text-center block w-full py-2 rounded'>Sign Up</a>
                                     </Link>
                                     <Link href="/login" legacyBehavior>
-                                        <a className='text-sm font-light text-white bg-[#3BB77E] mt-3 text-center block w-full py-2 rounded'>Login</a>
+                                        <a className='text-sm font-light text-white bg-primary mt-3 text-center block w-full py-2 rounded'>Login</a>
                                     </Link>
                                 </div>
 
@@ -117,7 +117,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>
                                         <FaFacebookF
-                                            className='bg-[#3BB77E] rounded-full 
+                                            className='bg-primary rounded-full 
                                             p-[6px] w-7 h-7 text-white' />
                                     </a>
 
@@ -125,7 +125,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>
                                         <FaTwitter
-                                            className='bg-[#3BB77E] rounded-full 
+                                            className='bg-primary rounded-full 
                                             p-[6px] w-7 h-7 text-white' />
                                     </a>
 
@@ -133,7 +133,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>
                                         <FaSkype
-                                            className='bg-[#3BB77E] rounded-full 
+                                            className='bg-primary rounded-full 
                                             p-[6px] w-7 h-7 text-white' />
                                     </a>
 
@@ -141,7 +141,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>
                                         <FaYoutube
-                                            className='bg-[#3BB77E] rounded-full 
+                                            className='bg-primary rounded-full 
                                             p-[6px] w-7 h-7 text-white' />
                                     </a>
 
@@ -149,7 +149,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
                                 <li>
                                     <a target="_blank" href='https://www.facebook.com/' rel='noopener noreferrer'>
                                         <FaInstagram
-                                            className='bg-[#3BB77E] rounded-full 
+                                            className='bg-primary rounded-full 
                                             p-[6px] w-7 h-7 text-white' />
                                     </a>
 

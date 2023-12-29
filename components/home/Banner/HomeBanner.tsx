@@ -97,11 +97,11 @@ const HomeBanner = () => {
 
                         <div className='swiper-navigations z-20 absolute top-[50%] left-0 w-full flex justify-between'>
                             <button onClick={() => swiperRef.current?.slidePrev()}
-                                className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_prev'>
+                                className='bg-white w-9 h-9 hover:bg-primary hover:text-white rounded-full p-2 banner_prev'>
                                 <ChevronLeftIcon className='w-full' />
                             </button>
                             <button onClick={() => swiperRef.current?.slideNext()}
-                                className='bg-white w-9 h-9 hover:bg-[#3bb77e] hover:text-white rounded-full p-2 banner_next' >
+                                className='bg-white w-9 h-9 hover:bg-primary hover:text-white rounded-full p-2 banner_next' >
                                 <ChevronRightIcon className='w-full' />
                             </button>
                         </div>

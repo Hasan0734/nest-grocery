@@ -2,7 +2,7 @@ import { StarIcon } from '@heroicons/react/24/outline';
 import { StarIcon as SolidStarIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
-const ProductRating = ({ rating }: any) => {
+const Ratting = ({ rating }: any) => {
 
     const ratingarr: number[] = [...Array(5)];
     let inActinve = []
@@ -10,7 +10,6 @@ const ProductRating = ({ rating }: any) => {
     for (let i = 0; i < ratingarr?.length - rating; i++) {
         inActinve.push(i)
     }
-
 
     return (
         <div className='flex '>
@@ -21,4 +20,4 @@ const ProductRating = ({ rating }: any) => {
     );
 };
 
-export default ProductRating;
+export default Ratting;

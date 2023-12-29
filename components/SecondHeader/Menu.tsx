@@ -53,14 +53,14 @@ const Menu = () => {
                             <hr />
                             {/* sub total */}
                             <div className='px-4 py-6'>
-                                <h3 className='text-sm tracking-wide'>Subtotal: <span className='text-[#3BB77E] font-semibold'>$41.25</span></h3>
+                                <h3 className='text-sm tracking-wide'>Subtotal: <span className='text-primary font-semibold'>$41.25</span></h3>
 
                                 <div className='flex justify-between items-center mt-4'>
                                     <Link href="/view-cart" legacyBehavior>
-                                        <a className='bg-[#3BB77E] px-4 py-2 text-white font-normal text-sm rounded'>View Cart</a>
+                                        <a className='bg-primary px-4 py-2 text-white font-normal text-sm rounded'>View Cart</a>
                                     </Link>
                                     <Link href="/view-cart" legacyBehavior>
-                                        <a className='bg-[#3BB77E] px-4 py-2 text-white font-normal text-sm rounded'>Checkout</a>
+                                        <a className='bg-primary px-4 py-2 text-white font-normal text-sm rounded'>Checkout</a>
                                     </Link>
                                 </div>
                             </div>

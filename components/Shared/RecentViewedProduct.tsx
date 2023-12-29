@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import Container from "@/components/Shared/Container";
-import TopProductCard from "@/components/home/TopProducts/TopProductCard";
+import TopProductCard from "@/components/Shared/TopProducts/TopProductCard";
 import {Swiper, SwiperSlide,useSwiper} from "swiper/react";
 
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";

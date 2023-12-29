@@ -14,7 +14,7 @@ const ProductCart = () => {
                     <div className='flex justify-between items-center gap-2'>
                         <h3 className='text-[16px] text-gray-600'>Angie's Sweet & Salty Kettle Corn</h3>
                         <div>
-                            <button className='hover:bg-[#3BB77E] rounded-full p-[6px] w-7 h-7 border border-gray-200 '>
+                            <button className='hover:bg-primary rounded-full p-[6px] w-7 h-7 border border-gray-200 '>
                                 <XMarkIcon className=' text-gray-500 hover:text-white' /></button>
                         </div>
                     </div>

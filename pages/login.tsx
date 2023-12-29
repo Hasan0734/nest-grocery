@@ -27,7 +27,7 @@ const Login = () => {
                 <BreadCrumbs>
                     <ul className='flex items-center gap-3'>
                         <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-[#3bb77e] hover:text-orange-300">
+                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
                                 <Home size={15} />
                                 <span className='font-medium text-sm'>Home</span>
                             </Link>
@@ -49,7 +49,7 @@ const Login = () => {
                                 <form>
                                     <h2 className='text-[50px] mb-3 font-bold text-gray-black'>Login</h2>
                                     <p className='text-[16px] text-light-gray font-normal'>Don't have an account? <Link
-                                        className='text-green-black hover:text-orange-light'
+                                        className='text-primary hover:text-orange-light'
                                         href={'/register'}>Create here</Link></p>
 
                                     <div className='w-full mt-6'>
@@ -78,7 +78,7 @@ const Login = () => {
                                                         .split('')
                                                         .map(co => (
                                                             <span
-                                                                className='first:text-green-black
+                                                                className='first:text-primary
                                                                  [&:nth-child(2)]:text-orange-light
                                                                   [&:nth-child(3)]:text-blue-500
                                                                   [&:nth-child(4)]:text-red-500'>
@@ -106,7 +106,7 @@ const Login = () => {
                                         </div>
                                         <div>
                                             <button 
-                                            className="bg-gray-black px-9 py-3 hover:bg-green-black duration-300 hover:-translate-y-1 rounded-lg text-white font-bold">Log in</button>
+                                            className="bg-gray-black px-9 py-3 hover:bg-primary duration-300 hover:-translate-y-1 rounded-lg text-white font-bold">Log in</button>
                                         </div>
                                     </div>
                                 </form>

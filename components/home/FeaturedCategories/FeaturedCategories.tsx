@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 const simpleCategory = [
     { id: 1, name: "Cake & Milk" },
-    { id: 2, name: "Coffes & Teas" },
+    { id: 2, name: "Coffees & Teas" },
     { id: 3, name: "Pet Foods" },
     { id: 4, name: "Vegetables" },
 ]
@@ -134,13 +134,13 @@ const FeaturedCategories = () => {
                     <div className='hidden lg:flex gap-4 '>
                         <button
                             onClick={() => swiperRef.current?.slidePrev()}
-                            className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+                            className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-primary duration-300'>
 
                             <ArrowLeftIcon className='w-full' />
                         </button>
                         <button
                             onClick={() => swiperRef.current?.slideNext()}
-                            className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+                            className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-primary duration-300'>
 
                             <ArrowRightIcon className='w-full' />
                         </button>

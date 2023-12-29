@@ -12,7 +12,7 @@ const RadioBtn = ({ label, name, id }: any) => {
                     type="radio"
                     name={name}
                     id={id} />
-                <div className='peer-checked:bg-green-black  w-3 h-3 rounded-full ring-1 peer-checked:ring-green-black  ring-[#ced4da] ring-offset-2 inline-block'>
+                <div className='peer-checked:bg-primary  w-3 h-3 rounded-full ring-1 peer-checked:ring-primary  ring-[#ced4da] ring-offset-2 inline-block'>
 
                 </div>
                 <span className='text-sm text-black font-semibold ml-3'>{label}</span>

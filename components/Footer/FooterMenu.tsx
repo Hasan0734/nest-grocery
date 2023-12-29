@@ -10,7 +10,7 @@ const FooterMenu = ({ menu }: any) => {
                     {menu.items.map((item: any) => (<li key={item.id} className="my-2">
                         <Link
                             href={item.url}
-                            className="hover:text-[#3bb77e] font-medium text-[#253d4e] text-sm">
+                            className="hover:text-primary font-medium text-[#253d4e] text-sm">
                             {item.name}
                         </Link>
                     </li>))}

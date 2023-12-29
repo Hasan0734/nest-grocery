@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductRating from '../../Shared/ProductRating';
+import ProductRating from '../../Shared/Rating';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import CounterBox from './CounterBox';
@@ -30,13 +30,13 @@ const CardContent = ({ deal }: any) => {
                         <span className='text-[#b6b6b6]'>By{" "}</span>
                         <Link
                             href="/"
-                            className='text-[#3bb77e]'>
+                            className='text-primary'>
                             {deal.vendor}</Link>
                     </h6>
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-x-3 mt-2'>
                             <h5
-                                className='text-[#3bb77e] 
+                                className='text-primary 
                             text-[18px] font-bold underline'>
                                 <NumericFormat
                                     displayType='text'
@@ -62,8 +62,8 @@ const CardContent = ({ deal }: any) => {
                             </h5>
                         </div>
                         <Link
-                            className='text-[#3bb77e] px-[10px] 
-                        py-1 gap-1 rounded flex bg-[#3bb77e]/20' href={'/'}>
+                            className='text-primary px-[10px] 
+                        py-1 gap-1 rounded flex bg-primary/20' href={'/'}>
                             <ShoppingCartIcon className='' width={18} /> Add</Link>
                     </div>
                 </div>

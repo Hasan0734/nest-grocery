@@ -35,7 +35,7 @@ const SecondHeader = () => {
                                     <li >
                                         <button onClick={() => setCartDrawer(true)} className='flex items-center space-x-1 cursor-pointer relative'>
                                             <ShoppingCartIcon className='w-8 text-gray-600' />
-                                            <div className='absolute p-1 -top-1 -left-3 rounded-full w-6 h-6 flex justify-center items-center bg-[#3BB77E] text-white'>
+                                            <div className='absolute p-1 -top-1 -left-3 rounded-full w-6 h-6 flex justify-center items-center bg-primary text-white'>
                                                 <span>5</span>
                                             </div>
                                         </button>
@@ -61,12 +61,12 @@ const SecondHeader = () => {
                                     <button
                                         className='border hover:-translate-y-1 duration-200 border-gray-200 drop-shadow-[0_10px_6px_rgba(0,0,0,0.05)]
                                               bg-white px-3 py-[6px] rounded flex items-center space-x-2'>
-                                        <span className='text-[#3BB77E]'>Become Vendor</span>
+                                        <span className='text-primary'>Become Vendor</span>
 
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             fill="none" viewBox="0 0 24 24"
                                             strokeWidth={1.5} stroke="currentColor"
-                                            className="w-5 h-5 text-[#3BB77E]">
+                                            className="w-5 h-5 text-primary">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                                         </svg>
                                     </button>

@@ -53,7 +53,7 @@ const Subscribe = () => {
                             lg:text-[25px] text-[#7e7e7e] mb-5 lg:mb-9
                             xl:mb-12 2xl:mb-16'>
 
-                            Start Your Daily Shopping with <span className='text-[#3bb77e]'>Nest Mart</span>
+                            Start Your Daily Shopping with <span className='text-primary'>Nest Mart</span>
                         </p>
                         <BannerForm className={"sm:w-1/2"}/>
                     </div>

@@ -73,8 +73,8 @@ const RangeSlider = ({ min, max, onChange }:any) => {
         <div className="slider__track" />
         <div ref={range} className="slider__range" />
         <div className="absolute top-5 w-full flex justify-between">
-          <span className="text-sm">From: <strong className="text-green-black">${minVal}</strong></span>
-          <span className="text-sm">To: <strong className="text-green-black">${maxVal}</strong></span>
+          <span className="text-sm">From: <strong className="text-primary">${minVal}</strong></span>
+          <span className="text-sm">To: <strong className="text-primary">${maxVal}</strong></span>
         </div>
        
       </div>

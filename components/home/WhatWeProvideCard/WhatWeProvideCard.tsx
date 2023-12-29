@@ -20,7 +20,7 @@ const WhatWeProvideCard = ({ provide }: any) => {
                     {provide.about}
                 </p>
 
-                <Link href={"/"} className="text-[#3bb77e] font-medium text-center block">
+                <Link href={"/"} className="text-primary font-medium text-center block">
                     Read More
                 </Link>
             </div>

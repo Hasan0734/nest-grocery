@@ -4,8 +4,7 @@
 
 
 ::selection{
-    background: #3BB77E;
-    color: #fff;
+    @apply bg-primary text-white
 }
 
 html {
@@ -16,6 +15,9 @@ body {
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Quicksand', sans-serif;
     background: #fff;
+}
+.scrollbar{
+    @apply scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-gray-100 scrollbar-thumb-rounded-full
 }
 
 .dropdown-items {
@@ -90,7 +92,7 @@ body {
 }
 
 .nav_item_hover:hover .nav_item {
-    color: #3BB77E;
+   @apply text-primary
 }
 
 .nav_stick {
@@ -125,18 +127,14 @@ body {
 }
 
 .banner_paginate_bullet {
+    @apply rounded-full border border-primary inline-block m-[5px] cursor-pointer ;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    border: 1px solid #3BB77E;
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
+
 }
 
 .banner_paginate_bullet_active {
-    border: 1px solid #0000;
-    background: #3BB77E;
+    @apply border border-primary/10 bg-primary;
 }
 
 .home_banner .banner_next,
@@ -347,15 +345,16 @@ body {
   }
   
 .slider__range {
-    background-color: #3BB77E;
-    z-index: 2;
+    /* background-color: #3BB77E;
+    z-index: 2; */
+    @apply bg-primary z-[2]
   }
   
 .slider__left-value,
 .slider__right-value {
     color: #6e6e6e;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 25px; 
   }
   
 .slider__left-value {
@@ -379,6 +378,7 @@ body {
     height: 0;
     width: 100%;
     outline: none;
+    margin-top: 2px;
   }
   
 .thumb--left {
@@ -391,16 +391,8 @@ body {
   
   /* For Chrome browsers */
 .thumb::-webkit-slider-thumb {
-    background-color: #3BB77E;
-    border: none;
-    border-radius: 50%;
-    
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-    margin-top: 4px;
-    pointer-events: all;
-    position: relative;
+    @apply bg-primary border-0 rounded-full cursor-pointer h-[20px] w-[20px] pointer-events-auto relative
+
   }
 
 .thumb::-webkit-slider-thumb:active {
@@ -410,16 +402,8 @@ body {
   
   /* For Firefox browsers */
 .thumb::-moz-range-thumb {
-    background-color: #3BB77E;
-    border: none;
-    border-radius: 50%;
+    @apply bg-primary  border-0 rounded-full cursor-pointer h-[20px] w-[20px] pointer-events-auto relative;
     box-shadow: 0 0 1px 1px #ced4da;
-    cursor: pointer;
-    height: 18px;
-    width: 18px;
-    margin-top: 4px;
-    pointer-events: all;
-    position: relative;
   }
   
   .thumb::-moz-range-thumb:active {

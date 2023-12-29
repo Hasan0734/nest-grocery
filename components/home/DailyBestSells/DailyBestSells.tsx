@@ -48,13 +48,13 @@ const DailyBestSells = () => {
                         <div className='gap-4 hidden lg:flex'>
                             <button
                                 onClick={() => swiperRef.current?.slidePrev()}
-                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-primary duration-300'>
 
                                 <ArrowLeftIcon className='w-full' />
                             </button>
                             <button
                                 onClick={() => swiperRef.current?.slideNext()}
-                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-[#3bb77e] duration-300'>
+                                className='w-10 h-10 p-[10px] rounded-full text-[#253d4e] hover:text-white bg-gray-200 hover:bg-primary duration-300'>
 
                                 <ArrowRightIcon className='w-full' />
                             </button>
@@ -69,9 +69,9 @@ const DailyBestSells = () => {
                             onClick={() => setCategory(slugify(category.name, '-'))}>
                             <a
                                 className={`text-[#253d4e] font-semibold
-                                 text-[15px] cursor-pointer hover:text-[#3bb77e]
+                                 text-[15px] cursor-pointer hover:text-primary
                                  hover:-translate-y-[3px] block duration-300
-                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-[#3bb77e]' : ""}`}>
+                                 ${slugify(category.name, ('-')) === selectedCategory ? 'text-primary' : ""}`}>
                                 {category.name}
                             </a>
                         </li>))}
@@ -85,7 +85,7 @@ const DailyBestSells = () => {
                         <h3 className='text-[#253d4e] font-bold mb-24 
                         text-[40px] leading-[48px] w-[250px]
                         '>Bring nature into your home</h3>
-                        <button className='bg-[#3bb77e] px-3 py-[6px]
+                        <button className='bg-primary px-3 py-[6px]
                          text-white rounded text-sm font-semibold'>Shop Now →</button>
                     </div>
 

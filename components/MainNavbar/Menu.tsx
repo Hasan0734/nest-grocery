@@ -17,14 +17,14 @@ const Menu = () => {
                 <li>
                     <Link href={"/"}
                           className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    hover:text-primary flex gap-1 items-center '>
                         Home
                     </Link>
                 </li>
                 <li>
                     <Link href={"/about"}
                           className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    hover:text-primary flex gap-1 items-center '>
                         About
 
 
@@ -33,7 +33,7 @@ const Menu = () => {
                 <li>
                     <Link href={"/shop"}
                           className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    hover:text-primary flex gap-1 items-center '>
                         Shop
 
 
@@ -42,7 +42,7 @@ const Menu = () => {
                 <li className={"group relative"}>
                     <button
                         className=' font-bold font-quicksand text-gray-600 text-[15px] px-3  py-6
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    group-hover:text-primary flex gap-1 items-center '>
                         <span>  Vendors</span>
                         <ChevronDownIcon className="w-3"/>
                     </button>
@@ -64,7 +64,7 @@ const Menu = () => {
                 <li className='nav_item_hover'>
 
                     <button className='nav_item font-bold font-quicksand text-gray-600 text-[15px] px-3 py-6
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    hover:text-primary flex gap-1 items-center '>
                         <span>Mega Menu</span>
                         <ChevronDownIcon className="w-3"/>
                     </button>
@@ -73,7 +73,7 @@ const Menu = () => {
                 <li>
 
                     <Link href={'/blogs'} className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center '>
+                                    hover:text-primary flex gap-1 items-center '>
                         <span>Blogs</span>
 
                     </Link>
@@ -83,7 +83,7 @@ const Menu = () => {
                 <li>
                     <Link href={"/"} legacyBehavior>
                         <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
-                                    hover:text-[#3BB77E] flex gap-1 items-center ' href="">
+                                    hover:text-primary flex gap-1 items-center ' href="">
                             <span>Contact</span>
                         </a>
                     </Link>

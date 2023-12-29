@@ -21,7 +21,7 @@ const ShopTags = () => {
 
                         <Link
                             href={"/"}
-                            className="text-green-black hover:text-orange-light duration-200 hover:-translate-y-[4px] flex
+                            className="text-primary hover:text-orange-light duration-200 hover:-translate-y-[4px] flex
                          gap-1 items-center border border-gray-200 rounded-full px-3 py-[7px] shadow-[0_3px_5px_rgba(0,0,0,0.04)]">
 
                             <XMarkIcon width={19} strokeWidth={1} className="text-light-gray" />

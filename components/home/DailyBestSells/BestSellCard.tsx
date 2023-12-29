@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Shuffle } from 'react-feather';
 import { NumericFormat } from 'react-number-format';
-import ProductRating from '../../Shared/ProductRating';
+import ProductRating from '../../Shared/Rating';
 
 const BestSellCard = () => {
     return (
@@ -20,7 +20,7 @@ const BestSellCard = () => {
                  top-[36%] flex bg-white divide-x-2 z-10
                   rounded-md border border-[#bce3c9] divide-[#3bb77e]/20' >
                     <li className='relative'>
-                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                        <button className='px-[10px] py-[10px] text-primary hover:text-orange-500 relative cursor-pointer'>
                             <EyeIcon width={18} />
 
                         </button>
@@ -28,7 +28,7 @@ const BestSellCard = () => {
                         '>Quick view</small>
                     </li>
                     <li className='relative'>
-                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                        <button className='px-[10px] py-[10px] text-primary hover:text-orange-500 relative cursor-pointer'>
                             <Shuffle size={18} />
 
                         </button>
@@ -36,7 +36,7 @@ const BestSellCard = () => {
                         '>Compare</small>
                     </li>
                     <li className='relative'>
-                        <button className='px-[10px] py-[10px] text-[#3bb77e] hover:text-orange-500 relative cursor-pointer'>
+                        <button className='px-[10px] py-[10px] text-primary hover:text-orange-500 relative cursor-pointer'>
                             <HeartIcon width={18} />
                         </button>
                         <small className='
@@ -65,7 +65,7 @@ const BestSellCard = () => {
                 {/* price */}
                 <div className='flex gap-x-4 mt-2 items-center'>
                     <h5
-                        className='text-[#3bb77e] 
+                        className='text-primary 
                          text-[18px] font-bold underline'>
                         <NumericFormat
                             displayType='text'
@@ -95,7 +95,7 @@ const BestSellCard = () => {
                     <div className='bg-gray-100 h-[6px] w-full rounded-md 
                     relative before:absolute before:w-[70%] 
                     before:h-full before:left-0 before:top-0 
-                    before:bg-[#3bb77e] before:rounded-l-md'>
+                    before:bg-primary before:rounded-l-md'>
 
                     </div>
 
@@ -105,8 +105,8 @@ const BestSellCard = () => {
                 font-semibold'>Sold: 243/356</span>
 
                 <button
-                    className='mt-4 bg-[#3bb77e]
-                 hover:bg-[#fdc040] duration-500 font-bold text-[14px]
+                    className='mt-4 bg-primary
+                 hover:bg-warning duration-500 font-bold text-[14px]
                  flex justify-center items-center gap-2 rounded text-white 
                  px-4 py-[14px] w-full text-center'>
 
@@ -117,7 +117,7 @@ const BestSellCard = () => {
 
             {/* product offer */}
             <div className='absolute top-0 left-0 z-10'>
-                <div className='bg-[#3bb77e] px-5 py-2 text-white font-semibold text-[12px] rounded-br-2xl'>10%</div>
+                <div className='bg-primary px-5 py-2 text-white font-semibold text-[12px] rounded-br-2xl'>10%</div>
             </div>
         </div >
     );

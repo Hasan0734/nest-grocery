@@ -12,7 +12,7 @@ const Checkbox = ({ title = "", name = "" }: any) => {
                 htmlFor={name}>
                 <input type="checkbox"
                     className={`peer  overflow-hidden appearance-none rounded-sm 
-                     w-[17px] h-[17px] border border-[#ced4da] checked:border-green-black checked:bg-green-black `}
+                     w-[17px] h-[17px] border border-[#ced4da] checked:border-primary checked:bg-primary `}
 
                     name={name} id={name} />
                 <Check

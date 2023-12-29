@@ -13,7 +13,7 @@ const CategoryCard = ({ category }: any) => {
                     </Link>
                 </div>
                 <div>
-                    <Link href={"/"} legacyBehavior>
+                    <Link href={"/products/category/12"} legacyBehavior>
                         <a
                             className='text-center block text-[#253d4e] font-bold
                                         '>{category.name}</a>

@@ -7,13 +7,13 @@ const TrendingProductCard = ({ product }: any) => {
     return (
         <>
             <div className='my-[10px] gap-3 flex'>
-                <Link href='/' className='max-w-[66px] lg:max-w-[77px] h-[66px] block'>
+                <Link href={`/products/${product.id}`} className='max-w-[66px] lg:max-w-[77px] h-[66px] block'>
                     <img className='w-full' src={product.image} alt="" />
                 </Link>
                 <div className=''>
                     <h6 className='my-1 line-clamp-2'>
-                        <Link href='/'
-                            className='leading-6 line-clamp-2 text-[15px] font-bold text-gray-black hover:text-green-black'>
+                        <Link href={`/products/${product.id}`}
+                            className='leading-6 line-clamp-2 text-[15px] font-bold text-gray-black hover:text-primary'>
                             {product.name}
                         </Link>
                     </h6>
@@ -33,7 +33,7 @@ const TrendingProductCard = ({ product }: any) => {
                             />
                         </h5>
                         <h5
-                            className='text-green-black
+                            className='text-primary
                          text-[16px] font-bold'>
                             <NumericFormat
                                 displayType='text'
@@ -48,7 +48,7 @@ const TrendingProductCard = ({ product }: any) => {
                     </div>}
                     {product.price_range && <div className='flex gap-x-1 mt-2'>
                         <h5
-                            className='text-[#3bb77e] 
+                            className='text-primary 
                         text-[18px] font-bold'>
                             <NumericFormat
                                 displayType='text'
