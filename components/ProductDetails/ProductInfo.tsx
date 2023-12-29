@@ -3,6 +3,7 @@ import {cn} from "@/utls/utils";
 import ProductDescription from "@/components/ProductDetails/ProductDescription";
 import AdditionalInfo from "@/components/ProductDetails/AdditionalInfo";
 import ProductVendor from "@/components/ProductDetails/ProductVendor";
+import ProductReview from "@/components/ProductDetails/ProductReview";
 
 const ProductInfo = () => {
     const [activeTab, setActiveTab] = useState('description');
@@ -23,7 +24,7 @@ const ProductInfo = () => {
             case 'vendor':
                 return  <ProductVendor/>
             case 'review':
-                return  <ProductDescription/>
+                return  <ProductReview/>
         }
     }
 
