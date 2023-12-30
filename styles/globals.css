@@ -417,3 +417,15 @@ body {
 .page-link{
     @apply cursor-pointer p-2 w-9 h-9 rounded-full font-semibold text-sm flex items-center justify-center
 }
+.product_thumb_swiper{
+    position: relative;
+}
+.product_thumb_swiper .swiper-slide {
+    z-index: 3;
+    filter:  brightness(50%);
+}
+
+.product_thumb_swiper .swiper-slide-thumb-active {
+    filter:  brightness(100%);
+
+}

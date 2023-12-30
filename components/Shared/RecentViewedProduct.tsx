@@ -75,7 +75,7 @@ const RecentViewedProduct = () => {
 
              <div className={'mt-6'}>
                  <Swiper
-                     slidesPerView={1}
+                          slidesPerView={1}
                          spaceBetween={15}
                          slidesPerGroup={1}
                          speed={1500}

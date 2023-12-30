@@ -30,6 +30,8 @@ module.exports = {
       },
       colors: {
         primary: "#3bb77e",
+        rose: '#f74b81',
+        softRose: '#fde0e9',
         warning: '#fdc040',
         bgSoft: "#3bb77e8f",
         "light-gray": "#7e7e7e",

@@ -31,7 +31,7 @@ const ProductInfo = () => {
 
     return (
         <>
-            <div className={'border border-gray-200 rounded-xl py-8 px-12'}>
+            <div className={'border border-gray-200 rounded-xl py-8 px-9 lg:px-12 mt-8'}>
 
                 <div>
                     <ul className={'flex items-center gap-4 flex-wrap'}>
