@@ -34,7 +34,7 @@ const MenuDrawer = ({ handleOutSideClick, menuDrawer, setMenuDrawer }: any) => {
         <>
             <div
                 onClick={handleOutSideClick}
-                className={`z-50 block lg:hidden absolute left-0  transition-all  w-full ${!menuDrawer ? "invisible" : " visible bg-gray-800/40"}  
+                className={`z-50 block lg:hidden fixed left-0  transition-all  w-full ${!menuDrawer ? "invisible" : " visible bg-gray-800/40"}  
             top-0 h-screen`}>
                 <div className={`absolute duration-500 opacity-0 ${menuDrawer ? "left-0 opacity-100" : "-left-[1000px]"} bg-white h-screen w-4/5 overflow-y-scroll`}>
                     <div

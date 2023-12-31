@@ -8,7 +8,7 @@ const CartDrawer = ({ handleOutSideClick, cartDrawer, setCartDrawer }: any) => {
         <>
             <div
                 onClick={handleOutSideClick}
-                className={`z-50 block lg:hidden absolute right-0  transition-all  w-full ${!cartDrawer ? "invisible" : "visible bg-gray-800/40"}  
+                className={`z-50 block lg:hidden fixed right-0  transition-all  w-full ${!cartDrawer ? "invisible" : "visible bg-gray-800/40"}  
             top-0 h-screen`}>
                 <div className={`absolute duration-500 right-0 opacity-0 ${cartDrawer ? "opacity-100 w-4/5" : " invisible w-0"} bg-white h-screen  overflow-y-scroll`}>
                     <div
