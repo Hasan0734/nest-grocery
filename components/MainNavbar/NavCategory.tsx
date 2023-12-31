@@ -35,15 +35,16 @@ const NavCategory = () => {
                         <ChevronDownIcon strokeWidth={2} className='w-4 text-white' />
                     </button>
 
-                    <div className={`${openCategory ? "visible opacity-100  top-[50px]" : "invisible opacity-0  top-[60px]"} duration-300 rounded-lg border left-0 border-[#3BB77E]  p-5 z-40 bg-gray-50
-                                 absolute  w-[400px]`}>
+                    <div className={`${openCategory ? "visible opacity-100  top-[50px]" : "invisible opacity-0  top-[60px]"}
+                     duration-300 rounded-lg border left-0 border-primary  p-5 z-40 bg-white
+                 absolute  w-[400px]`}>
                         <ul className='grid grid-cols-2 gap-3'>
                             {categories.map((category) => <li key={category.id}
                                 className=''>
                                 <Link href={"/"} legacyBehavior>
                                     <a
                                         className=' border border-gray-200 rounded
-                                                     p-2 flex gap-2 text-sm items-center hover:bg-white/80 duration-200 hover:drop-shadow-md'>
+                                                     p-2 flex gap-2 text-sm items-center hover:bg-white duration-200 hover:drop-shadow-md'>
                                         <img className='w-6 h-6' src={category.icon} alt={category.name} />
                                         <span> {category.name}</span>
                                     </a>

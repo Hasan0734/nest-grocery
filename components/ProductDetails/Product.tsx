@@ -6,6 +6,7 @@ import {CiHeart} from "react-icons/ci";
 import {IoShuffleOutline} from "react-icons/io5";
 import Link from "next/link";
 import ProductImages from "@/components/ProductDetails/ProductImages";
+import ProductQuantity from "@/components/Shared/ProductQuantity";
 
 const variants = [
     {id: 1, weight: '50g', size: null},
@@ -18,7 +19,6 @@ const Product = () => {
     const [selectSize, setSelectSize] = useState('50g')
     const [quantity, setQuantity] = useState(1)
     return (
-
 
             <div className={'flex flex-col xl:flex-row justify-between gap-14 w-full'}>
                 <ProductImages/>
@@ -53,9 +53,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className={'flex items-center gap-2 flex-wrap'}>
-                        <input onChange={(e: any) => setQuantity(e.target.value > 1 ? Number(e.target.value) : 1)}
-                               className={'p-2.5 border-2 border-primary outline-0 rounded text-lg max-w-[96px]'}
-                               value={quantity} type={'number'}/>
+                       <ProductQuantity setQuantity={setQuantity} quantity={quantity}/>
                         <button
                             className={'bg-primary text-white flex items-center px-4 py-3 rounded gap-2 hover:brightness-95 duration-300 '}>
                             <IoCartOutline size={22}/>

@@ -55,7 +55,7 @@ const RecentViewedProduct = () => {
 
     const swiperRef:any = useRef();
     return (
-        <Container className='pt-4'>
+        <Container className='mt-14'>
             <div className={'border-2 border-dashed border-gray-200 p-5 rounded-lg'}>
              <div className={'flex items-center justify-between'}>
                  <h2 className={'text-2xl text-primary-text font-semibold'}>Recent Viewed Product</h2>
