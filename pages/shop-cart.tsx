@@ -18,6 +18,13 @@ const ShopCart = () => {
             </Head>
             <Layout>
                 <BreadCrumbs>
+                    <li className='flex space-x-3 items-center' >
+                        <Link href={"/shop"} className="flex gap-1 items-center text-primary hover:text-orange-300">
+
+                            <span className='font-medium text-sm'>Shop</span>
+                        </Link>
+                        <ChevronRightIcon strokeWidth={2.5} width={10} />
+                    </li>
                     <li className=' flex space-x-5 items-center'>
                         <span className='font-medium text-sm'>Cart</span>
                     </li>

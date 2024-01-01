@@ -23,7 +23,7 @@ const Menu = () => {
         <>
             <ul className=' flex space-x-5 items-center'>
                 <li>
-                    <Link href="/compare" legacyBehavior>
+                    <Link href="/shop-compare" legacyBehavior>
                         <a className='flex space-x-1 items-center'>
 
                             <div className='relative'>
