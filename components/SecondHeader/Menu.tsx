@@ -12,10 +12,10 @@ import { MdLogout } from "react-icons/md";
 const Menu = () => {
     const items = [
         {id: 1, title: 'My Account', available: false, href: '/my-account', icon: <LuUser size={20}/>, },
-        {id: 1, title: 'Order Tracking', available: false, href: '/order-tracking', icon: <CiLocationOn size={20}/>, },
-        {id: 1, title: 'My Voucher', available: false, href: '/voucher', icon: <MdOutlineLabel size={20}/>, },
-        {id: 1, title: 'My Wishlist', available: false, href: '/my-wishlist', icon: <IoIosHeartEmpty size={20}/>, },
-        {id: 1, title: 'Setting', available: false, href: '/setting', icon: <LiaSlidersHSolid size={20}/>, },
+        {id: 2, title: 'Order Tracking', available: false, href: '/order-tracking', icon: <CiLocationOn size={20}/>, },
+        {id: 3, title: 'My Voucher', available: false, href: '/voucher', icon: <MdOutlineLabel size={20}/>, },
+        {id: 4, title: 'My Wishlist', available: false, href: '/my-wishlist', icon: <IoIosHeartEmpty size={20}/>, },
+        {id: 5, title: 'Setting', available: false, href: '/setting', icon: <LiaSlidersHSolid size={20}/>, },
     ]
 
 

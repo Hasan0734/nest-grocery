@@ -1,12 +1,9 @@
 import Layout from '@/components/Layout';
-import OurAdvantage from '@/components/OurAdvantage/OurAdvantage';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
-import Subscribe from '@/components/Subscribe/Subscribe';
-import { ChevronDownIcon, ChevronRightIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import Head from 'next/head';
-import Link from 'next/link';
 import React from 'react';
-import { Grid, Home, List } from 'react-feather';
+import { Grid, List } from 'react-feather';
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
@@ -40,18 +37,9 @@ const index = () => {
 
             <Layout>
                 <BreadCrumbs>
-                    <ul className='flex items-center gap-3'>
-                        <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
-                                <Home size={15} />
-                                <span className='font-medium text-sm'>Home</span>
-                            </Link>
-                            <ChevronRightIcon strokeWidth={2.5} width={10} />
-                        </li>
-                        <li className=' flex space-x-5 items-center'>
-                            <span className='font-medium text-sm'>Vebdirs List</span>
-                        </li>
-                    </ul>
+                    <li className=' flex space-x-5 items-center'>
+                        <span className='font-medium text-sm'>Vendor List</span>
+                    </li>
                 </BreadCrumbs>
 
                 <section className='mt-10'>

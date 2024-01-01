@@ -16,14 +16,14 @@ const WishlistData = () =>
     return (
         <div>
             <div className={'md:col-span-5'}>
-                <div className=" flow-root">
+                <div className="flow-root">
                     <div className="-mx-4 -my-2 overflow-x-auto scrollbar sm:-mx-6 lg:-mx-8">
                         <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                             <table className={'min-w-full'}>
                                 <thead>
                                 <tr className={''}>
                                     <td
-                                        className={'font-bold py-3 px-4  bg-gray-200 rounded-l-lg whitespace-nowrap max-w-sm'}
+                                        className={'font-bold py-3 px-4 bg-gray-200 rounded-l-lg whitespace-nowrap max-w-sm'}
                                         >Product
                                     </td>
                                     <td className={'font-bold py-3 px-4 text-center bg-gray-200 whitespace-nowrap'}>

@@ -87,18 +87,9 @@ const About: NextPage = () => {
 
       <Layout>
         <BreadCrumbs>
-          <ul className='flex items-center gap-3'>
-            <li className=' flex space-x-3 items-center' >
-              <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
-                <Home size={15} />
-                <span className='font-medium text-sm'>Home</span>
-              </Link>
-              <ChevronRightIcon strokeWidth={2.5} width={10} />
-            </li>
-            <li className=' flex space-x-5 items-center'>
-              <span className='font-medium text-sm'>About</span>
-            </li>
-          </ul>
+          <li className=' flex space-x-5 items-center'>
+            <span className='font-medium text-sm'>About</span>
+          </li>
         </BreadCrumbs>
 
         {/* welcome section */}

@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import BreadCrumbs from '@/components/Shared/BreadCrumbs';
-import { ChevronDownIcon, ChevronRightIcon, FunnelIcon} from '@heroicons/react/24/outline';
+import { ChevronDownIcon, ChevronRightIcon} from '@heroicons/react/24/outline';
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -8,10 +8,6 @@ import { Grid, Home, List } from 'react-feather';
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
-import CategoryListBox from '@/components/Shared/CategoryListBox';
-import Checkbox from '@/components/Shared/Checkbox';
-import RangeSlider from '@/components/Shared/RangeSlider';
-
 import ProductCard from '@/components/Shared/ProductCard';
 import Pagination from '@/components/Shared/Pagination';
 import VendorHeader from "@/components/StoreVendors/VendorHeader";
@@ -49,24 +45,15 @@ const VendorDetail = () => {
             </Head>
             <Layout>
                 <BreadCrumbs>
-                    <ul className='flex items-center gap-3'>
-                        <li className=' flex space-x-3 items-center' >
-                            <Link href={"/"} className="flex gap-1 items-center text-primary hover:text-orange-300">
-                                <Home size={15} />
-                                <span className='font-medium text-sm'>Home</span>
-                            </Link>
-                            <ChevronRightIcon strokeWidth={2.5} width={10} />
-                        </li>
-                        <li className=' flex space-x-3 items-center' >
-                            <Link href={"/index"} className="flex gap-1 items-center text-primary hover:text-orange-300">
-                                <span className='font-medium text-sm'>Vendors</span>
-                            </Link>
-                            <ChevronRightIcon strokeWidth={2.5} width={10} />
-                        </li>
-                        <li className=' flex space-x-5 items-center'>
-                            <span className='font-medium text-sm'>Vendor Details</span>
-                        </li>
-                    </ul>
+                    <li className=' flex space-x-3 items-center' >
+                        <Link href={"/index"} className="flex gap-1 items-center text-primary hover:text-orange-300">
+                            <span className='font-medium text-sm'>Vendors</span>
+                        </Link>
+                        <ChevronRightIcon strokeWidth={2.5} width={10} />
+                    </li>
+                    <li className=' flex space-x-5 items-center'>
+                        <span className='font-medium text-sm'>Vendor Details</span>
+                    </li>
                 </BreadCrumbs>
              <VendorHeader/>
 
