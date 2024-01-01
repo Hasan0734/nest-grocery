@@ -5,7 +5,7 @@ import Product from "@/components/ProductDetails/Product";
 const ProductDetails = () => {
     return (
 
-        <div className={'w-full px-6 md:px-0'}>
+        <div className={'w-full'}>
             <Product/>
             <ProductInfo/>
         </div>

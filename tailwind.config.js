@@ -30,14 +30,15 @@ module.exports = {
       },
       colors: {
         primary: "#3bb77e",
+        "primary-soft": '#DEF9EC',
         rose: '#f74b81',
         softRose: '#fde0e9',
         warning: '#fdc040',
         bgSoft: "#3bb77e8f",
         "light-gray": "#7e7e7e",
         "orange-light": "#fdc040",
-        'primary-text': '#253d4e',
-        'blue-light': '#f4f6fa'
+        "primary-text": '#253d4e',
+        "blue-light": '#f4f6fa'
 
       },
     },

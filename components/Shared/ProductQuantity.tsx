@@ -8,7 +8,7 @@ const ProductQuantity = ({setQuantity,quantity}:propsType) => {
     return (
         <>
             <input onChange={(e: any) => setQuantity(e.target.value > 1 ? Number(e.target.value) : 1)}
-                   className={'p-2.5 border-2 border-primary outline-0 rounded text-lg max-w-[96px]'}
+                   className={'p-2 sm:p-2.5 border-2 border-primary outline-0 rounded text-lg max-w-[60px] xs:max-w-[96px]'}
                    value={quantity} type={'number'}/>
         </>
     );

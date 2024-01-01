@@ -23,7 +23,7 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/wishlisht" legacyBehavior>
+                    <Link href="/shop-wishlist" legacyBehavior>
                         <a className='flex items-center space-x-1 '>
                             <div className='relative'>
                                 <HeartIcon className='w-7 text-gray-600' />
@@ -39,7 +39,6 @@ const Menu = () => {
                             <ShoppingCartIcon className='w-7 text-gray-600' />
                            <ProductCount total={3}/>
                         </div>
-
                         <span className='text-gray-600'>Cart</span>
                     </div>
                     <div className=' absolute right-0 border hover-dropdwon-item border-gray-200 bg-white invisible w-[300px]  rounded-lg z-50'>
@@ -56,7 +55,7 @@ const Menu = () => {
                                 <h3 className='text-sm tracking-wide'>Subtotal: <span className='text-primary font-semibold'>$41.25</span></h3>
 
                                 <div className='flex justify-between items-center mt-4'>
-                                    <Link href="/view-cart" legacyBehavior>
+                                    <Link href="/shop-cart" legacyBehavior>
                                         <a className='bg-primary px-4 py-2 text-white font-normal text-sm rounded'>View Cart</a>
                                     </Link>
                                     <Link href="/view-cart" legacyBehavior>

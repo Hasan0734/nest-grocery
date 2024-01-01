@@ -5,6 +5,7 @@ import SearchInput from './SearchInput';
 
 import CartDrawer from './CartDrawer';
 import MenuDrawer from './MenuDrawer';
+import Link from "next/link";
 
 
 const SecondHeader = () => {
@@ -29,7 +30,9 @@ const SecondHeader = () => {
                     <div className='flex items-center justify-between gap-10 xl:gap-20'>
                         <div className='flex flex-col xl:flex-row  gap-8  xl:items-center w-full'>
                             <div className='flex justify-between'>
-                                <img className='w-44 xl:w-64' src='/assets/logo.png' alt={"logo"} />
+                                <Link href='/'>
+                                    <img className='w-44 xl:w-64' src='/assets/logo.png' alt={"logo"} />
+                                </Link>
                                 <ul className=' flex lg:hidden  space-x-5 items-center'>
 
                                     <li >

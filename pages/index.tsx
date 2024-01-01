@@ -10,6 +10,7 @@ import Head from 'next/head'
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import Modal from '@/components/Modal/Modal'
+import ProductPopup from "@/components/Modal/ProductPopup";
 
 
 const Home: NextPage = () => {
@@ -22,11 +23,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Nest - Grocery Store SPA Website</title>
+        <title>Nest - Grocery Store SPA Website</  title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Modal isOpen={isOpen} setIsOpen={setIsOpen} >
+            <ProductPopup/>
+        </Modal>
       <Layout>
         <HomeBanner />
         <FeaturedCategories />
@@ -35,7 +38,6 @@ const Home: NextPage = () => {
         <DailyBestSells />
         <DealsOfTheDay />
         <TopProducts />
-
       </Layout>
     </>
   )
