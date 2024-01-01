@@ -30,10 +30,10 @@ const CartDrawer = ({ handleOutSideClick, cartDrawer, setCartDrawer }: any) => {
                             <h4 className='text-gray-500'>Sub total: <span className='text-primary'>$45.85</span></h4>
                         </div>
                         <div className='flex justify-between items-center mt-4'>
-                            <Link href="/view-cart" legacyBehavior>
+                            <Link href="/shop-cart" legacyBehavior>
                                 <a className='bg-primary px-4 py-3 text-white font-normal text-sm rounded'>View Cart</a>
                             </Link>
-                            <Link href="/view-cart" legacyBehavior>
+                            <Link href="/shop-cart" legacyBehavior>
                                 <a className='bg-primary px-4 py-3 text-white font-normal text-sm rounded'>Checkout</a>
                             </Link>
                         </div>

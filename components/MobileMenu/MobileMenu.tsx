@@ -35,7 +35,7 @@ const MobileMenu = () => {
 
     return (
         <div className={`fixed w-full bottom-0 px-2 py-[10px]
-         bg-white z-50 duration-300 ${navScroll ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-5'} 
+         bg-white z-[60] duration-300 ${navScroll ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-5'} 
          lg:invisible lg:opacity-0 lg:translate-y-5`}>
             <ul className='flex justify-between'>
                 {menus.map((menu: any) => <li key={menu.id} >

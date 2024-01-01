@@ -26,7 +26,7 @@ const Layout = ({ children }: any) => {
             <Subscribe />
             <OurAdvantage />
             <Footer />
-            {router.pathname === '/' && <MobileMenu />}
+            <MobileMenu />
 
             <ScrollToTop
                     className='flex items-center justify-center duration-300 hover:bg-primary hover:text-white mb-8 md:mb-0 '
