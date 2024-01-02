@@ -113,7 +113,7 @@ const ShopCompare = () => {
                                             className={'border-t-0 border-b border-x md:border '}>
                                             <div className={'flex justify-center'}>
                                                 <Link href={'/products/23'}>
-                                                    <img className={'max-w-[300px]'} src={product.image}
+                                                    <img className={'max-w-[210px] md:max-w-[300px]'} src={product.image}
                                                          alt={'product image'}/>
                                                 </Link>
                                             </div>

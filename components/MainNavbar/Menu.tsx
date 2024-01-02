@@ -81,7 +81,7 @@ const Menu = () => {
                 </li>
 
                 <li>
-                    <Link href={"/"} legacyBehavior>
+                    <Link href={"/contact"} legacyBehavior>
                         <a className='font-bold font-quicksand text-gray-600 text-[15px] px-3 py-2
                                     hover:text-primary flex gap-1 items-center ' href="">
                             <span>Contact</span>
