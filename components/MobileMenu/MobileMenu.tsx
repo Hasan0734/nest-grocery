@@ -7,7 +7,7 @@ import { Home, Repeat, User } from 'react-feather';
 const menus = [
     { id: 1, name: "Home", icon: <Home color='#253d4e' size={23} />, link: '/' },
     { id: 2, name: "Wishlist", icon: <HeartIcon color='#253d4e' width={23} />, link: '/shop-wishlist' },
-    { id: 3, name: "Compare", icon: <Repeat color='#253d4e' size={23} />, link: '/compare' },
+    { id: 3, name: "Compare", icon: <Repeat color='#253d4e' size={23} />, link: '/Compare' },
     { id: 4, name: "Checkout", icon: <CreditCardIcon color='#253d4e' width={23} />, link: '/shop-cart' },
     { id: 5, name: "Account", icon: <User color='#253d4e' size={23} />, link: '/account' },
 ]
